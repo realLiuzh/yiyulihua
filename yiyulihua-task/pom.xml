@@ -5,7 +5,7 @@
     <groupId>com.yiyulihua</groupId>
     <artifactId>task</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>task</name>
+    <name>yiyulihua-task</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,12 +21,6 @@
             <groupId>com.yiyulihua</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba.cloud</groupId>
-                    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

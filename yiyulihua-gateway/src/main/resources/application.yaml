@@ -3,17 +3,17 @@ server:
 
 spring:
   application:
-    name: gateway
+    name: yiyulihua-gateway
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.96.86.132:8848
     gateway:
       routes:
-        - id: client_route
-          uri: lb://jywclient       #客户端服务
+        - id: task_route  #任务模块路由
+          uri: lb://yiyulihua-task
           predicates:
-            - Path=/api/jywclient/**
+            - Path=/api/task/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 
