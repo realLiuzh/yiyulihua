@@ -1,4 +1,4 @@
-package utils;
+package com.yiyulihua.common.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

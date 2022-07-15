@@ -4,12 +4,10 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.query.TaskQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.yiyulihua.task.entity.TaskEntity;
 import com.yiyulihua.task.service.TaskService;
@@ -17,27 +15,25 @@ import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
 
 
-
 /**
- * 
+ * 任务Controller
  *
- * @author Ö¾ê»µÄÁõ
+ * @author lzh
  * @email 1138423425@qq.com
  * @date 2022-07-15 21:01:57
  */
 @RestController
-@RequestMapping("task/task")
+@RequestMapping("/task")
 public class TaskController {
     @Autowired
     private TaskService taskService;
 
     /**
-     * 列表
+     * 查询任务集市列表
      */
-    @RequestMapping("/list")
-    //@RequiresPermissions("task:task:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = taskService.queryPage(params);
+    @GetMapping("/list")
+    public R list(PageQuery param) {
+        PageUtils page = taskService.queryPage(param);
 
         return R.ok().put("page", page);
     }
@@ -48,8 +44,8 @@ public class TaskController {
      */
     @RequestMapping("/info/{id}")
     //@RequiresPermissions("task:task:info")
-    public R info(@PathVariable("id") Integer id){
-		TaskEntity task = taskService.getById(id);
+    public R info(@PathVariable("id") Integer id) {
+        TaskEntity task = taskService.getById(id);
 
         return R.ok().put("task", task);
     }
@@ -59,8 +55,8 @@ public class TaskController {
      */
     @RequestMapping("/save")
     //@RequiresPermissions("task:task:save")
-    public R save(@RequestBody TaskEntity task){
-		taskService.save(task);
+    public R save(@RequestBody TaskEntity task) {
+        taskService.save(task);
 
         return R.ok();
     }
@@ -70,8 +66,8 @@ public class TaskController {
      */
     @RequestMapping("/update")
     //@RequiresPermissions("task:task:update")
-    public R update(@RequestBody TaskEntity task){
-		taskService.updateById(task);
+    public R update(@RequestBody TaskEntity task) {
+        taskService.updateById(task);
 
         return R.ok();
     }
@@ -81,8 +77,8 @@ public class TaskController {
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("task:task:delete")
-    public R delete(@RequestBody Integer[] ids){
-		taskService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Integer[] ids) {
+        taskService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

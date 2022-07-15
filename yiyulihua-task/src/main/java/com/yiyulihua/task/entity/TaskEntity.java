@@ -11,7 +11,7 @@ import lombok.Data;
 /**
  * 
  * 
- * @author Ö¾ê»µÄÁõ
+ * @author lzh
  * @email 1138423425@qq.com
  * @date 2022-07-15 21:01:57
  */
@@ -33,10 +33,6 @@ public class TaskEntity implements Serializable {
 	 * 发布者id
 	 */
 	private Integer publisherId;
-	/**
-	 * 发布者名称
-	 */
-	private String publishName;
 	/**
 	 * 任务出价
 	 */

@@ -1,4 +1,4 @@
-package utils;
+package com.yiyulihua.common.utils;
 
 /**
  * 自定义异常

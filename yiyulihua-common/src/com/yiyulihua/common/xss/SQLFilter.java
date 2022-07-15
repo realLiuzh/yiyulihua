@@ -6,10 +6,10 @@
  * 版权所有，侵权必究！
  */
 
-package xss;
+package com.yiyulihua.common.xss;
 
 
-import com.cquptjyw.common.utils.RRException;
+import com.yiyulihua.common.utils.RRException;
 import org.apache.commons.lang3.StringUtils;
 
 /**

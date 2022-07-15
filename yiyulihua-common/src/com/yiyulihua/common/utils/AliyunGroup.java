@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package utils;
+package com.yiyulihua.common.utils;
 
 /**
  * 阿里云
