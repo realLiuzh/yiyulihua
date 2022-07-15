@@ -9,6 +9,7 @@
 
     <modules>
         <module>yiyulihua-common</module>
+        <module>yiyulihua-gateway</module>
     </modules>
 
 
