@@ -37,9 +37,9 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         wrapper.eq("id", id);
         wrapper.eq("is_valid", 1);
         UserEntity userEntity = baseMapper.selectOne(wrapper);
-
+        if (userEntity == null) return null;
         UserVo userVo = new UserVo();
-        BeanUtils.copyProperties(userEntity,userVo);
+        BeanUtils.copyProperties(userEntity, userVo);
         return userVo;
     }
 
