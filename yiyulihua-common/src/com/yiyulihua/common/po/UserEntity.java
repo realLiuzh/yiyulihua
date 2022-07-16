@@ -1,4 +1,4 @@
-package com.yiyulihua.user.entity;
+package com.yiyulihua.common.po;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -43,14 +43,10 @@ public class UserEntity implements Serializable {
 	/**
 	 * 创建时间
 	 */
-	private Date creataTime;
+	private Date createTime;
 	/**
 	 * 更新时间
 	 */
 	private Date updateTime;
-	/**
-	 * 是否有效
-	 */
-	private Integer isValid;
 
 }

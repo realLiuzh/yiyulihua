@@ -1,8 +1,9 @@
 package com.yiyulihua.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yiyulihua.common.com.yiyulihua.common.utils.PageUtils;
-import com.yiyulihua.user.entity.UserEntity;
+import com.yiyulihua.common.utils.PageUtils;
+import com.yiyulihua.common.po.UserEntity;
+import com.yiyulihua.common.vo.UserVo;
 
 import java.util.Map;
 
@@ -16,5 +17,7 @@ import java.util.Map;
 public interface UserService extends IService<UserEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    UserVo getById(Integer id);
 }
 

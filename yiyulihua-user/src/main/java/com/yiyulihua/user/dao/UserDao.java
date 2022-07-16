@@ -1,6 +1,6 @@
 package com.yiyulihua.user.dao;
 
-import com.yiyulihua.user.entity.UserEntity;
+import com.yiyulihua.common.po.UserEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

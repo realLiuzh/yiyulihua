@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.yiyulihua.common.utils.PageUtils;
+import com.yiyulihua.common.utils.R;
+import com.yiyulihua.common.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yiyulihua.user.entity.UserEntity;
+import com.yiyulihua.common.po.UserEntity;
 import com.yiyulihua.user.service.UserService;
-import com.yiyulihua.common.com.yiyulihua.common.utils.PageUtils;
-import com.yiyulihua.common.com.yiyulihua.common.utils.R;
+
 
 
 
@@ -26,7 +28,7 @@ import com.yiyulihua.common.com.yiyulihua.common.utils.R;
  * @date 2022-07-16 18:12:48
  */
 @RestController
-@RequestMapping("user/user")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -44,12 +46,11 @@ public class UserController {
 
 
     /**
-     * 信息
+     * 获取特定用户的信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("user:user:info")
     public R info(@PathVariable("id") Integer id){
-		UserEntity user = userService.getById(id);
+		UserVo user = userService.getById(id);
 
         return R.ok().put("user", user);
     }
