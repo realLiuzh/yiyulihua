@@ -39,9 +39,9 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
 
         List<TaskEntity> records = page.getRecords();
         List<TaskListVo> list = records.stream().map(taskEntity -> {
-            TaskListVo taskVo = new TaskListVo();
-            BeanUtils.copyProperties(taskEntity, taskVo);
-            return taskVo;
+            TaskListVo taskListVo = new TaskListVo();
+            BeanUtils.copyProperties(taskEntity, taskListVo);
+            return taskListVo;
         }).collect(Collectors.toList());
         PageUtils pageUtils = new PageUtils(page);
         pageUtils.setList(list);
@@ -51,7 +51,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
     @Override
     public TaskVo selectByid(Integer id) {
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
-        wrapper.select("id", "task_name", "type_name", "task_price", "task_deadline", "task_picture", "task_demands", "task_works_number", "task_process");
+        wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture", "task_demands", "task_works_number", "task_process");
         wrapper.eq("id", id);
         wrapper.eq("is_valid", 1);
         TaskEntity taskEntity = baseMapper.selectOne(wrapper);
@@ -59,7 +59,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         TaskVo taskVo = new TaskVo();
         BeanUtils.copyProperties(taskEntity, taskVo);
 
-        return null;
+        return taskVo;
 
     }
 
