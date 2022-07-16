@@ -1,15 +1,14 @@
 package com.yiyulihua.task.controller;
 
 import java.util.Arrays;
-import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import com.yiyulihua.common.query.PageQuery;
-import com.yiyulihua.common.query.TaskQuery;
+import com.yiyulihua.common.vo.TaskVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.yiyulihua.task.entity.TaskEntity;
+import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.task.service.TaskService;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
@@ -40,14 +39,12 @@ public class TaskController {
 
 
     /**
-     * 信息
+     * 获取任务的详细信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("task:task:info")
-    public R info(@PathVariable("id") Integer id) {
-        TaskEntity task = taskService.getById(id);
-
-        return R.ok().put("task", task);
+    public R selectByid(@PathVariable("id") Integer id) {
+        TaskVo task = taskService.selectByid(id);
+        return R.ok().put("data", task);
     }
 
     /**

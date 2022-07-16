@@ -19,11 +19,11 @@ import com.yiyulihua.common.query.PageQuery;
  */
 public class Query<T> {
 
-    public IPage<T> getPage(PageQuery params) {
+    public Page<T> getPage(PageQuery params) {
         return this.getPage(params, null, false);
     }
 
-    public IPage<T> getPage(PageQuery query, String defaultOrderField, boolean isAsc) {
+    public Page<T> getPage(PageQuery query, String defaultOrderField, boolean isAsc) {
         //分页参数
         long curPage = 1;
         long limit = 6;
@@ -36,8 +36,6 @@ public class Query<T> {
         }
 
         //分页对象
-        Page<T> page = new Page<>(curPage, limit);
-
-        return page;
+        return new Page<>(curPage, limit);
     }
 }

@@ -6,7 +6,7 @@ spring:
       discovery:
         server-addr: 47.96.86.132:8848
 
-logging:
-  file:
-    path: logs/
-  config: classpath:logback-spring.xml
+#logging:
+#  file:
+#    path: logs/
+#  config: classpath:logback-spring.xml

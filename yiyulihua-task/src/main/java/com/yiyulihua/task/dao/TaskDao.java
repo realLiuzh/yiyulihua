@@ -1,6 +1,6 @@
 package com.yiyulihua.task.dao;
 
-import com.yiyulihua.task.entity.TaskEntity;
+import com.yiyulihua.common.po.TaskEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
