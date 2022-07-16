@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.96.86.132:8848
+
+logging:
+  file:
+    path: logs/
+  config: classpath:logback-spring.xml

@@ -11,6 +11,7 @@
         <module>yiyulihua-common</module>
         <module>yiyulihua-gateway</module>
         <module>yiyulihua-task</module>
+        <module>yiyulihua-work</module>
         <module>yiyulihua-user</module>
     </modules>
 

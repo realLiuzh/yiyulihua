@@ -1,0 +1,24 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    username: snbo
+    password: 1234
+    url: jdbc:mysql://175.178.189.89:12209/yiyulihua?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  application:
+    name: yiyulihua-work
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
