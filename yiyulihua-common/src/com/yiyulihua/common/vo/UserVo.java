@@ -26,12 +26,4 @@ public class UserVo implements Serializable {
      * 企业/学校
      */
     private String organization;
-    /**
-     * 创建时间
-     */
-    private Date createTime;
-    /**
-     * 更新时间
-     */
-    private Date updateTime;
 }

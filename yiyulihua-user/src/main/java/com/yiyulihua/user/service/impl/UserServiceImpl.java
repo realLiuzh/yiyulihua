@@ -33,7 +33,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
     @Override
     public UserVo getById(Integer id) {
         QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
-        wrapper.select("id", "username", "avatar", "organization", "create_time", "update_time");
+        wrapper.select("id", "username", "avatar", "organization");
         wrapper.eq("id", id);
         wrapper.eq("is_valid", 1);
         UserEntity userEntity = baseMapper.selectOne(wrapper);
