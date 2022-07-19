@@ -13,6 +13,7 @@
         <module>yiyulihua-task</module>
         <module>yiyulihua-work</module>
         <module>yiyulihua-user</module>
+        <module>yiyulihua-auth</module>
     </modules>
 
 
