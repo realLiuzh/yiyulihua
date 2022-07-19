@@ -4,7 +4,6 @@ import org.redisson.api.RBucket;
 import org.redisson.api.RCountDownLatch;
 import org.redisson.api.RReadWriteLock;
 import org.redisson.api.RedissonClient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 

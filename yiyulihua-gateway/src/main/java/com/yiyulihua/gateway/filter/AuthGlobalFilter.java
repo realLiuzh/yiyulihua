@@ -1,29 +1,49 @@
 package com.yiyulihua.gateway.filter;
 
+import com.alibaba.fastjson.JSON;
+import com.yiyulihua.gateway.config.RedisMethod;
 import com.yiyulihua.gateway.constant.AuthConstant;
+import com.yiyulihua.gateway.entity.UserJwtVo;
+import com.yiyulihua.gateway.service.AuthService;
+import com.yiyulihua.gateway.util.AuthToken;
+import com.yiyulihua.gateway.util.JwtUtils;
+import com.yiyulihua.gateway.util.ResponseCodeEnum;
+import com.yiyulihua.gateway.util.ResponseResult;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.util.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 
 // 认证-全局过滤器
+@Slf4j
 @Component
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
+
+    public static final String Authorization = "Authorization";
+
     // 白名单
-    public static final String NO_AUTH_PATH = "/auth/password/login,/auth/oauth/check_token,/auth/oauth/token";
+    public static final String NO_AUTH_PATH = "/api/user/info,/auth/password/login,/auth/oauth/check_token,/auth/oauth/token";
+
+    //在redis里面的过期时间 3600秒
+    private final Long ExpireTime = 3600l;
 
     @Autowired
     private RedisMethod redisMethod;
+
 
     @Autowired
     private AuthService authService;
@@ -43,19 +63,19 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             List<String> tokenList = request.getHeaders().get(AuthConstant.TOKEN);
             if (CollectionUtils.isEmpty(tokenList)) {
                 // 拦截请求
-                return getVoidMono(serverHttpResponse, );
+                return getVoidMono(serverHttpResponse, ResponseCodeEnum.TOKEN_MISSION);
             }
             String token = tokenList.get(0);
             // 验证token
             String redisToken = redisMethod.getString(token);
             if (StringUtils.isEmpty(redisToken)) {
-                return getVoidMono(serverHttpResponse, );
+                return getVoidMono(serverHttpResponse, ResponseCodeEnum.TOKEN_INVALID);
             }
 
             // refresh token
             long time = redisMethod.getTime(token);
             if (time < 50) {
-                AuthToken authToken = authService.refreshToken(token);
+                AuthToken authToken = authService.refresh_token(token);
                 if (!org.springframework.util.StringUtils.isEmpty(authToken)) {
                     String jsonString = JSON.toJSONString(authToken);
                     //删除Redis原有的令牌 并存入新的令牌
@@ -120,17 +140,11 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
      * @param request
      * @return
      */
-    private boolean isAllowRequesr(ServerHttpRequest request) {
+    private boolean isAllowRequester(ServerHttpRequest request) {
         //获取当前请求的path和method
         String path = request.getPath().toString();
-        String method = request.getMethodValue();
         //判断是否允许
-        if (StringUtils.startsWith(NO_AUTH_PATH, path)) {
-            //是许可的路径 放行
-            return true;
-        }
-        //不是白名单请求
-        return false;
+        return StringUtils.startsWith(NO_AUTH_PATH, path);
     }
 
 
