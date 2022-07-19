@@ -16,6 +16,7 @@ spring:
             - Path=/api/task/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+            - Log
 
         - id: task_user  # 用户模块路由
           uri: lb://yiyulihua-user
@@ -23,6 +24,7 @@ spring:
             - Path=/api/user/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+            - Log
 
         - id: yiyulihua-work
           uri: lb://yiyulihua-work
