@@ -5,7 +5,7 @@ import com.yiyulihua.gateway.config.RedisMethod;
 import com.yiyulihua.gateway.constant.AuthConstant;
 import com.yiyulihua.gateway.entity.UserJwtVo;
 import com.yiyulihua.gateway.service.AuthService;
-import com.yiyulihua.gateway.util.AuthToken;
+import com.yiyulihua.gateway.util.AssertUtil;
 import com.yiyulihua.gateway.util.JwtUtils;
 import com.yiyulihua.gateway.util.ResponseCodeEnum;
 import com.yiyulihua.gateway.util.ResponseResult;
@@ -25,6 +25,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // 认证-全局过滤器
@@ -32,14 +33,18 @@ import java.util.List;
 @Component
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
-
     public static final String Authorization = "Authorization";
 
     // 白名单
-    public static final String NO_AUTH_PATH = "/api/user/info,/auth/password/login,/auth/oauth/check_token,/auth/oauth/token";
+    public static final List<String> NOAUTHPATH;
 
-    //在redis里面的过期时间 3600秒
-    private final Long ExpireTime = 3600l;
+    static {
+        NOAUTHPATH = new ArrayList<>();
+        NOAUTHPATH.add("/api/user/info/1");
+    }
+
+    //在redis里面的过期时间 7200秒
+    private final Long ExpireTime = 7200l;
 
     @Autowired
     private RedisMethod redisMethod;
@@ -53,98 +58,76 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         // 获取request对象
         ServerHttpRequest request = exchange.getRequest();
         // 获取response对象
-        ServerHttpResponse serverHttpResponse = exchange.getResponse();
+        ServerHttpResponse response = exchange.getResponse();
         // 未登录 判断是否为白名单请求
-        if (isAllowRequester(request)) {
-            return chain.filter(exchange);
+        if (isAllowRequester(request)) return chain.filter(exchange);
+        // 获取header中的token
+        List<String> tokenList = request.getHeaders().get(AuthConstant.TOKEN);
+        if (CollectionUtils.isEmpty(tokenList)) {
+            return getVoidMono(response, ResponseCodeEnum.TOKEN_MISSION);
         }
-        try {
-            // 获取header中的token
-            List<String> tokenList = request.getHeaders().get(AuthConstant.TOKEN);
-            if (CollectionUtils.isEmpty(tokenList)) {
-                // 拦截请求
-                return getVoidMono(serverHttpResponse, ResponseCodeEnum.TOKEN_MISSION);
-            }
-            String token = tokenList.get(0);
-            // 验证token
-            String redisToken = redisMethod.getString(token);
-            if (StringUtils.isEmpty(redisToken)) {
-                return getVoidMono(serverHttpResponse, ResponseCodeEnum.TOKEN_INVALID);
-            }
 
-            // refresh token
-            long time = redisMethod.getTime(token);
-            if (time < 50) {
-                AuthToken authToken = authService.refresh_token(token);
-                if (!org.springframework.util.StringUtils.isEmpty(authToken)) {
-                    String jsonString = JSON.toJSONString(authToken);
-                    //删除Redis原有的令牌 并存入新的令牌
-                    if (redisMethod.delString(token)) {
-                        redisMethod.setStringTime(authToken.getAccess_token(), jsonString, ExpireTime);
-                        return returnsToken(serverHttpResponse, authToken);
-                    }
-                }
-
-            }
-            UserJwtVo userJwtFromHeader = JwtUtils.getUserJwtFromToken(token);
-            log.info("用户{}正在访问资源:{}", userJwtFromHeader.getName(), request.getPath());
-            //权限判断 校验通过,请求头增强，放行
-//            Map map = JwtUtils.parsingJwt(token);
-//            String authorities = map.get("authorities").toString();
-//            System.out.println(authorities);
-//            if (!authorities.contains(path)) {
-//                return getVoidMono(serverHttpResponse, ResponseCodeEnum.REFRESH_TOKEN_QUANXIANNOT);
-//            }
-            //增强请求头
-            request.mutate().header(Authorization, "Bearer " + token, "token", token);
-            //放行
-            return chain.filter(exchange);
-        } catch (Exception e) {
-            log.info("服务解析用户信息失败:", e);
-            //内部异常 返回500
-            exchange.getResponse().setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR);
-            return exchange.getResponse().setComplete();
+        // 验证token
+        String token = tokenList.get(0);
+        String redisToken = redisMethod.getString(token);
+        if (StringUtils.isEmpty(redisToken)) {
+            return getVoidMono(response, ResponseCodeEnum.TOKEN_INVALID);
         }
+
+        // TODO refresh token
+
+        UserJwtVo userJwtVo = JwtUtils.getUserInfoByToken(token);
+        log.info("用户:{}正在访问资源:{}", userJwtVo.getName(), request.getPath());
+        // TODO 权限判断 校验通过,请求头增强，放行
+        //增强请求头
+        request.mutate().header(Authorization, "Bearer " + token, "token", token);
+
+        return chain.filter(exchange);
     }
 
-    /**
-     * 创建response返回提示信息
-     *
-     * @param serverHttpResponse
-     * @param responseCodeEnum
-     * @return
-     */
+//    private void refreshToken(String token) {
+//        long time = redisMethod.getTime(token);
+//        if (time <= 3600) {
+//            AuthToken authToken = authService.refresh_token(token);
+//            if (!org.springframework.util.StringUtils.isEmpty(authToken)) {
+//                String jsonString = JSON.toJSONString(authToken);
+//                //删除Redis原有的令牌 并存入新的令牌
+//                if (redisMethod.delString(token)) {
+//                    redisMethod.setStringTime(authToken.getAccess_token(), jsonString, ExpireTime);
+//                    return returnsToken(serverHttpResponse, authToken);
+//                }
+//            }
+//
+//        }
+//    }
+
+
+    // 创建response返回信息
     private Mono<Void> getVoidMono(ServerHttpResponse serverHttpResponse, ResponseCodeEnum responseCodeEnum) {
         serverHttpResponse.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
-        ResponseResult responseResult = ResponseResult.error(responseCodeEnum.getCode(), responseCodeEnum.getMessage());
+        ResponseResult<Object> responseResult = ResponseResult.error(responseCodeEnum.getCode(), responseCodeEnum.getMessage());
         DataBuffer dataBuffer = serverHttpResponse.bufferFactory().wrap(JSON.toJSONString(responseResult).getBytes());
         return serverHttpResponse.writeWith(Flux.just(dataBuffer));
     }
 
-    /**
-     * 创建response返回刷新令牌
-     *
-     * @param serverHttpResponse
-     * @param o
-     * @return
-     */
+    // 创建response返回刷新令牌
     private Mono<Void> returnsToken(ServerHttpResponse serverHttpResponse, Object o) {
         serverHttpResponse.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
         DataBuffer dataBuffer = serverHttpResponse.bufferFactory().wrap(JSON.toJSONString(o).getBytes());
         return serverHttpResponse.writeWith(Flux.just(dataBuffer));
     }
 
-    /**
-     * 判断请求是否在白名单
-     *
-     * @param request
-     * @return
-     */
+    // 判断请求是否在白名单
     private boolean isAllowRequester(ServerHttpRequest request) {
         //获取当前请求的path和method
         String path = request.getPath().toString();
         //判断是否允许
-        return StringUtils.startsWith(NO_AUTH_PATH, path);
+        for (String s : NOAUTHPATH) {
+            if (s.equals(path)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
