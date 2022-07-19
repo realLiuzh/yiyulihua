@@ -12,6 +12,4 @@ public class GatewayConfig {
     public LogGatewayFilterFactory logGatewayFilterFactory() {
         return new LogGatewayFilterFactory();
     }
-
-
 }
