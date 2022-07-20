@@ -1,4 +1,4 @@
-package com.yiyulihua.task;
+package com.yiyulihua.works;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.yiyulihua"})
 @EnableDiscoveryClient
-public class WorkApplication {
+public class WorksApplication {
     public static void main(String[] args) {
-        SpringApplication.run(WorkApplication.class, args);
+        SpringApplication.run(WorksApplication.class, args);
     }
 }

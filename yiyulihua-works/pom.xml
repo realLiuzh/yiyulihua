@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yiyulihua</groupId>
-    <artifactId>yiyulihua-work</artifactId>
+    <artifactId>yiyulihua-works</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>yiyulihua-work</name>
@@ -68,7 +68,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.yiyulihua.task.WorkApplication</mainClass>
+                    <mainClass>com.yiyulihua.works.WorksApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

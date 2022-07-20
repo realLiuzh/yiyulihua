@@ -1,16 +1,16 @@
-package com.yiyulihua.task.controller;
+package com.yiyulihua.works.controller;
 
 import java.util.Arrays;
 
 
+import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.yiyulihua.task.entity.WorkEntity;
-import com.yiyulihua.task.service.WorkService;
+import com.yiyulihua.works.service.WorksService;
 
 
 /**
@@ -19,13 +19,13 @@ import com.yiyulihua.task.service.WorkService;
  */
 
 @RestController
-@RequestMapping("/work")
-public class WorkController {
-    private final WorkService workService;
+@RequestMapping("/works")
+public class WorksController {
+    private final WorksService worksService;
 
     @Autowired
-    public WorkController(WorkService workService) {
-        this.workService = workService;
+    public WorksController(WorksService worksService) {
+        this.worksService = worksService;
     }
 
     /**
@@ -33,7 +33,7 @@ public class WorkController {
      */
     @PostMapping("/list")
     public R list(@RequestBody PageQuery params) {
-        PageUtils page = workService.queryPage(params);
+        PageUtils page = worksService.queryPage(params);
 
         return R.ok().put("page", page);
     }
@@ -44,7 +44,7 @@ public class WorkController {
      */
     @GetMapping("/{id}")
     public R info(@PathVariable("id") String id) {
-        WorkEntity work = workService.getById(id);
+        WorksEntity work = worksService.getById(id);
 
         return R.ok().put("work", work);
     }
@@ -53,8 +53,8 @@ public class WorkController {
      * 保存
      */
     @PostMapping
-    public R save(@RequestBody WorkEntity work) {
-        workService.save(work);
+    public R save(@RequestBody WorksEntity work) {
+        worksService.save(work);
 
         return R.ok();
     }
@@ -63,8 +63,8 @@ public class WorkController {
      * 修改
      */
     @PutMapping
-    public R update(@RequestBody WorkEntity work) {
-        workService.updateById(work);
+    public R update(@RequestBody WorksEntity work) {
+        worksService.updateById(work);
 
         return R.ok();
     }
@@ -74,7 +74,7 @@ public class WorkController {
      */
     @DeleteMapping("{/id}")
     public R delete(@PathVariable String id){
-        workService.removeById(id);
+        worksService.removeById(id);
 
         return R.ok();
     }
@@ -84,7 +84,7 @@ public class WorkController {
      */
     @PostMapping("/delete")
     public R delete(@RequestBody String[] ids) {
-        workService.removeByIds(Arrays.asList(ids));
+        worksService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

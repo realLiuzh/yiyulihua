@@ -1,12 +1,11 @@
-package com.yiyulihua.task.entity;
+package com.yiyulihua.common.po;
 
 import com.baomidou.mybatisplus.annotation.*;
-
-import java.math.BigDecimal;
-import java.io.Serializable;
-import java.util.Date;
-
 import lombok.Data;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @author snbo
@@ -14,7 +13,7 @@ import lombok.Data;
  */
 @Data
 @TableName("tb_work")
-public class WorkEntity implements Serializable {
+public class WorksEntity implements Serializable {
     private static final long serialVersionUID = 212123456781L;
 
     /**
@@ -25,7 +24,7 @@ public class WorkEntity implements Serializable {
     /**
      * 作品名称
      */
-    private String workName;
+    private String worksName;
     /**
      * 作品类型id
      */
@@ -37,7 +36,7 @@ public class WorkEntity implements Serializable {
     /**
      * 作品路径
      */
-    private String workPath;
+    private String worksPath;
     /**
      * 发布者id
      */
@@ -45,27 +44,27 @@ public class WorkEntity implements Serializable {
     /**
      * 作品出价
      */
-    private BigDecimal workPrice;
+    private BigDecimal worksPrice;
     /**
      * 作品截止日期
      */
-    private Date workDeadline;
+    private Date worksDeadline;
     /**
      * 作品图片
      */
-    private String workCover;
+    private String worksCover;
     /**
      * 作品需求
      */
-    private String workDemand;
+    private String worksDemand;
     /**
-     *
+     * 作品流程
      */
-    private String workProcess;
+    private String worksProcess;
     /**
      * 出价人数
      */
-    private Integer workBidNumber;
+    private Integer worksBidNumber;
     /**
      * 创建时间
      */

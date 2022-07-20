@@ -12,7 +12,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
 
   application:
-    name: yiyulihua-work
+    name: yiyulihua-works
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -22,3 +22,6 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
 
+logging:
+  level:
+    com.yiyulihua.work.dao: debug
