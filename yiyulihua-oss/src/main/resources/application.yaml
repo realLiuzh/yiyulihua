@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 175.178.189.89:12208

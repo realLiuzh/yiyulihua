@@ -11,9 +11,11 @@
         <module>yiyulihua-common</module>
         <module>yiyulihua-gateway</module>
         <module>yiyulihua-task</module>
-        <module>yiyulihua-work</module>
+        <module>yiyulihua-works</module>
         <module>yiyulihua-user</module>
         <module>yiyulihua-auth</module>
+        <!--接受右边的咯-->
+        <module>yiyulihua-oss</module>
     </modules>
 
 

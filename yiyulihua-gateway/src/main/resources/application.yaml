@@ -7,7 +7,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.96.86.132:8848
+        server-addr: 175.178.189.89:12208
     gateway:
       routes:
         - id: task_route  #任务模块路由
@@ -26,8 +26,13 @@ spring:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
             - Log
 
-        - id: yiyulihua-work
-          uri: lb://yiyulihua-work
+        - id: yiyulihua-works
+          uri: lb://yiyulihua-works
           predicates:
             - Path=/work/**
+
+        - id: yiyulihua-oss
+          uri: lb://yiyulihua-oss
+          predicates:
+            - Path=/oss/**
 
