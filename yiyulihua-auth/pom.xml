@@ -64,7 +64,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.yiyulihua.auth.YiyulihuaAuthApplication</mainClass>
+                    <mainClass>com.yiyulihua.auth.AuthApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

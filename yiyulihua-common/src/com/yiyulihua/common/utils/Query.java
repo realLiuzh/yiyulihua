@@ -26,7 +26,7 @@ public class Query<T> {
     public Page<T> getPage(PageQuery query, String defaultOrderField, boolean isAsc) {
         //分页参数
         long curPage = 1;
-        long limit = 6;
+        long limit = 8;
 
         if (query.getPage() != null) {
             curPage = Long.parseLong("" + query.getPage());

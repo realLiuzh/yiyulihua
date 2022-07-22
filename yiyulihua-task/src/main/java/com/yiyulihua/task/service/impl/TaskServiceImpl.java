@@ -34,7 +34,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
     private UserFeignService userFeignService;
 
     @Override
-    public PageUtils queryPage(PageQuery params) {
+    public PageUtils<TaskListVo> queryPage(PageQuery params) {
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture");
         wrapper.orderByDesc("update_time");
@@ -51,7 +51,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
             BeanUtils.copyProperties(taskEntity, taskListVo);
             return taskListVo;
         }).collect(Collectors.toList());
-        PageUtils pageUtils = new PageUtils(page);
+        PageUtils<TaskListVo> pageUtils = new PageUtils<>(page);
         pageUtils.setList(list);
         return pageUtils;
     }
@@ -66,7 +66,6 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
 
         TaskVo taskVo = new TaskVo();
         BeanUtils.copyProperties(taskEntity, taskVo);
-
 
         R<UserVo> result = userFeignService.info(taskVo.getPublisherId());
 //        UserVo userVo = result.getData();

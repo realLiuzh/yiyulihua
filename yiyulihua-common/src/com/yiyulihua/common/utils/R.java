@@ -14,7 +14,6 @@ import java.util.Map;
  * @email sunlightcs@gmail.com
  * @date 2016年10月27日 下午9:59:27
  */
-
 public class R<T> extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
     private T data;

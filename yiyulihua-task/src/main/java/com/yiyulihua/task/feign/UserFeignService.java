@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient("yiyulihua-user")
 public interface UserFeignService {
 
-    @GetMapping("/user/info/{id}")
+    @GetMapping("/info/{id}")
     R<UserVo> info(@PathVariable("id") Integer id);
 }

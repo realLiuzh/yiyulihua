@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface LoginDao {
-    UserLoginTo loadUserByUsername(@Param("username") String username);
+    UserLoginTo loadUserByEmail(@Param("email") String email);
 }

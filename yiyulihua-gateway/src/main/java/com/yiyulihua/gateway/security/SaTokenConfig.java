@@ -1,4 +1,4 @@
-package com.yiyulihua.gateway.config;
+package com.yiyulihua.gateway.security;
 
 import cn.dev33.satoken.reactor.context.SaReactorSyncHolder;
 import cn.dev33.satoken.reactor.filter.SaReactorFilter;
@@ -9,8 +9,31 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.server.ServerWebExchange;
 
-//@Configuration
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
+
+@Configuration
 public class SaTokenConfig {
+
+    private static final String[] EXCLUDE_PATH_PATTERNS = {
+            // Swagger
+            "/**/swagger-ui.*",
+            "/**/swagger-resources/**",
+            "/**/webjars/**",
+            "/**/v2/api-docs/**",
+            "/swagger-ui.html/**",
+            "/**/doc.html/**",
+            "/error",
+            "/favicon.ico",
+            "sso/auth",
+            "/csrf",
+
+
+            "/api-auth/login"
+    };
+
     /**
      * 注册Sa-Token全局过滤器
      */
@@ -22,7 +45,7 @@ public class SaTokenConfig {
                 // 鉴权方法：每次访问进入
                 .setAuth(r -> {
                     // 登录认证：除登录接口都需要认证
-                    SaRouter.match("/**", "/auth/user/login", StpUtil::checkLogin);
+                    SaRouter.match(Collections.singletonList("/**"), Arrays.stream(EXCLUDE_PATH_PATTERNS).collect(Collectors.toList()), StpUtil::checkLogin);
                     // 权限认证：不同接口访问权限不同
 //                    SaRouter.match("/api/test/hello", () -> StpUtil.checkPermission("api:test:hello"));
                 })

@@ -9,11 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-@ApiModel("用户登录对象")
-public class LoginPasswordTo {
-    @ApiModelProperty(value = "邮箱",required = true)
-    private String email;
-    @ApiModelProperty(value = "密码",required = true)
-    private String password;
+@ApiModel("token对象")
+public class ApiToken {
+    @ApiModelProperty("token-head")
+    private String tokenHead;
+    @ApiModelProperty("token-value")
+    private String token;
 }

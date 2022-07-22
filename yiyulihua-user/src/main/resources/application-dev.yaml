@@ -2,6 +2,10 @@ server:
   port: 11000
 
 spring:
+  redis:
+    database: 10
+    port: 6379
+    host: 47.96.86.132
   datasource:
     username: snbo
     password: 1234
@@ -25,3 +29,14 @@ logging:
   level:
     com.yiyulihua.user.dao: debug
 
+# Sa-Token配置
+sa-token:
+  token-name: Authorization
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+  is-read-cookie: false
+  is-read-head: true

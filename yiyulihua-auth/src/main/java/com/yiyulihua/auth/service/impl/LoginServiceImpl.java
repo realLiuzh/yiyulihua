@@ -38,9 +38,7 @@ public class LoginServiceImpl implements LoginService {
         return saTokenInfo;
     }
 
-    private UserLoginTo loadUserByUsername(String username) {
-        return loginDao.loadUserByUsername(username);
+    private UserLoginTo loadUserByUsername(String email) {
+        return loginDao.loadUserByEmail(email);
     }
-
-
 }

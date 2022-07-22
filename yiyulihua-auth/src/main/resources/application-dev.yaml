@@ -24,4 +24,9 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
 
+logging:
+  level:
+    com.yiyulihua.auth.dao: debug
+
+
 

@@ -7,7 +7,6 @@ import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFac
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import reactor.core.publisher.Mono;
 
-import javax.servlet.http.HttpServletRequest;
 
 // 记录接口花费时间
 @Slf4j

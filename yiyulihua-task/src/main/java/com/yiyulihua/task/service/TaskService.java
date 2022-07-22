@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.TaskEntity;
+import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskVo;
 
 /**
@@ -13,7 +14,7 @@ import com.yiyulihua.common.vo.TaskVo;
  */
 public interface TaskService extends IService<TaskEntity> {
 
-    PageUtils queryPage(PageQuery params);
+    PageUtils<TaskListVo> queryPage(PageQuery params);
 
     TaskVo selectByid(Integer id);
 }

@@ -13,21 +13,33 @@ spring:
       discovery:
         server-addr: 175.178.189.89:12208
     gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
       routes:
+        - id: auth_route  #认证模块路由
+          uri: lb://yiyulihua-auth
+          predicates:
+            - Path=/api-auth/**
+          filters:
+            - StripPrefix=1
+            - Log
+
         - id: task_route  #任务模块路由
           uri: lb://yiyulihua-task
           predicates:
-            - Path=/api/task/**
+            - Path=/api-task/**
           filters:
-            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+            - StripPrefix=1
             - Log
 
-        - id: task_user  # 用户模块路由
+        - id: user_route  # 用户模块路由
           uri: lb://yiyulihua-user
           predicates:
-            - Path=/api/user/**
+            - Path=/api-user/**
           filters:
-            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+            - StripPrefix=1
             - Log
 
         - id: yiyulihua-works
@@ -39,6 +51,8 @@ spring:
           uri: lb://yiyulihua-oss
           predicates:
             - Path=/oss/**
+
+
 
 # Sa-Token配置
 sa-token:

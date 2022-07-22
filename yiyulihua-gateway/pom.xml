@@ -22,6 +22,14 @@
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
+                    <groupId>cn.dev33</groupId>
+                    <artifactId>sa-token-spring-boot-starter</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+                <exclusion>
                     <groupId>mysql</groupId>
                     <artifactId>mysql-connector-java</artifactId>
                 </exclusion>
@@ -34,6 +42,12 @@
                     <artifactId>druid-spring-boot-starter</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-reactor-spring-boot-starter</artifactId>
+            <version>1.24.0</version>
         </dependency>
 
         <dependency>

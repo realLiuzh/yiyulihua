@@ -1,12 +1,13 @@
-package com.yiyulihua.gateway.config;
+package com.yiyulihua.gateway.security;
 
 import cn.dev33.satoken.stp.StpInterface;
 import cn.dev33.satoken.stp.StpUtil;
 import com.yiyulihua.common.to.UserLoginTo;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-//@Component
+@Component
 public class StpInterfaceImpl implements StpInterface {
 
     @Override

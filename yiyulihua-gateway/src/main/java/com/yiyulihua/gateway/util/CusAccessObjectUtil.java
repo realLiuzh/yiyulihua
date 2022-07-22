@@ -3,8 +3,6 @@ package com.yiyulihua.gateway.util;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * 获取请求的真实IP地址等信息
  *

@@ -17,10 +17,17 @@
 
     <dependencies>
 
+        <!--swagger-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
         <!-- Sa-Token 权限认证（Reactor响应式集成） -->
         <dependency>
             <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-reactor-spring-boot-starter</artifactId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
             <version>1.24.0</version>
         </dependency>
         <!-- Sa-Token 整合 Redis (使用jackson序列化方式) -->

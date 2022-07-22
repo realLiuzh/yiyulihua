@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yiyulihua.auth.dao.LoginDao">
-    <select id="loadUserByUsername">
-        select id,username,password
+    <select id="loadUserByEmail" resultType="com.yiyulihua.common.to.UserLoginTo">
+        select id,email,password
         from tb_user
-        where username=#{username}
+        where email=#{email}
         and is_valid=1;
     </select>
 </mapper>
