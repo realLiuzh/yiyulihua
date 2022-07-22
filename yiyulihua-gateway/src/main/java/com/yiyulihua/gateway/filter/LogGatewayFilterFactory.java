@@ -1,6 +1,5 @@
 package com.yiyulihua.gateway.filter;
 
-import com.yiyulihua.gateway.util.CusAccessObjectUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -27,7 +26,7 @@ public class LogGatewayFilterFactory extends AbstractGatewayFilterFactory<LogGat
                         Long startTime = exchange.getAttribute(REQUEST_START_TIME);
                         if (startTime != null) {
                             ServerHttpRequest request = exchange.getRequest();
-                            log.info("源ip:{},目的地址:{},消耗时间:{}s", CusAccessObjectUtil.getIpAddress(request), request.getURI(), (System.currentTimeMillis() - startTime) / 1000.0);
+                           // log.info("源ip:{},目的地址:{},消耗时间:{}s", CusAccessObjectUtil.getIpAddress(request), request.getURI(), (System.currentTimeMillis() - startTime) / 1000.0);
                         }
                     })
             );

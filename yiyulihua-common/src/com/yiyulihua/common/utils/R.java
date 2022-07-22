@@ -1,9 +1,6 @@
 package com.yiyulihua.common.utils;
 
-import com.yiyulihua.common.exception.BaseErrorInfoInterface;
-import lombok.Data;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,12 +60,12 @@ public class R<T> extends HashMap<String, Object> {
         return this;
     }
 
-    public static R error(BaseErrorInfoInterface errorInfo) {
+/*    public static R error(BaseErrorInfoInterface errorInfo) {
         R rb = new R();
         rb.put("code", errorInfo.getResultCode());
         rb.put("msg", errorInfo.getResultMsg());
         return rb;
-    }
+    }*/
 
     public static R error(String code, String message) {
         R rb = new R();

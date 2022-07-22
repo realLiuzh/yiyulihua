@@ -53,13 +53,20 @@ public class AudioUtils {
     }
 
 
-    public static void cut(FileInputStream inputStream, File target) throws IOException {
-        long length = inputStream.getChannel().size();
-        long size = length / 4;
+    public static void cut(File source, File target, Integer duration) throws IOException, CannotReadException, TagException, InvalidAudioFrameException, ReadOnlyFileException {
+        FileInputStream inputStream = new FileInputStream(source);
+        long size;
+        if ((duration / 3) > 40) {
+            // 比特率 * kbps ==> * kb/s ,1kb = 10^3b 区分 1KB = 2^10B
+            size = getBitRate(source) * 1000 * 40 / 8;
+        } else {
+            long length = source.length();
+            size = length / 3;
+        }
         FileOutputStream outputStream = new FileOutputStream(target);
         byte[] buffer = new byte[1024];
         int total = 0;
-        int len = 0;
+        int len;
         while ((len = inputStream.read(buffer)) != -1) {
             total += len;
             if (total > size) {
@@ -83,6 +90,12 @@ public class AudioUtils {
     public static Integer getTime(File file) throws CannotReadException, TagException, InvalidAudioFrameException, ReadOnlyFileException, IOException {
         AudioFile audioFile = AudioFileIO.read(file);
         return audioFile.getAudioHeader().getTrackLength();
+
+    }
+
+    public static Integer getBitRate(File file) throws CannotReadException, TagException, InvalidAudioFrameException, ReadOnlyFileException, IOException {
+        AudioFile audioFile = AudioFileIO.read(file);
+        return Integer.valueOf(audioFile.getAudioHeader().getBitRate());
     }
 
 
@@ -90,13 +103,11 @@ public class AudioUtils {
      * description: 音频格式转为mp3
      *
      * @param source 源文件
-     * @param target
-     * @return {@link boolean}
+     * @param target 目标文件
      * @author sunbo
      * @date 2022/7/20 11:42
      */
-    public static boolean ConvertingAnyAudioToMp3WithAProgressListener(File source, File target) {
-        boolean succeeded = true;
+    public static void ConvertingAnyAudioToMp3WithAProgressListener(File source, File target) {
         try {
 
             // Audio Attributes/音频编码属性
@@ -147,9 +158,7 @@ public class AudioUtils {
 
         } catch (Exception ex) {
             ex.printStackTrace();
-            succeeded = false;
         }
-        return succeeded;
     }
 
 }
