@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Collectors;
 
-@Configuration
+//@Configuration
 public class SaTokenConfig {
 
     private static final String[] EXCLUDE_PATH_PATTERNS = {
