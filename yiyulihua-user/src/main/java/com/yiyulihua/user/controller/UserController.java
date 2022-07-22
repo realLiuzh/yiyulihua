@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import cn.dev33.satoken.stp.StpUtil;
+import com.yiyulihua.common.to.UserLoginTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.UserVo;
@@ -46,14 +48,24 @@ public class UserController {
     public R<UserVo> info(@PathVariable("id") Integer id) {
         UserVo user = userService.getById(id);
         R<UserVo> r = new R<>();
-        r.put("data",user);
+        r.put("data", user);
 //        r.setData(user);
 //        System.out.println(r.getData());
         return r;
     }
 
 
-
+    /**
+     * 获取特定用户的信息
+     * @return
+     */
+    @GetMapping("/info")
+    @ResponseBody
+    public R infoByToken() {
+        UserLoginTo userInfo = (UserLoginTo) StpUtil.getSession().get("userInfo");
+        UserVo user = userService.getById(userInfo.getId());
+        return R.ok().put("data", user);
+    }
 
 
     /**
