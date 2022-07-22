@@ -34,6 +34,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public  R exceptionHandler(HttpServletRequest req, Exception e) {
         log.error("未知异常!异常描述:", e);
-        return R.error(ApiExceptionEnum.INTERNAL_SERVER_ERROR);
+        return R.error(ApiExceptionEnum.INTERNAL_SERVER_ERROR.getResultCode(),ApiExceptionEnum.INTERNAL_SERVER_ERROR.getResultMsg());
     }
 }

@@ -925,3 +925,83 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2022-07-16 22:56:46.016 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
 2022-07-16 22:56:46.017 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-16 22:56:46.021 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-22 21:50:45.195 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-07-22 21:50:45.745 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-22 21:50:45.746 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-22 21:50:45.760 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2022-07-22 21:50:45.933 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=f7fa1080-27c0-35b1-ae05-06fc25c84c9a
+2022-07-22 21:50:46.153 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-07-22 21:50:46.158 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:50:46.159 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-22 21:50:46.159 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-22 21:50:46.254 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-22 21:50:46.254 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1047 ms
+2022-07-22 21:50:46.569 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:50:46.572 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:50:46.638 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-22 21:50:47.111 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-22 21:50:47.157 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-22 21:50:47.217 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-22 21:50:48.290 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:50:48.309 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-07-22 21:50:48.510 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-07-22 21:50:48.934 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 4.832 seconds (JVM running for 5.532)
+2022-07-22 21:51:17.742 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 21:51:17.742 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-22 21:51:17.748 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-07-22 21:51:46.418 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-22 21:51:46.419 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-22 21:51:46.533 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-22 21:51:46.545 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-22 21:51:51.144 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-07-22 21:51:51.703 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-22 21:51:51.705 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-22 21:51:51.717 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2022-07-22 21:51:51.872 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=e413e9fa-5c39-359b-9820-bfe37818c573
+2022-07-22 21:51:52.126 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-07-22 21:51:52.132 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:51:52.133 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-22 21:51:52.133 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-22 21:51:52.233 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-22 21:51:52.233 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1077 ms
+2022-07-22 21:51:52.577 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:51:52.580 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:51:52.646 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-22 21:51:53.120 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-22 21:51:53.165 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-22 21:51:53.225 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-22 21:51:54.279 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:51:54.302 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-07-22 21:51:54.462 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-07-22 21:51:54.732 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 4.661 seconds (JVM running for 5.367)
+2022-07-22 21:52:00.324 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 21:52:00.324 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-22 21:52:00.328 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-07-22 21:52:58.358 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-22 21:52:58.359 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-22 21:52:58.814 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-22 21:52:58.825 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-22 21:53:04.344 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-07-22 21:53:04.908 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-22 21:53:04.910 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-22 21:53:04.922 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2022-07-22 21:53:05.084 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=e413e9fa-5c39-359b-9820-bfe37818c573
+2022-07-22 21:53:05.300 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-07-22 21:53:05.307 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:53:05.307 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-22 21:53:05.307 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-22 21:53:05.406 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-22 21:53:05.407 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1051 ms
+2022-07-22 21:53:05.748 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:53:05.750 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 21:53:05.817 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-22 21:53:06.292 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-22 21:53:06.336 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-22 21:53:06.396 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-22 21:53:07.450 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-07-22 21:53:07.466 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-07-22 21:53:07.646 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-07-22 21:53:08.040 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 4.793 seconds (JVM running for 5.487)
+2022-07-22 21:53:14.421 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-22 21:53:14.421 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-22 21:53:14.426 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms

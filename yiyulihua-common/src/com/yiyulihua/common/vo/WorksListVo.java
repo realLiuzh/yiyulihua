@@ -32,6 +32,14 @@ public class WorksListVo {
      */
     private String type;
     /**
+     * 作品子类型id
+     */
+    private String subtypeId;
+    /**
+     * 作品子类型
+     */
+    private String subtype;
+    /**
      * 发布者id
      */
     private String publisherId;
@@ -39,6 +47,10 @@ public class WorksListVo {
      * 发布者昵称
      */
     private String publisherNickname;
+    /**
+     * 作品真实路径
+     */
+    private String previewUrl;
     /**
      * 作品出价
      */

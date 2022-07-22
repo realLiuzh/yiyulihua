@@ -30,9 +30,9 @@ public class AudioUtils {
      * @date 2022/7/19 22:17
      */
     public static void cut(FileInputStream fis, FileOutputStream fos, int bt, int start, int end) throws IOException { //			      计算开始截取的字节
-        int sta = bt * start * 1024 / 8;
+        int sta = bt * start * 1000 / 8;
         //计算结束截取的字节
-        int en = bt * end * 1024 / 8;
+        int en = bt * end * 1000 / 8;
         //定义接收到几个字符长度变量len和total累加器
         int len, total = 0;
         //定义接收字节的byte数组

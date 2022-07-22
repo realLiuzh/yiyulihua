@@ -1,8 +1,9 @@
 package com.yiyulihua.oss.service.impl;
 
-import com.aliyun.oss.OSS;
-import com.aliyun.oss.OSSClientBuilder;
-import com.aliyun.oss.OSSException;
+import com.aliyun.oss.*;
+import com.aliyun.oss.model.DeleteObjectsRequest;
+import com.aliyun.oss.model.DeleteObjectsResult;
+import com.aliyun.oss.model.VoidResult;
 import com.spire.doc.Document;
 import com.spire.doc.FileFormat;
 import com.yiyulihua.common.utils.DateUtils;
@@ -24,14 +25,10 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author sunbo
@@ -51,6 +48,7 @@ public class OssServiceImpl implements OssService {
         switch (type) {
             case ".png":
             case ".jpg":
+            case ".jpeg":
                 return uploadImage(file);
             case ".doc":
             case ".docx":
@@ -267,6 +265,53 @@ public class OssServiceImpl implements OssService {
                     "\nHost ID:" + oe.getHostId()
             );
             return null;
+        } finally {
+            if (ossClient != null) {
+                ossClient.shutdown();
+            }
+        }
+    }
+
+    @Override
+    public boolean removeFile(String url) {
+        boolean flag = false;
+        OSS ossClient = null;
+        try {
+            String filename = url.substring(("https://" + ConstantPropertiesUtils.BUCKET_NAME + "." + ConstantPropertiesUtils.END_POINT + "/").length());
+            ossClient = new OSSClientBuilder().build(ConstantPropertiesUtils.END_POINT, ConstantPropertiesUtils.ACCESS_KEY_ID, ConstantPropertiesUtils.ACCESS_KEY_SECRET);
+            VoidResult voidResult = ossClient.deleteObject(ConstantPropertiesUtils.BUCKET_NAME, filename);
+            if (voidResult.getResponse().getStatusCode() == 204) {
+                flag = true;
+            }
+            return flag;
+        } catch (OSSException | ClientException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (ossClient != null) {
+                ossClient.shutdown();
+            }
+        }
+
+    }
+
+    @Override
+    public List<String> removedFiles(List<String> urls) {
+        OSS ossClient = null;
+        try {
+            // 创建OSSClient实例。
+            ossClient = new OSSClientBuilder().build(ConstantPropertiesUtils.END_POINT, ConstantPropertiesUtils.ACCESS_KEY_ID, ConstantPropertiesUtils.ACCESS_KEY_SECRET);
+            // 创建删除请求
+            DeleteObjectsRequest deleteRequest = new DeleteObjectsRequest(ConstantPropertiesUtils.BUCKET_NAME);
+            //添加要删除的文件名
+            urls.replaceAll(s -> s.substring(("https://" + ConstantPropertiesUtils.BUCKET_NAME + "." + ConstantPropertiesUtils.END_POINT + "/").length()));
+
+            deleteRequest.setKeys(urls);
+            //调用删除
+            DeleteObjectsResult objectsResult = ossClient.deleteObjects(deleteRequest);
+            // 返回已删除
+            return objectsResult.getDeletedObjects();
+        } catch (OSSException | ClientException e) {
+            throw new RuntimeException(e);
         } finally {
             if (ossClient != null) {
                 ossClient.shutdown();

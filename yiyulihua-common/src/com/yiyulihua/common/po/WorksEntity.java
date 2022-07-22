@@ -33,6 +33,15 @@ public class WorksEntity implements Serializable {
      * 作品类型
      */
     private String type;
+
+    /**
+     * 作品子类型id
+     */
+    private String subtypeId;
+    /**
+     * 作品子类型
+     */
+    private String subtype;
     /**
      * 作品路径
      */
@@ -65,6 +74,10 @@ public class WorksEntity implements Serializable {
      * 出价人数
      */
     private Integer worksBidNumber;
+    /**
+     * 备注(文字备注为字数,图片备注为大小,音频备注为时长)
+     */
+    private String remark;
     /**
      * 创建时间
      */

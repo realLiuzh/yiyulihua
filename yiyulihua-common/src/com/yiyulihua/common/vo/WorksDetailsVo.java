@@ -21,10 +21,6 @@ public class WorksDetailsVo {
      */
     private String worksName;
     /**
-     * 作品路径
-     */
-    private String worksPath;
-    /**
      * 发布者id
      */
     private String publisherId;
@@ -32,6 +28,26 @@ public class WorksDetailsVo {
      * 发布者昵称
      */
     private String publisherNickname;
+    /**
+     * 作品真实路径
+     */
+    private String previewUrl;
+    /**
+     * 作品类型id
+     */
+    private String typeId;
+    /**
+     * 作品类型
+     */
+    private String type;
+    /**
+     * 作品子类型id
+     */
+    private String subtypeId;
+    /**
+     * 作品子类型
+     */
+    private String subtype;
     /**
      * 作品出价
      */
@@ -56,4 +72,8 @@ public class WorksDetailsVo {
      * 作品流程
      */
     private String worksProcess;
+    /**
+     * 备注(文字备注为字数,图片备注为大小,音频备注为时长)
+     */
+    private String remark;
 }
