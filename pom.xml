@@ -7,6 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>yiyulihu</name>
 
+
+    <packaging>pom</packaging>
+
     <modules>
         <module>yiyulihua-common</module>
         <module>yiyulihua-gateway</module>
@@ -14,7 +17,6 @@
         <module>yiyulihua-works</module>
         <module>yiyulihua-user</module>
         <module>yiyulihua-auth</module>
-        <!--接受右边的咯-->
         <module>yiyulihua-oss</module>
     </modules>
 

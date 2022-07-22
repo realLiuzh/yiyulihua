@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: yiyulihua-gateway
+  redis:
+    database: 10
+    port: 6379
+    host: 47.96.86.132
   cloud:
     nacos:
       discovery:
@@ -36,3 +40,14 @@ spring:
           predicates:
             - Path=/oss/**
 
+# Sa-Token配置
+sa-token:
+  token-name: Authorization
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+  is-read-cookie: false
+  is-read-head: true

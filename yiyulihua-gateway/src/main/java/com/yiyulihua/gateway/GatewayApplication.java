@@ -1,6 +1,5 @@
 package com.yiyulihua.gateway;
 
-import com.yiyulihua.gateway.config.FacePlusThrowErrorHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -19,18 +18,4 @@ public class GatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
-
-
-    @Bean
-    public RestTemplate facePlusRestTemplate() {
-        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
-        requestFactory.setConnectTimeout(300000);
-        requestFactory.setReadTimeout(300000);
-        RestTemplate restTemplate = new RestTemplate(requestFactory);
-        restTemplate.getMessageConverters().set(1, new StringHttpMessageConverter(StandardCharsets.UTF_8));
-        restTemplate.getMessageConverters().add(new FormHttpMessageConverter());
-        restTemplate.setErrorHandler(new FacePlusThrowErrorHandler());
-        return restTemplate;
-    }
-
 }

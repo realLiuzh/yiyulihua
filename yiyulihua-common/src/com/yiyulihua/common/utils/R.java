@@ -1,5 +1,6 @@
 package com.yiyulihua.common.utils;
 
+import com.yiyulihua.common.exception.BaseErrorInfoInterface;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -35,10 +36,6 @@ public class R<T> extends HashMap<String, Object> {
         return error(500, "未知异常，请联系管理员");
     }
 
-    public static R error(String msg) {
-        return error(500, msg);
-    }
-
     public static R error(int code, String msg) {
         R r = new R();
         r.put("code", code);
@@ -65,5 +62,27 @@ public class R<T> extends HashMap<String, Object> {
     public R put(String key, Object value) {
         super.put(key, value);
         return this;
+    }
+
+    public static R error(BaseErrorInfoInterface errorInfo) {
+        R rb = new R();
+        rb.put("code", errorInfo.getResultCode());
+        rb.put("msg", errorInfo.getResultMsg());
+        return rb;
+    }
+
+    public static R error(String code, String message) {
+        R rb = new R();
+        rb.put("code", code);
+        rb.put("msg", message);
+        return rb;
+    }
+
+
+    public static R error(String message) {
+        R rb = new R();
+        rb.put("code", 500);
+        rb.put("msg", message);
+        return rb;
     }
 }

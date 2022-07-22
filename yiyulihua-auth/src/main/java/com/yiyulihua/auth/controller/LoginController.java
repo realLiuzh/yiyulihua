@@ -1,36 +1,35 @@
 package com.yiyulihua.auth.controller;
 
+import cn.dev33.satoken.stp.SaTokenInfo;
+import com.yiyulihua.auth.service.LoginService;
+import com.yiyulihua.common.exception.CustomException;
+import com.yiyulihua.common.exception.ExceptionEnum;
+import com.yiyulihua.common.to.LoginPasswordTo;
+import com.yiyulihua.common.utils.AssertUtil;
+import com.yiyulihua.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 自定义Oauth2获取令牌接口
+ */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/user")
 public class LoginController {
-    @Autowired
-    private TokenService tokenService;
 
     @Autowired
-    private RedisMethod redisMethod;
+    private LoginService loginService;
 
-    /**
-     * 用户密码登录
-     *
-     * @param login
-     * @return
-     */
-    @PostMapping("/password/login")
-    public LoginResult login(@RequestBody LoginDTO login) {
-        //判断用户名和密码不能为空
-        if (StringUtils.isEmpty(login.getUserName()) || login.getUserName() == null) {
-            return new LoginResult(AuthCode.AUTH_USERNAME_NONE, null, null);
-        }
-        if (StringUtils.isEmpty(login.getPassword()) || login.getPassword() == null) {
-            return new LoginResult(AuthCode.AUTH_PASSWORD_NONE, null, null);
-        }
-        //拿着用户名和密码去请求服务来获取 token
-        //登录成功显示这个
-        AuthToken token = tokenService.passwordVerifyToken(login.getUserName(), login.getPassword());
-        return this.errorInfo(token);
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public R login(@RequestBody LoginPasswordTo userInfo) {
+        SaTokenInfo saTokenInfo = loginService.login(userInfo);
+        AssertUtil.isTrue(saTokenInfo == null, new CustomException(ExceptionEnum.LOGIN_ERROR));
+        Map<String, Object> tokenMap = new HashMap<>();
+        tokenMap.put("token", saTokenInfo.getTokenValue());
+        tokenMap.put("tokenHead", saTokenInfo.getTokenName());
+        return R.ok(tokenMap);
     }
 }
