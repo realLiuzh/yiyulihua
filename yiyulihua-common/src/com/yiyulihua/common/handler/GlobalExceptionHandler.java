@@ -1,7 +1,7 @@
 package com.yiyulihua.common.handler;
 
-import com.yiyulihua.common.exception.CustomException;
-import com.yiyulihua.common.exception.ExceptionEnum;
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,8 +23,8 @@ public class GlobalExceptionHandler {
      * @param e
      * @return
      */
-    @ExceptionHandler(value = CustomException.class)
-    public R bizExceptionHandler(HttpServletRequest req, CustomException e) {
+    @ExceptionHandler(value = ApiException.class)
+    public R bizExceptionHandler(HttpServletRequest req, ApiException e) {
         log.error("发生业务异常!异常描述:{}", e.getErrorMsg());
         return R.error(e.getErrorCode(), e.getErrorMsg());
     }
@@ -34,6 +34,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public  R exceptionHandler(HttpServletRequest req, Exception e) {
         log.error("未知异常!异常描述:", e);
-        return R.error(ExceptionEnum.INTERNAL_SERVER_ERROR);
+        return R.error(ApiExceptionEnum.INTERNAL_SERVER_ERROR);
     }
 }

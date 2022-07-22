@@ -1,7 +1,7 @@
 package com.yiyulihua.common.exception;
 
 // 异常处理枚举类
-public enum ExceptionEnum implements BaseErrorInfoInterface {
+public enum ApiExceptionEnum implements BaseErrorInfoInterface {
 
     SUCCESS("0", "成功!"),
     INTERNAL_SERVER_ERROR("5000", "服务器内部错误!"),
@@ -23,7 +23,7 @@ public enum ExceptionEnum implements BaseErrorInfoInterface {
      */
     private final String resultMsg;
 
-    ExceptionEnum(String resultCode, String resultMsg) {
+    ApiExceptionEnum(String resultCode, String resultMsg) {
         this.resultCode = resultCode;
         this.resultMsg = resultMsg;
     }

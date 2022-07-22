@@ -2,8 +2,8 @@ package com.yiyulihua.auth.controller;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import com.yiyulihua.auth.service.LoginService;
-import com.yiyulihua.common.exception.CustomException;
-import com.yiyulihua.common.exception.ExceptionEnum;
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.to.LoginPasswordTo;
 import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
@@ -26,7 +26,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public R login(@RequestBody LoginPasswordTo userInfo) {
         SaTokenInfo saTokenInfo = loginService.login(userInfo);
-        AssertUtil.isTrue(saTokenInfo == null, new CustomException(ExceptionEnum.LOGIN_ERROR));
+        AssertUtil.isTrue(saTokenInfo == null, new ApiException(ApiExceptionEnum.LOGIN_ERROR));
         Map<String, Object> tokenMap = new HashMap<>();
         tokenMap.put("token", saTokenInfo.getTokenValue());
         tokenMap.put("tokenHead", saTokenInfo.getTokenName());

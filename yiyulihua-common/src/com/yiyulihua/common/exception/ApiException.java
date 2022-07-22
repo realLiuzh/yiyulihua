@@ -3,7 +3,7 @@ package com.yiyulihua.common.exception;
 import lombok.Data;
 
 @Data
-public class CustomException extends RuntimeException {
+public class ApiException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
@@ -16,34 +16,34 @@ public class CustomException extends RuntimeException {
      */
     protected String errorMsg;
 
-    public CustomException() {
+    public ApiException() {
         super();
     }
 
-    public CustomException(BaseErrorInfoInterface errorInfoInterface) {
+    public ApiException(BaseErrorInfoInterface errorInfoInterface) {
         super(errorInfoInterface.getResultCode());
         this.errorCode = errorInfoInterface.getResultCode();
         this.errorMsg = errorInfoInterface.getResultMsg();
     }
 
-    public CustomException(BaseErrorInfoInterface errorInfoInterface, Throwable cause) {
+    public ApiException(BaseErrorInfoInterface errorInfoInterface, Throwable cause) {
         super(errorInfoInterface.getResultCode(), cause);
         this.errorCode = errorInfoInterface.getResultCode();
         this.errorMsg = errorInfoInterface.getResultMsg();
     }
 
-    public CustomException(String errorMsg) {
+    public ApiException(String errorMsg) {
         super(errorMsg);
         this.errorMsg = errorMsg;
     }
 
-    public CustomException(String errorCode, String errorMsg) {
+    public ApiException(String errorCode, String errorMsg) {
         super(errorCode);
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;
     }
 
-    public CustomException(String errorCode, String errorMsg, Throwable cause) {
+    public ApiException(String errorCode, String errorMsg, Throwable cause) {
         super(errorCode, cause);
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;
