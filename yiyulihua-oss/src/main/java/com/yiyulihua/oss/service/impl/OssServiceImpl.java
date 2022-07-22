@@ -81,12 +81,14 @@ public class OssServiceImpl implements OssService {
             // MultipartFile转File
             source = FileUtils.multipartFileToFile(file);
 
+            //时长
+            duration = AudioUtils.getTime(source);
             if (".flac".equals(suffix)) {
                 // flac 格式转为mp3
                 File tempMp3 = File.createTempFile("tempMp3", ".mp3");
                 AudioUtils.ConvertingAnyAudioToMp3WithAProgressListener(source, tempMp3);
-                // 截取1/4
-                AudioUtils.cut(new FileInputStream(tempMp3), tempFile);
+                // 截取1/3 或 40s
+                AudioUtils.cut(tempMp3, tempFile, duration);
                 previewUrl = upload(createFileName("audioPreview", filename + ".mp3"), Files.newInputStream(tempFile.toPath()));
                 //删除临时文件
                 if (!tempMp3.delete()) {
@@ -94,14 +96,13 @@ public class OssServiceImpl implements OssService {
                 }
             } else if (".mp3".equals(suffix)) {
                 assert source != null;
-                AudioUtils.cut(new FileInputStream(source), tempFile);
+                AudioUtils.cut(source, tempFile, duration);
                 previewUrl = upload(createFileName("audioPreview", filename), Files.newInputStream(tempFile.toPath()));
             } else {
                 throw new RRException("格式错误");
             }
 
             realUrl = upload(createFileName("audio", filename), Files.newInputStream(source.toPath()));
-            duration = AudioUtils.getTime(source);
 
             Map<String, Object> map = new HashMap<>();
             map.put("realUrl", realUrl);
