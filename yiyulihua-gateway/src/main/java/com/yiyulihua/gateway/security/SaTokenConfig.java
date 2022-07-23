@@ -31,7 +31,8 @@ public class SaTokenConfig {
             "/csrf",
 
 
-            "/api-auth/login"
+            "/api-auth/login",
+            "/api-auth/send/phone"
     };
 
     /**
