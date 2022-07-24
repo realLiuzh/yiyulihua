@@ -212,6 +212,7 @@ public class OssServiceImpl implements OssService {
             if (!StringUtils.isEmpty(split[0])) {
                 document.replace(split[0], "\r\n购买查看后续...", true, true);
             }
+
             for (int i = 1; i < split.length; i++) {
                 if (!StringUtils.isEmpty(split[i])) {
                     document.replace(split[i], "", true, true);

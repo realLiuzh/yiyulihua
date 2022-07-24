@@ -29,6 +29,5 @@ public class TestService {
         list.add("https://edu-mogu.oss-cn-chengdu.aliyuncs.com/2022/03/26/9664252468e7449d92c01983e618c74cfile.png");
 
         list.add("https://edu-mogu.oss-cn-chengdu.aliyuncs.com/2022/06/19/961c18f76d05439ca8fef5f8d4ed9554file.jpg/png");
-        System.out.println(controller.deleteFiles(list));
     }
 }

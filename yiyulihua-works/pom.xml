@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yiyulihua</groupId>
-    <artifactId>yiyulihua-works</artifactId>
+    <artifactId>works</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>yiyulihua-work</name>
@@ -80,6 +80,11 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
 
 </project>

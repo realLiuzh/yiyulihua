@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yiyulihua.works.dao.WorksDao">
+    <select id="getWorksList" resultType="com.yiyulihua.common.vo.WorksListVo">
+        SELECT tb_works.`id`,
+               `works_name`,
+               `publisher_id`,
+               `username` AS publisherNickname,
+               `type_id`,
+               `type`,
+               `subtype_id`,
+               `subtype`,
+               `preview_url`,
+               `works_price`,
+               `works_cover`,
+               `works_bid_number`
+        FROM `tb_works`
+                 LEFT JOIN `tb_user`
+                           ON `tb_works`.`publisher_id` = tb_user.`id`
+            ${ew.customSqlSegment}
+    </select>
+
+    <select id="getWorksDetails" resultType="com.yiyulihua.common.vo.WorksDetailsVo">
+        SELECT tb_works.`id`,
+               `works_name`,
+               `publisher_id`,
+               `username` AS publisherNickname,
+               `type_id`,
+               `type`,
+               `subtype_id`,
+               `subtype`,
+               `preview_url`,
+               `works_price`,
+               `works_cover`,
+               `works_demand`,
+               `works_bid_number`,
+               `works_process`,
+               `remark`
+        FROM `tb_works`
+                 LEFT JOIN `tb_user`
+                           ON `tb_works`.`publisher_id` = tb_user.`id`
+            ${ew.customSqlSegment}
+    </select>
+</mapper>
+

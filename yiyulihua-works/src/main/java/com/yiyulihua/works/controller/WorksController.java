@@ -3,10 +3,15 @@ package com.yiyulihua.works.controller;
 import java.util.Arrays;
 
 
-import com.yiyulihua.common.po.WorksEntity;
-import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.query.WorksQuery;
+import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
+import com.yiyulihua.common.vo.WorksDetailsVo;
+import com.yiyulihua.common.vo.WorksListVo;
+import com.yiyulihua.common.vo.WorksPublishVo;
+import com.yiyulihua.common.vo.WorksUpdateVo;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +23,8 @@ import com.yiyulihua.works.service.WorksService;
  * @date 2022-07-16 16:53:42
  */
 
+@Api(value = "作品管理")
 @RestController
-@RequestMapping("/works")
 public class WorksController {
     private final WorksService worksService;
 
@@ -28,65 +33,83 @@ public class WorksController {
         this.worksService = worksService;
     }
 
-    /**
-     * 列表
-     */
+    @ApiOperation(value = "按条件分页查询作品信息", notes = "timeSort priceSort为排序参数,大于0为降序,小于0为升序,默认为0不排序.如果要同时按时间和价格排序,比较两者绝对值,绝对值大的先排序", tags = "查询操作")
     @PostMapping("/list")
-    public R list(@RequestBody PageQuery params) {
-        PageUtils page = worksService.queryPage(params);
+    public Result<PageUtils<WorksListVo>> list(@RequestBody(required = true) WorksQuery worksQuery) {
+        PageUtils<WorksListVo> page = worksService.queryPage(worksQuery);
 
-        return R.ok().put("page", page);
+        return new Result<PageUtils<WorksListVo>>().setData(page);
     }
 
 
-    /**
-     * 信息
-     */
+    @ApiOperation(value = "根据作品id查询作品的详细信息", tags = "查询操作")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id",
+                    value = "作品 id",
+                    required = true,
+                    paramType = "path")
+    })
     @GetMapping("/{id}")
-    public R info(@PathVariable("id") String id) {
-        WorksEntity work = worksService.getById(id);
+    public Result<WorksDetailsVo> info(@PathVariable("id") String id) {
+        WorksDetailsVo works = worksService.getDetailsInfoById(id);
 
-        return R.ok().put("work", work);
+        return new Result<WorksDetailsVo>().setData(works);
     }
 
-    /**
-     * 保存
-     */
-    @PostMapping
-    public R save(@RequestBody WorksEntity work) {
-        worksService.save(work);
 
-        return R.ok();
+    @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ", tags = "增改操作")
+    @PostMapping
+    public Result save(@RequestBody(required = true) WorksPublishVo work) {
+        worksService.publishOrSave(work);
+
+        return Result.success();
     }
 
     /**
      * 修改
      */
+    @ApiOperation(value = "根据作品id更新作品信息", notes = "id 为必填项,其余非必需", tags = "增改操作")
     @PutMapping
-    public R update(@RequestBody WorksEntity work) {
-        worksService.updateById(work);
+    public Result update(@RequestBody(required = true) WorksUpdateVo work) {
+        worksService.updateInfoById(work);
 
-        return R.ok();
+        return Result.success();
     }
 
     /**
      * 删除
      */
-    @DeleteMapping("{/id}")
-    public R delete(@PathVariable String id){
+    @ApiOperation(value = "根据 id 删除作品信息", tags = "删除操作")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id",
+                    value = "作品 id",
+                    required = true,
+                    paramType = "path"
+            )
+    })
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable("id") String id) {
         worksService.removeById(id);
 
-        return R.ok();
+        return Result.success();
     }
 
     /**
      * 批量删除
      */
+    @ApiOperation(value = "根据 id 批量删除作品信息", tags = "删除操作")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "ids",
+                    value = "作品 id 数组",
+                    required = true,
+                    paramType = "body",
+                    dataType = "String[]")
+    })
     @PostMapping("/delete")
-    public R delete(@RequestBody String[] ids) {
+    public Result delete(@RequestBody String[] ids) {
         worksService.removeByIds(Arrays.asList(ids));
 
-        return R.ok();
-    }
+        return Result.success();
 
+    }
 }

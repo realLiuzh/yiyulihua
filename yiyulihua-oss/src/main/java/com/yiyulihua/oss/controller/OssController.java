@@ -1,11 +1,17 @@
 package com.yiyulihua.oss.controller;
 
+import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.oss.service.OssService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +21,7 @@ import java.util.Map;
  * @author sunbo
  * @date 2022-07-18-17:45
  */
+@Api(value = "文件管理")
 @RestController
 @RequestMapping("/oss")
 public class OssController {
@@ -26,50 +33,47 @@ public class OssController {
         this.ossService = ossService;
     }
 
-    /**
-     * description: 上传文件
-     *
-     * @param file 图片/文本/音频
-     * @return {@link R}
-     * @author sunbo
-     * @date 2022/7/22 21:08
-     */
+    @ApiOperation(value = "上传文件", tags = "上传文件")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "file",
+                    value = "作品文件",
+                    required = true)
+    })
     @PostMapping
-    public R loadFile(MultipartFile file) {
+    public Result loadFile(@RequestParam("file") MultipartFile file) {
         Map<String, Object> map = ossService.uploadFile(file);
-        return R.ok(map);
+        return Result.success();
     }
 
-    /**
-     * description: 删除文件
-     *
-     * @param url 文件url
-     * @return {@link R}
-     * @author sunbo
-     * @date 2022/7/22 21:08
-     */
+
+    @ApiOperation(value = "根据 url 删除文件", tags = "删除文件")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "url",
+                    value = "文件url",
+                    required = true,
+                    paramType = "query")
+    })
     @DeleteMapping
-    public R deleteFile(@PathVariable("url") String url) {
+    public Result deleteFile(@RequestParam("url") String url) {
         if (ossService.removeFile(url)) {
-            return R.ok("删除成功");
+            return Result.success();
         }
-        return R.error("删除失败");
+        return Result.error("删除失败");
     }
 
-    /**
-     * description: 批量删除文件
-     *
-     * @param urls 文件url列表
-     * @return {@link R}
-     * @author sunbo
-     * @date 2022/7/22 21:09
-     */
-    @DeleteMapping("/remove")
-    public R deleteFiles(@RequestParam("urls") List<String> urls) {
-        List<String> list = ossService.removedFiles(urls);
+
+    @ApiOperation(value = "根据 id 批量删除文件", tags = "删除文件")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "urls",
+                    value = "url 数组",
+                    required = true,
+                    paramType = "body")})
+    @PostMapping("/delete")
+    public Result deleteFiles(@RequestBody String[] urls) {
+        List<String> list = ossService.removedFiles(Arrays.asList(urls));
         if (list == null) {
-            return R.error("删除失败");
+            return Result.error("删除失败");
         }
-        return R.ok("删除成功");
+        return Result.success();
     }
 }

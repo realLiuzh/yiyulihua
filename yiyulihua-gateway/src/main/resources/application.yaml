@@ -42,15 +42,21 @@ spring:
             - StripPrefix=1
             - Log
 
-        - id: yiyulihua-works
+        - id: works_route #作品模块路由
           uri: lb://yiyulihua-works
           predicates:
-            - Path=/work/**
+            - Path=/api-works/**
+          filters:
+            - StripPrefix=1
+            - Log
 
-        - id: yiyulihua-oss
+        - id: oss-route
           uri: lb://yiyulihua-oss
           predicates:
-            - Path=/oss/**
+            - Path=/api-oss/**
+          filters:
+            - StripPrefix=1
+            - Log
 
 
 
