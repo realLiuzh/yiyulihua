@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.WorksQuery;
 import com.yiyulihua.common.utils.PageUtils;
-import com.yiyulihua.common.vo.WorksDetailsVo;
-import com.yiyulihua.common.vo.WorksListVo;
-import com.yiyulihua.common.vo.WorksPublishVo;
-import com.yiyulihua.common.vo.WorksUpdateVo;
+import com.yiyulihua.common.vo.*;
 
 /**
  * @author Ö¾ê»µÄÁõ
@@ -53,5 +50,8 @@ public interface WorksService extends IService<WorksEntity> {
      * @date 2022/7/24 17:19
      */
     void updateInfoById(WorksUpdateVo work);
+
+    PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size, String publisherId);
+
 }
 

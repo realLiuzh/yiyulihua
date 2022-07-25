@@ -99,6 +99,9 @@ public class WorksEntity implements Serializable {
 
     @ApiModelProperty("作品状态(0:未发布 1:已发布)")
     private Integer worksStatus;
+
+    @ApiModelProperty("作品截止时间")
+    private Date worksDeadline;
     /**
      * 创建时间
      */

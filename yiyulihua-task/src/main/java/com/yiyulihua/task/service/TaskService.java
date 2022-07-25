@@ -5,6 +5,7 @@ import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.common.vo.TaskListVo;
+import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
 
 /**
@@ -16,6 +17,8 @@ public interface TaskService extends IService<TaskEntity> {
 
     PageUtils<TaskListVo> queryPage(PageQuery params);
 
-    TaskVo selectByid(Integer id);
+    TaskVo selectById(Integer id);
+
+    PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId);
 }
 

@@ -3,11 +3,10 @@ package com.yiyulihua.task.controller;
 import java.util.Arrays;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
-import com.yiyulihua.common.exception.ApiException;
-import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.vo.TaskListVo;
+import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -65,8 +64,33 @@ public class TaskController {
     })
     @GetMapping("/info")
     public Result<TaskVo> selectById(@RequestParam("id") Integer id) {
-        TaskVo task = taskService.selectByid(id);
+        TaskVo task = taskService.selectById(id);
         return new Result<TaskVo>().setData(task);
+    }
+
+    @ApiOperation(value = "通过用户 id 分页查询用户发布的任务")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "current",
+                    value = "当前页",
+                    required = true,
+                    paramType = "path"),
+            @ApiImplicitParam(name = "size",
+                    value = "每页记录条数",
+                    required = true,
+                    paramType = "path"),
+            @ApiImplicitParam(name = "publisherId",
+                    value = "发布者 id",
+                    required = true,
+                    paramType = "query")
+    })
+    @GetMapping("/publisher/{current}/{size}")
+    public Result<PageUtils<TaskMyPublishVo>> getTaskByPublisherId(
+            @PathVariable("current") Integer current,
+            @PathVariable("size") Integer size,
+            @RequestParam("publisherId") String publisherId) {
+        PageUtils<TaskMyPublishVo> page = taskService.getByPublisherId(current, size, publisherId);
+
+        return new Result<PageUtils<TaskMyPublishVo>>().setData(page);
     }
 
     /**

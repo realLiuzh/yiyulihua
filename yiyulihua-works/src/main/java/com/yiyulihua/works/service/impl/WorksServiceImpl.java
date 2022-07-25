@@ -8,10 +8,7 @@ import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.query.WorksQuery;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
-import com.yiyulihua.common.vo.WorksDetailsVo;
-import com.yiyulihua.common.vo.WorksListVo;
-import com.yiyulihua.common.vo.WorksPublishVo;
-import com.yiyulihua.common.vo.WorksUpdateVo;
+import com.yiyulihua.common.vo.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -21,6 +18,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yiyulihua.works.dao.WorksDao;
 import com.yiyulihua.works.service.WorksService;
 import org.springframework.util.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service("workService")
@@ -57,9 +57,9 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         if (!isEmpty(timeSort) && !isEmpty(priceSort)) {
             if (Math.abs(timeSort) > Math.abs(priceSort)) {
                 if (timeSort > 0) {
-                    wrapper.orderByDesc("tb_works.create_time");
+                    wrapper.orderByDesc("works_deadline");
                 } else {
-                    wrapper.orderByAsc("tb_works.create_time");
+                    wrapper.orderByAsc("works_deadline");
                 }
                 if (priceSort > 0) {
                     wrapper.orderByDesc("works_price");
@@ -73,16 +73,16 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
                     wrapper.orderByAsc("works_price");
                 }
                 if (timeSort > 0) {
-                    wrapper.orderByDesc("tb_works.create_time");
+                    wrapper.orderByDesc("works_deadline");
                 } else {
-                    wrapper.orderByAsc("tb_works.create_time");
+                    wrapper.orderByAsc("works_deadline");
                 }
             }
         } else if (isEmpty(timeSort)) {
             if (timeSort > 0) {
-                wrapper.orderByDesc("tb_works.create_time");
+                wrapper.orderByDesc("works_deadline");
             } else {
-                wrapper.orderByAsc("tb_works.create_time");
+                wrapper.orderByAsc("works_deadline");
             }
         } else if (isEmpty(priceSort)) {
             if (priceSort > 0) {
@@ -138,6 +138,29 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         if (i < 1) {
             throw new ApiException("-1", "更新作品失败");
         }
+    }
+
+    @Override
+    public PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size, String publisherId) {
+        //条件
+        QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
+        wrapper.eq("publisher_id", publisherId);
+        wrapper.orderByDesc("create_time");
+
+        //分页查询
+        Page<WorksEntity> page = new Query<WorksEntity>().getPage(new PageQuery(current, size));
+        baseMapper.selectPage(page, wrapper);
+
+        //封装数据
+        List<WorksEntity> worksEntities = page.getRecords();
+        List<WorksMyPublishVo> list = new ArrayList<>();
+        worksEntities.forEach(worksEntity -> {
+            WorksMyPublishVo worksMyPublishVo = new WorksMyPublishVo();
+            BeanUtils.copyProperties(worksEntity, worksMyPublishVo);
+            list.add(worksMyPublishVo);
+        });
+
+        return new PageUtils<WorksMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
 
     private void checkEmpty(WorksPublishVo work) {

@@ -1,12 +1,10 @@
 package com.yiyulihua.oss.controller;
 
 import com.yiyulihua.common.result.Result;
-import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.TypeListVo;
 import com.yiyulihua.oss.service.TypeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.bouncycastle.LICENSE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

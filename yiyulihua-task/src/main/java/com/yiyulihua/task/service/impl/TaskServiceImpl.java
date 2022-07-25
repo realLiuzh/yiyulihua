@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.TaskListVo;
+import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
 import com.yiyulihua.common.vo.UserVo;
 import com.yiyulihua.task.feign.UserFeignService;
@@ -57,7 +58,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
     }
 
     @Override
-    public TaskVo selectByid(Integer id) {
+    public TaskVo selectById(Integer id) {
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "publisher_id", "task_price", "task_deadline", "task_picture", "task_demands", "task_works_number", "task_process");
         wrapper.eq("id", id);
@@ -79,6 +80,29 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         taskVo.setPublisherName((String) data.get("username"));
         return taskVo;
 
+    }
+
+    @Override
+    public PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId) {
+        //条件
+        QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
+        wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture", "task_works_number");
+        wrapper.eq("publisher_id", publisherId);
+        wrapper.orderByAsc("create_time");
+        wrapper.eq("is_valid", 1);
+
+        //分页
+        Page<TaskEntity> page = new Query<TaskEntity>().getPage(new PageQuery(current, size));
+        baseMapper.selectPage(page, wrapper);
+
+        List<TaskEntity> tasks = page.getRecords();
+        List<TaskMyPublishVo> list = tasks.stream().map(taskEntity -> {
+            TaskMyPublishVo taskListVo = new TaskMyPublishVo();
+            BeanUtils.copyProperties(taskEntity, taskListVo);
+            return taskListVo;
+        }).collect(Collectors.toList());
+
+        return new PageUtils<TaskMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
 
 }

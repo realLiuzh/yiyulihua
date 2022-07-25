@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @author sunbo
@@ -35,22 +36,12 @@ public class WorksDetailsVo {
     @ApiModelProperty("发布者昵称")
     private String publisherNickname;
     /**
-     * 作品类型id
-     */
-    @ApiModelProperty("作品类型 id")
-    private String typeId;
-    /**
      * 作品类型
      */
-    @ApiModelProperty("作品类型(如: text/image/audio...)")
+    @ApiModelProperty("作品类型(如: /图片/音频...)")
     private String type;
     /**
-     * 作品子类型id
-     */
-    @ApiModelProperty("作品子类型(格式) id")
-    private String subtypeId;
-    /**
-     * 作品子类型
+     * 作品子类型(格式)
      */
     @ApiModelProperty("作品子类型(如: jpg/png/mp3/flac/doc...)")
     private String subtype;
@@ -90,4 +81,6 @@ public class WorksDetailsVo {
     @ApiModelProperty("备注(文字作品备注为字数,图片作品备注为大小,音频作品备注为时长)")
     private String remark;
 
+    @ApiModelProperty("作品截止时间")
+    private Date worksDeadline;
 }

@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @author sunbo
@@ -28,7 +29,7 @@ public class WorksPublishVo {
     /**
      * 作品类型
      */
-    @ApiModelProperty(value = "作品类型(如: text/image/audio...)", required = true)
+    @ApiModelProperty(value = "作品类型(如: 图片/音频...)", required = true)
     private String type;
     /**
      * 作品子类型id
@@ -79,4 +80,7 @@ public class WorksPublishVo {
 
     @ApiModelProperty(value = "作品状态(0:未发布 1:已发布)默认为 0", required = true)
     private Integer worksStatus;
+
+    @ApiModelProperty("作品截止时间")
+    private Date worksDeadline;
 }

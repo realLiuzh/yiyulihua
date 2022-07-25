@@ -6,10 +6,7 @@ import java.util.Arrays;
 import com.yiyulihua.common.query.WorksQuery;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.utils.PageUtils;
-import com.yiyulihua.common.vo.WorksDetailsVo;
-import com.yiyulihua.common.vo.WorksListVo;
-import com.yiyulihua.common.vo.WorksPublishVo;
-import com.yiyulihua.common.vo.WorksUpdateVo;
+import com.yiyulihua.common.vo.*;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -55,6 +52,31 @@ public class WorksController {
         return new Result<WorksDetailsVo>().setData(works);
     }
 
+
+    @ApiOperation(value = "通过用户 id 分页查询用户发布的作品", tags = "查询操作")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "current",
+                    value = "当前页",
+                    required = true,
+                    paramType = "path"),
+            @ApiImplicitParam(name = "size",
+                    value = "每页记录条数",
+                    required = true,
+                    paramType = "path"),
+            @ApiImplicitParam(name = "publisherId",
+                    value = "发布者 id",
+                    required = true,
+                    paramType = "query")
+    })
+    @GetMapping("/publisher/{current}/{size}")
+    public Result<PageUtils<WorksMyPublishVo>> getWorksByPublisherId(
+            @PathVariable("current") Integer current,
+            @PathVariable("size") Integer size,
+            @RequestParam("publisherId") String publisherId) {
+        PageUtils<WorksMyPublishVo> works = worksService.getWorksByPublisherId(current, size, publisherId);
+
+        return new Result<PageUtils<WorksMyPublishVo>>().setData(works);
+    }
 
     @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ", tags = "增改操作")
     @PostMapping
@@ -111,4 +133,5 @@ public class WorksController {
         return Result.success();
 
     }
+
 }

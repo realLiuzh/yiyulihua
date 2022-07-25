@@ -6,14 +6,12 @@
                `works_name`,
                `publisher_id`,
                `username` AS publisherNickname,
-               `type_id`,
                `type`,
-               `subtype_id`,
                `subtype`,
-               `preview_url`,
                `works_price`,
                `works_cover`,
-               `works_bid_number`
+               `works_bid_number`,
+               `works_deadline`
         FROM `tb_works`
                  LEFT JOIN `tb_user`
                            ON `tb_works`.`publisher_id` = tb_user.`id`
@@ -25,9 +23,7 @@
                `works_name`,
                `publisher_id`,
                `username` AS publisherNickname,
-               `type_id`,
                `type`,
-               `subtype_id`,
                `subtype`,
                `preview_url`,
                `works_price`,
@@ -35,7 +31,8 @@
                `works_demand`,
                `works_bid_number`,
                `works_process`,
-               `remark`
+               `remark`,
+               `works_deadline`
         FROM `tb_works`
                  LEFT JOIN `tb_user`
                            ON `tb_works`.`publisher_id` = tb_user.`id`
