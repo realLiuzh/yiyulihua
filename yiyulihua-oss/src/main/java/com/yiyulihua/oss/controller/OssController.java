@@ -1,12 +1,8 @@
 package com.yiyulihua.oss.controller;
 
 import com.yiyulihua.common.result.Result;
-import com.yiyulihua.common.utils.R;
 import com.yiyulihua.oss.service.OssService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,9 +17,8 @@ import java.util.Map;
  * @author sunbo
  * @date 2022-07-18-17:45
  */
-@Api(value = "文件管理")
+@Api(value = "作品文件的上传删除等", tags = "作品文件管理")
 @RestController
-@RequestMapping("/oss")
 public class OssController {
 
     private final OssService ossService;
@@ -33,20 +28,20 @@ public class OssController {
         this.ossService = ossService;
     }
 
-    @ApiOperation(value = "上传文件", tags = "上传文件")
+    @ApiOperation(value = "上传文件")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "file",
                     value = "作品文件",
                     required = true)
     })
     @PostMapping
-    public Result loadFile(@RequestParam("file") MultipartFile file) {
+    public Result<Map<String, Object>> loadFile(@RequestParam("file") MultipartFile file) {
         Map<String, Object> map = ossService.uploadFile(file);
-        return Result.success();
+        return new Result<Map<String, Object>>().setData(map);
     }
 
 
-    @ApiOperation(value = "根据 url 删除文件", tags = "删除文件")
+    @ApiOperation(value = "根据 url 删除文件")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "url",
                     value = "文件url",
@@ -62,7 +57,7 @@ public class OssController {
     }
 
 
-    @ApiOperation(value = "根据 id 批量删除文件", tags = "删除文件")
+    @ApiOperation(value = "根据 id 批量删除文件")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "urls",
                     value = "url 数组",
