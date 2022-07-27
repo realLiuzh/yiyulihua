@@ -8,7 +8,7 @@
     <artifactId>yiyulihua-oss</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>yiyulihua-oss</name>
+    <name>oss</name>
 
     <properties>
         <java.version>1.8</java.version>
