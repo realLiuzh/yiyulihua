@@ -43,6 +43,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture");
         wrapper.orderByDesc("update_time");
+        wrapper.eq("task_status", 1);
         wrapper.eq("is_valid", 0);
 
 
@@ -116,6 +117,11 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         taskEntity.setTaskWorksNumber(0);
         int insert = this.baseMapper.insert(taskEntity);
         AssertUtil.isTrue(insert != 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+    }
+
+    @Override
+    public List<TaskListVo> recommendTask() {
+        return baseMapper.recommendTask();
     }
 
 }

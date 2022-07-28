@@ -1,6 +1,7 @@
 package com.yiyulihua.task.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import com.yiyulihua.common.annotation.I18n;
@@ -103,6 +104,13 @@ public class TaskController {
     public Result<Object> buildTask(@RequestBody TaskBuildTo taskBuildTo) {
         taskService.buildTask(taskBuildTo);
         return Result.success();
+    }
+
+    @ApiOperation("发布推荐")
+    @GetMapping("/recommend")
+    public Result<List<TaskListVo>> recommendTask() {
+        List<TaskListVo> list = taskService.recommendTask();
+        return new Result<List<TaskListVo>>().setData(list);
     }
 
 

@@ -63,7 +63,10 @@ public class TaskEntity {
      * 任务参与流程
      */
     private String taskProcess;
-
+    /**
+     * 任务保存/发布
+     */
+    private Integer taskStatus;
     /**
      * 首页广告
      */

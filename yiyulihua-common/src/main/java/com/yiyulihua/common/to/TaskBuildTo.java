@@ -51,6 +51,11 @@ public class TaskBuildTo {
     @ApiModelProperty(value = "任务需求", required = true)
     private String taskDemands;
     /**
+     * 任务保存/发布
+     */
+    @ApiModelProperty(value = "任务保存/发布(0代表保存,1代表发布)", required = true)
+    private Integer taskStatus;
+    /**
      * 任务截止日期
      */
     @ApiModelProperty(value = "任务截止日期", required = true)
@@ -59,12 +64,12 @@ public class TaskBuildTo {
     /**
      * 首页广告
      */
-    @ApiModelProperty(value = "是否设置为首页广告", required = true)
+    @ApiModelProperty(value = "首页广告天数(0、15...)", required = true)
     private Integer frontPageAds;
 
     /**
      * 底部广告
      */
-    @ApiModelProperty(value = "是否设置为底部广告", required = true)
+    @ApiModelProperty(value = "底部广告天数(0、15...)", required = true)
     private Integer bottomAds;
 }

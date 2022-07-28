@@ -9,6 +9,8 @@ import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
 
+import java.util.List;
+
 /**
  * @author lzh
  * @email 1138423425@qq.com
@@ -23,5 +25,7 @@ public interface TaskService extends IService<TaskEntity> {
     PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId);
 
     void buildTask(TaskBuildTo taskBuildTo);
+
+    List<TaskListVo> recommendTask();
 }
 
