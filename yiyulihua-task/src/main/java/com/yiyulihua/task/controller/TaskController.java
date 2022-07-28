@@ -3,8 +3,10 @@ package com.yiyulihua.task.controller;
 import java.util.Arrays;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.yiyulihua.common.annotation.I18n;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.result.Result;
+import com.yiyulihua.common.to.TaskBuildTo;
 import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
@@ -46,6 +48,7 @@ public class TaskController {
                     required = false,
                     paramType = "query")
     })
+    @I18n
     @GetMapping("/list")
     public Result<PageUtils<TaskListVo>> list(@RequestParam(value = "page", required = false) Integer page,
                                               @RequestParam(value = "limit", required = false) Integer limit) {
@@ -62,6 +65,7 @@ public class TaskController {
                     required = true,
                     paramType = "query"),
     })
+    @I18n
     @GetMapping("/info")
     public Result<TaskVo> selectById(@RequestParam("id") Integer id) {
         TaskVo task = taskService.selectById(id);
@@ -92,6 +96,15 @@ public class TaskController {
 
         return new Result<PageUtils<TaskMyPublishVo>>().setData(page);
     }
+
+
+    @ApiOperation("任务发布")
+    @PostMapping("/build")
+    public Result<Object> buildTask(@RequestBody TaskBuildTo taskBuildTo) {
+
+        return null;
+    }
+
 
     /**
      * 保存

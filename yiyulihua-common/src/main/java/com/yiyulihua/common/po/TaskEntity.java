@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -63,6 +64,17 @@ public class TaskEntity{
      * 任务参与流程
      */
     private String taskProcess;
+
+    /**
+     * 首页广告
+     */
+    private Integer frontPageAds;
+
+    /**
+     * 底部广告
+     */
+    private Integer bottomAds;
+
     /**
      * 创建时间
      */

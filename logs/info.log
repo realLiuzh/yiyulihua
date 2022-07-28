@@ -1005,3 +1005,976 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2022-07-22 21:53:14.421 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-07-22 21:53:14.421 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2022-07-22 21:53:14.426 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-07-23 12:45:44.837 [main] INFO  com.yiyulihua.works.WorksApplication - The following profiles are active: dev
+2022-07-23 12:45:45.852 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 12:45:45.856 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-23 12:45:45.891 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-23 12:45:46.217 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=45d137fe-3170-3a2c-94e7-82e93b447d4a
+2022-07-23 12:45:46.579 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10000 (http)
+2022-07-23 12:45:46.589 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:45:46.590 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-23 12:45:46.590 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-23 12:45:46.710 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-23 12:45:46.710 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1846 ms
+2022-07-23 12:45:46.847 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-23 12:45:47.020 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-23 12:45:48.358 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:45:48.362 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:45:48.486 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 12:45:49.346 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-23 12:45:50.192 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:45:50.227 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-23 12:45:50.234 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-23 12:45:50.236 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:45:50.236 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-07-23 12:45:50.240 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:45:50.240 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:45:50.249 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-23 12:46:16.745 [main] INFO  com.yiyulihua.works.WorksApplication - The following profiles are active: dev
+2022-07-23 12:46:17.398 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 12:46:17.400 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-23 12:46:17.415 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-23 12:46:17.608 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=45d137fe-3170-3a2c-94e7-82e93b447d4a
+2022-07-23 12:46:17.877 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10000 (http)
+2022-07-23 12:46:17.885 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:46:17.886 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-23 12:46:17.886 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-23 12:46:17.989 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-23 12:46:17.989 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1231 ms
+2022-07-23 12:46:18.082 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-23 12:46:18.217 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-23 12:46:19.276 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:46:19.279 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:46:19.359 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 12:46:19.889 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-23 12:46:20.382 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:46:20.407 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-23 12:46:20.411 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-23 12:46:20.412 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:46:20.412 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-07-23 12:46:20.416 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:46:20.416 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-10000"]
+2022-07-23 12:46:20.422 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-23 12:46:35.914 [main] INFO  com.yiyulihua.works.WorksApplication - The following profiles are active: dev
+2022-07-23 12:46:36.623 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 12:46:36.624 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-23 12:46:36.641 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-23 12:46:36.872 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=45d137fe-3170-3a2c-94e7-82e93b447d4a
+2022-07-23 12:46:37.152 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10001 (http)
+2022-07-23 12:46:37.160 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10001"]
+2022-07-23 12:46:37.161 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-23 12:46:37.161 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-23 12:46:37.265 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-23 12:46:37.265 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1338 ms
+2022-07-23 12:46:37.375 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-23 12:46:37.529 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-23 12:46:38.550 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:46:38.553 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 12:46:38.635 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 12:46:39.151 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-23 12:46:39.657 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10001"]
+2022-07-23 12:46:39.679 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10001 (http) with context path ''
+2022-07-23 12:46:39.907 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-works 192.168.0.196:10001 register finished
+2022-07-23 12:46:40.370 [main] INFO  com.yiyulihua.works.WorksApplication - Started WorksApplication in 5.934 seconds (JVM running for 6.813)
+2022-07-28 10:43:14.247 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 10:43:15.269 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 10:43:15.271 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 10:43:15.289 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-07-28 10:43:15.493 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 10:43:15.508 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 10:43:15.993 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 10:43:16.003 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:43:16.003 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 10:43:16.003 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 10:43:16.214 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 10:43:16.215 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1949 ms
+2022-07-28 10:43:16.324 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 10:43:16.447 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 10:43:17.828 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:43:17.832 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:43:17.945 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:43:18.601 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 10:43:19.186 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:43:19.206 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 10:43:19.412 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 10:43:19.894 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.418 seconds (JVM running for 9.492)
+2022-07-28 10:43:49.200 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 10:43:49.200 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 10:43:49.209 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2022-07-28 10:47:26.908 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 10:47:27.774 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 10:47:27.775 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 10:47:27.792 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 10:47:28.007 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 10:47:28.022 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 10:47:28.427 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 10:47:28.435 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:47:28.435 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 10:47:28.435 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 10:47:28.604 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 10:47:28.604 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1670 ms
+2022-07-28 10:47:28.724 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 10:47:28.825 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 10:47:30.219 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:47:30.232 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:47:30.326 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:47:30.872 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 10:47:31.433 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:47:31.453 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 10:47:31.676 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 10:47:32.482 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.191 seconds (JVM running for 8.045)
+2022-07-28 10:47:34.279 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 10:47:34.280 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 10:47:34.292 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2022-07-28 10:49:59.180 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 10:49:59.925 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 10:49:59.926 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 10:49:59.942 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-07-28 10:50:00.145 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 10:50:00.159 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 10:50:00.540 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 10:50:00.549 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:50:00.550 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 10:50:00.550 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 10:50:00.708 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 10:50:00.709 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1514 ms
+2022-07-28 10:50:00.817 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 10:50:00.915 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 10:50:02.250 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:50:02.254 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:50:02.355 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:50:02.878 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 10:50:03.381 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:50:03.399 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 10:50:03.655 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 10:50:04.117 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.415 seconds (JVM running for 7.269)
+2022-07-28 10:50:09.503 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 10:50:09.504 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 10:50:09.514 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2022-07-28 10:50:53.875 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 10:50:54.831 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 10:50:54.832 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 10:50:54.851 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-28 10:50:55.093 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 10:50:55.108 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 10:50:55.602 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 10:50:55.679 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:50:55.680 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 10:50:55.680 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 10:50:55.798 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 10:50:55.799 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1905 ms
+2022-07-28 10:50:55.919 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 10:50:56.021 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 10:50:57.442 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:50:57.448 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:50:57.568 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:50:58.154 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 10:50:58.692 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:50:58.715 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 10:50:58.967 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 10:50:59.517 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.234 seconds (JVM running for 8.992)
+2022-07-28 10:51:14.651 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 10:51:14.651 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 10:51:14.668 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2022-07-28 10:56:04.791 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 10:56:04.917 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 10:56:04.941 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:56:04.957 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 10:56:11.096 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 10:56:12.017 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 10:56:12.018 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 10:56:12.038 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-28 10:56:12.306 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 10:56:12.323 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 10:56:12.745 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 10:56:12.754 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:56:12.754 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 10:56:12.754 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 10:56:12.949 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 10:56:12.949 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1835 ms
+2022-07-28 10:56:13.078 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 10:56:13.190 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 10:56:14.546 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:56:14.549 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 10:56:14.668 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 10:56:15.283 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 10:56:15.963 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 10:56:15.984 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 10:56:18.170 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 10:56:18.170 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 10:56:18.182 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2022-07-28 10:56:18.911 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 10:56:19.830 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 10.335 seconds (JVM running for 11.391)
+2022-07-28 11:06:18.182 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:06:18.926 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:06:18.928 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:06:18.948 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-07-28 11:06:19.158 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:06:19.178 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:06:19.555 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:06:19.565 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:06:19.566 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:06:19.566 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:06:19.726 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:06:19.727 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1530 ms
+2022-07-28 11:06:19.835 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:06:19.928 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:06:21.200 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:06:21.213 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:06:21.305 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:06:21.825 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:06:22.322 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:06:22.342 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:06:22.554 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:06:23.050 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.321 seconds (JVM running for 7.272)
+2022-07-28 11:06:45.824 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:06:45.825 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:06:45.840 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2022-07-28 11:08:00.673 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:08:01.396 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:08:01.397 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:08:01.414 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:08:01.614 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:08:01.628 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:08:02.003 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:08:02.010 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:08:02.011 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:08:02.011 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:08:02.165 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:08:02.165 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1476 ms
+2022-07-28 11:08:02.270 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:08:02.380 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:08:03.631 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:08:03.635 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:08:03.728 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:08:04.356 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:08:04.854 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:08:04.876 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:08:05.096 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:08:05.597 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.394 seconds (JVM running for 7.283)
+2022-07-28 11:08:09.791 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:08:09.791 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:08:09.801 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2022-07-28 11:09:29.986 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:09:30.787 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:09:30.789 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:09:30.805 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:09:30.999 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:09:31.016 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:09:31.410 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:09:31.418 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:09:31.418 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:09:31.419 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:09:31.578 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:09:31.578 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1573 ms
+2022-07-28 11:09:31.681 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:09:31.776 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:09:33.041 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:09:33.046 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:09:33.149 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:09:33.683 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:09:34.174 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:09:34.193 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:09:34.404 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:09:34.965 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.798 seconds (JVM running for 7.679)
+2022-07-28 11:09:45.748 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:09:45.748 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:09:45.757 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2022-07-28 11:09:47.339 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:09:47.339 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:09:47.339 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Object name:data value:com.yiyulihua.common.utils.PageUtils@5b96502a
+2022-07-28 11:11:49.190 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:11:49.943 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:11:49.944 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:11:49.960 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:11:50.182 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:11:50.196 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:11:50.619 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:11:50.631 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:11:50.632 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:11:50.632 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:11:50.832 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:11:50.832 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1627 ms
+2022-07-28 11:11:50.939 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:11:51.032 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:11:52.267 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:11:52.270 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:11:52.362 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:11:52.876 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:11:53.364 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:11:53.384 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:11:53.622 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:11:54.116 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.377 seconds (JVM running for 7.273)
+2022-07-28 11:11:58.559 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:11:58.559 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:11:58.567 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2022-07-28 11:12:00.009 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:12:00.009 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:12:12.323 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:12:13.162 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:12:13.164 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:12:13.181 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:12:13.417 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:12:13.432 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:12:13.891 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:12:13.961 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:12:13.962 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:12:13.962 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:12:14.076 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:12:14.076 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1734 ms
+2022-07-28 11:12:14.200 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:12:14.305 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:12:15.622 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:12:15.626 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:12:15.733 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:12:16.285 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:12:16.821 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:12:16.846 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:12:17.163 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:12:17.677 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.916 seconds (JVM running for 8.187)
+2022-07-28 11:12:24.445 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:12:24.446 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:12:24.458 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2022-07-28 11:12:56.253 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:13:00.629 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:14:31.657 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 11:14:31.781 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 11:14:31.802 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:14:31.817 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 11:14:37.472 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:14:38.323 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:14:38.326 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:14:38.344 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:14:38.585 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:14:38.602 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:14:39.070 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:14:39.136 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:14:39.137 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:14:39.137 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:14:39.255 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:14:39.255 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1760 ms
+2022-07-28 11:14:39.381 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:14:39.499 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:14:40.838 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:14:40.842 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:14:40.949 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:14:41.543 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:14:42.082 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:14:42.105 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:14:42.345 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:14:42.869 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.072 seconds (JVM running for 8.209)
+2022-07-28 11:14:53.362 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:14:53.362 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:14:53.371 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2022-07-28 11:15:01.224 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:15:03.701 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:16:25.290 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:16:36.305 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:16:39.294 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:16:41.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:16:47.167 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:18:09.657 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:interface java.util.List name:list value:[TaskListVo(id=3, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Thu Jul 16 10:21:39 CST 2026, taskPicture=null), TaskListVo(id=2, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Fri Dec 16 10:20:58 CST 2022, taskPicture=null), TaskListVo(id=1, taskName= 收一份情书模板, type=文本/文案, taskPrice=20.00, taskDeadline=Sun Jan 01 10:18:55 CST 2023, taskPicture=null)]
+2022-07-28 11:21:19.468 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 11:21:19.593 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 11:21:19.610 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:21:19.623 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 11:21:24.862 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:21:25.718 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:21:25.720 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:21:25.736 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:21:25.931 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:21:25.946 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:21:26.354 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:21:26.361 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:21:26.361 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:21:26.362 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:21:26.551 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:21:26.551 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1674 ms
+2022-07-28 11:21:26.712 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:21:26.819 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:21:28.205 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:21:28.209 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:21:28.302 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:21:28.825 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:21:29.327 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:21:29.345 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:21:29.560 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:21:30.126 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.814 seconds (JVM running for 7.704)
+2022-07-28 11:21:55.013 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:21:55.014 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:21:55.025 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-07-28 11:21:56.361 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:21:56.361 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:21:56.362 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:interface java.util.List name:list value:[TaskListVo(id=3, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Thu Jul 16 10:21:39 CST 2026, taskPicture=null), TaskListVo(id=2, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Fri Dec 16 10:20:58 CST 2022, taskPicture=null), TaskListVo(id=1, taskName= 收一份情书模板, type=文本/文案, taskPrice=20.00, taskDeadline=Sun Jan 01 10:18:55 CST 2023, taskPicture=null)]
+2022-07-28 11:22:33.577 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:22:34.454 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:22:34.456 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:22:34.476 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-28 11:22:34.728 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:22:34.744 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:22:35.261 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:22:35.272 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:22:35.272 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:22:35.272 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:22:35.385 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:22:35.385 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1789 ms
+2022-07-28 11:22:35.502 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:22:35.608 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:22:36.956 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:22:36.959 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:22:37.061 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:22:37.642 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:22:38.248 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:22:38.272 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:22:38.513 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:22:39.031 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.059 seconds (JVM running for 8.134)
+2022-07-28 11:22:57.564 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:22:57.564 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:22:57.573 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2022-07-28 11:23:05.531 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:23:06.281 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:23:19.272 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:23:20.168 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:23:20.808 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:23:21.398 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:23:22.191 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:23:34.103 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:interface java.util.List name:list value:[TaskListVo(id=3, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Thu Jul 16 10:21:39 CST 2026, taskPicture=null), TaskListVo(id=2, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Fri Dec 16 10:20:58 CST 2022, taskPicture=null), TaskListVo(id=1, taskName= 收一份情书模板, type=文本/文案, taskPrice=20.00, taskDeadline=Sun Jan 01 10:18:55 CST 2023, taskPicture=null)]
+2022-07-28 11:23:34.374 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 11:23:34.503 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 11:23:34.537 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:23:34.551 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 11:23:54.944 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:23:55.906 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:23:55.909 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:23:55.930 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-07-28 11:23:56.202 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:23:56.222 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:23:56.760 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:23:56.849 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:23:56.850 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:23:56.851 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:23:56.990 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:23:56.990 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2027 ms
+2022-07-28 11:23:57.141 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:23:57.280 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:23:58.756 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:23:58.760 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:23:58.860 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:23:59.436 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:24:00.032 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:24:00.055 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:24:00.291 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:24:00.840 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.468 seconds (JVM running for 8.641)
+2022-07-28 11:24:13.537 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:24:13.537 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:24:13.548 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-07-28 11:24:18.738 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:24:19.327 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:24:21.286 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:24:22.020 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:24:22.516 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:24:23.114 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:24:23.687 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:24:27.842 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - [TaskListVo(id=3, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Thu Jul 16 10:21:39 CST 2026, taskPicture=null), TaskListVo(id=2, taskName=急需微信头像, type=图片, taskPrice=20.00, taskDeadline=Fri Dec 16 10:20:58 CST 2022, taskPicture=null), TaskListVo(id=1, taskName= 收一份情书模板, type=文本/文案, taskPrice=20.00, taskDeadline=Sun Jan 01 10:18:55 CST 2023, taskPicture=null)]是list类
+2022-07-28 11:26:03.817 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 11:26:03.963 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 11:26:03.981 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:26:03.992 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 11:26:09.384 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:26:10.144 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:26:10.146 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:26:10.163 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-28 11:26:10.386 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:26:10.403 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:26:10.784 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:26:10.792 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:26:10.793 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:26:10.793 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:26:10.995 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:26:11.202 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1802 ms
+2022-07-28 11:26:11.335 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:26:11.446 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:26:12.862 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:26:12.866 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:26:12.987 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:26:13.550 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:26:14.103 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:26:14.124 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:26:14.364 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:26:14.938 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 7.071 seconds (JVM running for 7.937)
+2022-07-28 11:26:20.249 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:26:20.249 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:26:20.282 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 33 ms
+2022-07-28 11:26:21.596 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:26:21.596 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:26:21.596 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Integer name:id value:3
+2022-07-28 11:26:21.597 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:taskName value:急需微信头像
+2022-07-28 11:26:21.598 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:type value:图片
+2022-07-28 11:26:21.598 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.math.BigDecimal name:taskPrice value:20.00
+2022-07-28 11:26:21.598 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.util.Date name:taskDeadline value:Thu Jul 16 10:21:39 CST 2026
+2022-07-28 11:26:24.401 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:26:24.402 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:26:24.402 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:26:24.402 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:26:24.402 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:26:24.403 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:26:24.403 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:26:24.403 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Integer name:id value:3
+2022-07-28 11:26:24.403 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:taskName value:急需微信头像
+2022-07-28 11:26:24.403 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:type value:图片
+2022-07-28 11:26:24.404 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.math.BigDecimal name:taskPrice value:20.00
+2022-07-28 11:26:24.404 [http-nio-9000-exec-2] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.util.Date name:taskDeadline value:Thu Jul 16 10:21:39 CST 2026
+2022-07-28 11:27:22.900 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:27:23.709 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:27:23.711 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:27:23.725 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:27:23.969 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:27:23.984 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:27:24.369 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:27:24.376 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:27:24.377 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:27:24.378 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:27:24.548 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:27:24.548 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1626 ms
+2022-07-28 11:27:24.650 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:27:24.743 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:27:26.080 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:27:26.083 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:27:26.183 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:27:26.696 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:27:27.188 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:27:27.209 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:27:27.414 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:27:27.896 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.606 seconds (JVM running for 7.535)
+2022-07-28 11:27:32.045 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:27:32.046 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:27:32.068 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2022-07-28 11:27:33.388 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:code value:0
+2022-07-28 11:27:33.389 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:message value:操作成功!
+2022-07-28 11:27:33.389 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:long name:serialVersionUID value:1
+2022-07-28 11:27:33.389 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalCount value:3
+2022-07-28 11:27:33.389 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:pageSize value:8
+2022-07-28 11:27:33.389 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:totalPage value:1
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:int name:currPage value:1
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Integer name:id value:3
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:taskName value:急需微信头像
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:type value:图片
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.math.BigDecimal name:taskPrice value:20.00
+2022-07-28 11:27:33.390 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.util.Date name:taskDeadline value:Thu Jul 16 10:21:39 CST 2026
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Integer name:id value:2
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:taskName value:急需微信头像
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:type value:图片
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.math.BigDecimal name:taskPrice value:20.00
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.util.Date name:taskDeadline value:Fri Dec 16 10:20:58 CST 2022
+2022-07-28 11:27:33.391 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.Integer name:id value:1
+2022-07-28 11:27:33.392 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:taskName value: 收一份情书模板
+2022-07-28 11:27:33.392 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.lang.String name:type value:文本/文案
+2022-07-28 11:27:33.392 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.math.BigDecimal name:taskPrice value:20.00
+2022-07-28 11:27:33.392 [http-nio-9000-exec-1] INFO  com.yiyulihua.common.aspect.I18nAop - type:class java.util.Date name:taskDeadline value:Sun Jan 01 10:18:55 CST 2023
+2022-07-28 11:44:57.211 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:44:58.027 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:44:58.029 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:44:58.046 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 11:44:58.268 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:44:58.283 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:44:58.754 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:44:58.762 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:44:58.763 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:44:58.763 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:44:58.939 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:44:58.939 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1708 ms
+2022-07-28 11:44:59.077 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:44:59.199 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:45:00.610 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:45:00.613 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:45:00.710 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:45:01.233 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:45:01.745 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:45:01.776 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:45:01.982 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:45:02.479 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.995 seconds (JVM running for 7.985)
+2022-07-28 11:45:30.372 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:45:30.372 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:45:30.384 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2022-07-28 11:47:55.675 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:47:56.461 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:47:56.463 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:47:56.480 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-07-28 11:47:56.730 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:47:56.743 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:47:57.155 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:47:57.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:47:57.164 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:47:57.165 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:47:57.354 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:47:57.354 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1663 ms
+2022-07-28 11:47:57.464 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:47:57.555 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:47:58.786 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:47:58.789 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:47:58.886 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:47:59.413 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:47:59.918 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:47:59.936 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:48:00.156 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:48:00.635 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.434 seconds (JVM running for 7.34)
+2022-07-28 11:48:06.009 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:48:06.010 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:48:06.023 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2022-07-28 11:49:22.762 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:49:23.534 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:49:23.536 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:49:23.552 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-07-28 11:49:23.768 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:49:23.782 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:49:24.156 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:49:24.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:49:24.165 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:49:24.165 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:49:24.324 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:49:24.325 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1546 ms
+2022-07-28 11:49:24.429 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:49:24.531 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:49:25.762 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:49:25.765 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:49:25.877 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:49:26.408 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:49:26.901 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:49:26.919 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:49:27.134 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:49:27.623 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.322 seconds (JVM running for 7.153)
+2022-07-28 11:49:33.140 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:49:33.141 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:49:33.153 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-07-28 11:54:08.808 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:54:09.567 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:54:09.569 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:54:09.583 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-07-28 11:54:09.781 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:54:09.795 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:54:10.191 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:54:10.198 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:54:10.199 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:54:10.199 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:54:10.353 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:54:10.353 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1528 ms
+2022-07-28 11:54:10.457 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:54:10.556 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:54:11.841 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:54:11.844 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:54:11.938 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:54:12.431 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:54:12.932 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:54:12.950 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:54:13.194 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:54:13.686 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.334 seconds (JVM running for 7.207)
+2022-07-28 11:54:35.859 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:54:35.859 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:54:35.872 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2022-07-28 11:55:11.471 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 11:55:12.251 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 11:55:12.252 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 11:55:12.267 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-07-28 11:55:12.505 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 11:55:12.520 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 11:55:12.908 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 11:55:12.916 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:55:12.917 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 11:55:12.917 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 11:55:13.075 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 11:55:13.076 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1589 ms
+2022-07-28 11:55:13.189 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 11:55:13.289 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 11:55:14.660 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:55:14.664 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 11:55:14.792 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 11:55:15.330 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 11:55:15.827 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 11:55:15.846 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 11:55:16.061 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 11:55:16.555 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.597 seconds (JVM running for 7.471)
+2022-07-28 11:55:22.255 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 11:55:22.255 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 11:55:22.266 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-07-28 15:05:02.719 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:05:04.312 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:05:04.314 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:05:04.344 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-28 15:05:04.783 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:05:04.812 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:05:05.698 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:05:05.714 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:05:05.715 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:05:05.716 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:05:06.103 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:05:06.104 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3345 ms
+2022-07-28 15:05:06.302 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:05:06.484 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:05:09.165 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:05:09.184 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:05:09.432 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:05:12.053 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:05:14.249 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:05:14.304 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:05:14.834 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:05:16.029 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 16.901 seconds (JVM running for 18.751)
+2022-07-28 15:07:24.552 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:07:26.365 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:07:26.368 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:07:26.404 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-28 15:07:26.928 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:07:26.963 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:07:27.945 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:07:28.094 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:07:28.095 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:07:28.095 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:07:28.444 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:07:28.444 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3849 ms
+2022-07-28 15:07:28.700 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:07:28.947 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:07:31.910 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:07:31.918 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:07:32.140 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:07:33.376 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:07:34.577 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:07:34.631 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:07:35.001 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:07:36.305 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 15.413 seconds (JVM running for 19.361)
+2022-07-28 15:08:01.764 [http-nio-9000-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:08:01.765 [http-nio-9000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:08:01.786 [http-nio-9000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2022-07-28 15:10:16.375 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 15:10:16.504 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 15:10:16.556 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:10:16.584 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 15:10:33.178 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:10:35.066 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:10:35.069 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:10:35.113 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2022-07-28 15:10:35.616 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:10:35.650 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:10:36.702 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:10:36.918 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:10:36.919 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:10:36.919 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:10:37.183 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:10:37.183 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3949 ms
+2022-07-28 15:10:37.428 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:10:37.645 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:10:40.750 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:10:40.761 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:10:41.088 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:10:42.549 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:10:43.995 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:10:44.048 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:10:44.348 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:10:44.348 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:10:44.371 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2022-07-28 15:10:44.520 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:10:46.441 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 16.678 seconds (JVM running for 19.574)
+2022-07-28 15:12:44.471 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 15:12:44.582 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 15:12:44.620 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:12:44.651 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 15:12:55.916 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:12:57.902 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:12:57.907 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:12:58.022 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32ms. Found 0 Redis repository interfaces.
+2022-07-28 15:12:58.635 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:12:58.700 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:12:59.718 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:12:59.859 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:12:59.861 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:12:59.861 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:13:00.123 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:13:00.124 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4153 ms
+2022-07-28 15:13:00.510 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:13:01.162 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:13:04.379 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:13:04.386 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:13:04.605 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:13:05.802 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:13:06.957 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:13:07.018 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:13:07.336 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:13:07.336 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:13:07.363 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+2022-07-28 15:13:07.521 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:13:09.208 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 16.72 seconds (JVM running for 19.15)
+2022-07-28 15:13:26.460 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 15:13:26.596 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 15:13:26.628 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:13:26.651 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 15:14:30.501 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:14:32.493 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:14:32.497 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:14:32.535 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2022-07-28 15:14:33.118 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:14:33.152 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:14:34.088 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:14:34.106 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:14:34.107 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:14:34.108 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:14:34.561 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:14:34.562 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4019 ms
+2022-07-28 15:14:34.797 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:14:35.031 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:14:38.089 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:14:38.096 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:14:38.316 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:14:39.506 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:14:40.672 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:14:40.710 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:14:41.028 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:14:42.187 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 15.776 seconds (JVM running for 18.377)
+2022-07-28 15:15:05.995 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:15:05.996 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:15:06.013 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2022-07-28 15:16:39.089 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:16:40.680 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:16:40.683 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:16:40.714 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-28 15:16:41.186 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:16:41.231 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:16:42.196 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:16:42.211 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:16:42.212 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:16:42.213 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:16:42.604 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:16:42.605 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3481 ms
+2022-07-28 15:16:42.792 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:16:42.981 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:16:45.452 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:16:45.458 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:16:45.651 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:16:46.654 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:16:47.692 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:16:47.734 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:16:48.039 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:16:49.016 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 13.273 seconds (JVM running for 14.86)
+2022-07-28 15:16:55.556 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:16:55.557 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:16:55.572 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2022-07-28 15:17:38.106 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:17:39.954 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:17:39.958 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:17:39.992 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2022-07-28 15:17:40.452 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:17:40.483 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:17:41.355 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:17:41.486 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:17:41.486 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:17:41.487 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:17:41.727 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:17:41.728 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3583 ms
+2022-07-28 15:17:41.963 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:17:42.197 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:17:44.942 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:17:44.949 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:17:45.149 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:17:46.282 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:17:47.406 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:17:47.456 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:17:47.768 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:17:48.956 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 14.405 seconds (JVM running for 17.123)
+2022-07-28 15:17:53.938 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:17:53.940 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:17:53.960 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2022-07-28 15:23:54.329 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-07-28 15:23:54.444 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-07-28 15:23:54.493 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:23:54.520 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-07-28 15:24:06.592 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:24:08.289 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:24:08.292 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:24:08.325 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-28 15:24:08.758 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:24:08.794 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:24:09.617 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:24:09.633 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:24:09.634 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:24:09.634 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:24:10.045 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:24:10.046 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3422 ms
+2022-07-28 15:24:10.300 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:24:10.564 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:24:13.427 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:24:13.434 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:24:13.733 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:24:15.091 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:24:16.278 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:24:16.322 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:24:16.643 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:24:17.851 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 14.9 seconds (JVM running for 17.276)
+2022-07-28 15:24:50.433 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:24:50.434 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:24:50.456 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2022-07-28 15:26:19.179 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:26:21.578 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:26:21.614 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:26:21.701 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2022-07-28 15:26:22.466 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:26:22.505 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:26:23.679 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:26:23.700 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:26:23.702 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:26:23.702 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:26:24.227 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:26:24.228 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5001 ms
+2022-07-28 15:26:24.496 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:26:24.762 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:26:28.377 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:26:28.388 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:26:28.695 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:26:30.070 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:26:31.345 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:26:31.388 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:26:31.713 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:26:33.035 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 17.956 seconds (JVM running for 20.663)
+2022-07-28 15:26:34.584 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:26:34.585 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:26:34.601 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2022-07-28 15:35:13.851 [main] INFO  com.yiyulihua.task.TaskApplication - The following profiles are active: dev
+2022-07-28 15:35:14.589 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-28 15:35:14.591 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-28 15:35:14.607 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-07-28 15:35:14.802 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=af285002-b43c-36a5-9719-950fb827d7d8
+2022-07-28 15:35:14.817 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.task.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 15:35:15.261 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-07-28 15:35:15.268 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:35:15.269 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-28 15:35:15.269 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-28 15:35:15.428 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-28 15:35:15.428 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1562 ms
+2022-07-28 15:35:15.543 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-07-28 15:35:15.638 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-07-28 15:35:16.889 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:35:16.892 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 15:35:16.988 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:35:17.485 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-07-28 15:35:17.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2022-07-28 15:35:17.998 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2022-07-28 15:35:18.192 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-task 192.168.0.196:9000 register finished
+2022-07-28 15:35:18.655 [main] INFO  com.yiyulihua.task.TaskApplication - Started TaskApplication in 6.3 seconds (JVM running for 7.103)
+2022-07-28 15:35:30.039 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 15:35:30.040 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-28 15:35:30.051 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-07-28 15:35:31.565 [http-nio-9000-exec-1] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: yiyulihua-user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-28 15:35:31.604 [http-nio-9000-exec-1] INFO  com.netflix.loadbalancer.BaseLoadBalancer - Client: yiyulihua-user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=yiyulihua-user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-28 15:35:31.613 [http-nio-9000-exec-1] INFO  com.netflix.loadbalancer.DynamicServerListLoadBalancer - Using serverListUpdater PollingServerListUpdater
+2022-07-28 15:35:31.746 [http-nio-9000-exec-1] INFO  com.netflix.loadbalancer.DynamicServerListLoadBalancer - DynamicServerListLoadBalancer for client yiyulihua-user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=yiyulihua-user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@769a1dac
+2022-07-28 15:36:32.678 [PollingServerListUpdater-0] INFO  com.netflix.config.ChainedDynamicProperty - Flipping property: yiyulihua-user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
