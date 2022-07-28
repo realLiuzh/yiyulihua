@@ -43,14 +43,13 @@ public class TaskBuildTo {
     /**
      * 任务图片
      */
-    @ApiModelProperty(value = "任务封面图片", required = true)
+    @ApiModelProperty(value = "任务封面图片url", required = true)
     private String taskPicture;
     /**
      * 任务需求
      */
     @ApiModelProperty(value = "任务需求", required = true)
     private String taskDemands;
-
     /**
      * 任务截止日期
      */

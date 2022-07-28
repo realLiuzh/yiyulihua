@@ -2,6 +2,7 @@ package com.yiyulihua.task.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.to.TaskBuildTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.common.vo.TaskListVo;
@@ -20,5 +21,7 @@ public interface TaskService extends IService<TaskEntity> {
     TaskVo selectById(Integer id);
 
     PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId);
+
+    void buildTask(TaskBuildTo taskBuildTo);
 }
 

@@ -101,8 +101,8 @@ public class TaskController {
     @ApiOperation("任务发布")
     @PostMapping("/build")
     public Result<Object> buildTask(@RequestBody TaskBuildTo taskBuildTo) {
-
-        return null;
+        taskService.buildTask(taskBuildTo);
+        return Result.success();
     }
 
 

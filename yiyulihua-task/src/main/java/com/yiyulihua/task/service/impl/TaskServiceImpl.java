@@ -1,7 +1,11 @@
 package com.yiyulihua.task.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.to.TaskBuildTo;
+import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
@@ -39,7 +43,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture");
         wrapper.orderByDesc("update_time");
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("is_valid", 0);
 
 
         Page<TaskEntity> ipage = new Query<TaskEntity>().getPage(params);
@@ -62,7 +66,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "publisher_id", "task_price", "task_deadline", "task_picture", "task_demands", "task_works_number", "task_process");
         wrapper.eq("id", id);
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("is_valid", 0);
         TaskEntity taskEntity = baseMapper.selectOne(wrapper);
 
         TaskVo taskVo = new TaskVo();
@@ -89,7 +93,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture", "task_works_number");
         wrapper.eq("publisher_id", publisherId);
         wrapper.orderByAsc("create_time");
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("is_valid", 0);
 
         //分页
         Page<TaskEntity> page = new Query<TaskEntity>().getPage(new PageQuery(current, size));
@@ -102,7 +106,16 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
             return taskListVo;
         }).collect(Collectors.toList());
 
-        return new PageUtils<TaskMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
+        return new PageUtils<>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
+    }
+
+    @Override
+    public void buildTask(TaskBuildTo taskBuildTo) {
+        TaskEntity taskEntity = new TaskEntity();
+        BeanUtils.copyProperties(taskBuildTo, taskEntity);
+        taskEntity.setTaskWorksNumber(0);
+        int insert = this.baseMapper.insert(taskEntity);
+        AssertUtil.isTrue(insert != 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 
 }
