@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
@@ -22,7 +21,6 @@ import com.yiyulihua.task.dao.TaskDao;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.task.service.TaskService;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,7 +37,8 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture");
         wrapper.orderByDesc("update_time");
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("task_status", 1);
+        wrapper.eq("is_valid", 0);
 
 
         Page<TaskEntity> ipage = new Query<TaskEntity>().getPage(params);
@@ -62,7 +61,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "publisher_id", "task_price", "task_deadline", "task_picture", "task_demands", "task_works_number", "task_process");
         wrapper.eq("id", id);
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("is_valid", 0);
         TaskEntity taskEntity = baseMapper.selectOne(wrapper);
 
         TaskVo taskVo = new TaskVo();
@@ -89,7 +88,7 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture", "task_works_number");
         wrapper.eq("publisher_id", publisherId);
         wrapper.orderByAsc("create_time");
-        wrapper.eq("is_valid", 1);
+        wrapper.eq("is_valid", 0);
 
         //分页
         Page<TaskEntity> page = new Query<TaskEntity>().getPage(new PageQuery(current, size));
@@ -102,7 +101,6 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
             return taskListVo;
         }).collect(Collectors.toList());
 
-        return new PageUtils<TaskMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
+        return new PageUtils<>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
-
 }
