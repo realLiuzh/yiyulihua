@@ -2,11 +2,14 @@ package com.yiyulihua.task.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.to.TaskBuildTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
+
+import java.util.List;
 
 /**
  * @author lzh
@@ -20,5 +23,9 @@ public interface TaskService extends IService<TaskEntity> {
     TaskVo selectById(Integer id);
 
     PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId);
+
+    void buildTask(TaskBuildTo taskBuildTo);
+
+    List<TaskListVo> recommendTask();
 }
 

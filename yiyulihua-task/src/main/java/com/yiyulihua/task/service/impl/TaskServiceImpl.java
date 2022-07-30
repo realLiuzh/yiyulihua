@@ -1,7 +1,11 @@
 package com.yiyulihua.task.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.to.TaskBuildTo;
+import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
@@ -13,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
@@ -21,6 +26,7 @@ import com.yiyulihua.task.dao.TaskDao;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.task.service.TaskService;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -103,4 +109,19 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
 
         return new PageUtils<>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
+
+    @Override
+    public void buildTask(TaskBuildTo taskBuildTo) {
+        TaskEntity taskEntity = new TaskEntity();
+        BeanUtils.copyProperties(taskBuildTo, taskEntity);
+        taskEntity.setTaskWorksNumber(0);
+        int insert = this.baseMapper.insert(taskEntity);
+        AssertUtil.isTrue(insert != 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+    }
+
+    @Override
+    public List<TaskListVo> recommendTask() {
+        return baseMapper.recommendTask();
+    }
+
 }

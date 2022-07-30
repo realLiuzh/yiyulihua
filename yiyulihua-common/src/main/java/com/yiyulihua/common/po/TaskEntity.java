@@ -1,12 +1,12 @@
 package com.yiyulihua.common.po;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 
 import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -16,12 +16,12 @@ import lombok.Data;
  */
 @Data
 @TableName("tb_task")
-public class TaskEntity{
+public class TaskEntity {
 
     /**
      * 主键
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer id;
     /**
      * 任务名称
@@ -64,16 +64,33 @@ public class TaskEntity{
      */
     private String taskProcess;
     /**
+     * 任务保存/发布
+     */
+    private Integer taskStatus;
+    /**
+     * 首页广告
+     */
+    private Integer frontPageAds;
+
+    /**
+     * 底部广告
+     */
+    private Integer bottomAds;
+
+    /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
     /**
      * 是否有效
      */
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Integer isValid;
-
 }
