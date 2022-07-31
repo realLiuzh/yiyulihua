@@ -3,6 +3,8 @@ package com.yiyulihua.works.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.WorksQuery;
+import com.yiyulihua.common.to.WorksPublishTo;
+import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.*;
 
@@ -40,7 +42,7 @@ public interface WorksService extends IService<WorksEntity> {
      * @author sunbo
      * @date 2022/7/23 20:26
      */
-    void publishOrSave(WorksPublishVo work);
+    void publishOrSave(WorksPublishTo work);
 
     /**
      * description: 更新作品信息
@@ -49,7 +51,7 @@ public interface WorksService extends IService<WorksEntity> {
      * @author sunbo
      * @date 2022/7/24 17:19
      */
-    void updateInfoById(WorksUpdateVo work);
+    void updateInfoById(WorksUpdateTo work);
 
     PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size, String publisherId);
 

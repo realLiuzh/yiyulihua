@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 import com.yiyulihua.common.query.WorksQuery;
 import com.yiyulihua.common.result.Result;
+import com.yiyulihua.common.to.WorksPublishTo;
+import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.*;
 import io.swagger.annotations.*;
@@ -80,7 +82,7 @@ public class WorksController {
 
     @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ", tags = "增改操作")
     @PostMapping
-    public Result save(@RequestBody(required = true) WorksPublishVo work) {
+    public Result save(@RequestBody(required = true) WorksPublishTo work) {
         worksService.publishOrSave(work);
 
         return Result.success();
@@ -91,7 +93,7 @@ public class WorksController {
      */
     @ApiOperation(value = "根据作品id更新作品信息", notes = "id 为必填项,其余非必需", tags = "增改操作")
     @PutMapping
-    public Result update(@RequestBody(required = true) WorksUpdateVo work) {
+    public Result update(@RequestBody(required = true) WorksUpdateTo work) {
         worksService.updateInfoById(work);
 
         return Result.success();

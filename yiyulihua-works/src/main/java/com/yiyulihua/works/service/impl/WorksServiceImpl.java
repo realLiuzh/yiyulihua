@@ -6,6 +6,8 @@ import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.query.WorksQuery;
+import com.yiyulihua.common.to.WorksPublishTo;
+import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
 import com.yiyulihua.common.vo.*;
@@ -109,7 +111,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     }
 
     @Override
-    public void publishOrSave(WorksPublishVo work) {
+    public void publishOrSave(WorksPublishTo work) {
         //检查参数
         checkEmpty(work);
 
@@ -126,7 +128,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     }
 
     @Override
-    public void updateInfoById(WorksUpdateVo work) {
+    public void updateInfoById(WorksUpdateTo work) {
         //检查参数
         if (StringUtils.isEmpty(work.getId())) {
             throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
@@ -163,7 +165,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         return new PageUtils<WorksMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
 
-    private void checkEmpty(WorksPublishVo work) {
+    private void checkEmpty(WorksPublishTo work) {
         if (StringUtils.isEmpty(work.getWorksName())) {
             throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
         }
