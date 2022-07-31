@@ -6,6 +6,8 @@ import com.yiyulihua.common.vo.UserVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -41,6 +43,21 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         UserVo userVo = new UserVo();
         BeanUtils.copyProperties(userEntity, userVo);
         return userVo;
+    }
+
+    @Override
+    public List<Integer> getAllUserId() {
+        QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
+        wrapper.select("id");
+        wrapper.eq("is_valid", 1);
+        List<UserEntity> userEntities = baseMapper.selectList(wrapper);
+
+        List<Integer> list = new ArrayList<>();
+        userEntities.forEach(user -> {
+            list.add(user.getId());
+        });
+
+        return list;
     }
 
 }

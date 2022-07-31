@@ -2,6 +2,8 @@ package com.yiyulihua.common.vo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * 客户端发送给服务器的websocket数据
  *
@@ -12,6 +14,10 @@ import lombok.Data;
 @Data
 public class MessageVo {
     /**
+     * 是否为系统消息
+     */
+    private boolean isSystemMsg;
+    /**
      * 接收方用户 id
      */
     private String toUserId;
@@ -19,4 +25,8 @@ public class MessageVo {
      * 信息内容
      */
     private String message;
+    /**
+     * 发送时间
+     */
+    private Date sendTime;
 }

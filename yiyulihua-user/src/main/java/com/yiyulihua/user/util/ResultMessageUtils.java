@@ -2,8 +2,12 @@ package com.yiyulihua.user.util;
 
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.util.BeanUtil;
+import com.yiyulihua.common.vo.MessageVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
-import org.springframework.util.StringUtils;
+import org.springframework.beans.BeanUtils;
+
+import java.util.Date;
 
 /**
  * @author sunbo
@@ -12,14 +16,11 @@ import org.springframework.util.StringUtils;
 
 public class ResultMessageUtils {
 
-    public static String toMessage(boolean isSystem, String fromUserId, Object message) {
-        ResultMessageVo vo = new ResultMessageVo();
-        vo.setSystem(isSystem);
-        vo.setMessage(message);
-        if (!StringUtils.isEmpty(fromUserId)) {
-            vo.setFromUserId(fromUserId);
-        }
+    public static String toMessage(String fromUserId, MessageVo messageVo) {
+        ResultMessageVo resultMessageVo = new ResultMessageVo();
+        BeanUtils.copyProperties(messageVo, resultMessageVo);
+        resultMessageVo.setFromUserId(fromUserId);
 
-        return JSON.toJSONString(vo);
+        return JSON.toJSONString(resultMessageVo);
     }
 }

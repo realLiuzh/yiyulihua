@@ -1,4 +1,4 @@
-package com.yiyulihua.common.vo;
+package com.yiyulihua.common.to;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,7 +13,7 @@ import java.util.Date;
  */
 @ApiModel(value = "WorksPublishVo", description = "作品发布或保存对象")
 @Data
-public class WorksPublishVo {
+public class WorksPublishTo {
 
     /**
      * 作品名称

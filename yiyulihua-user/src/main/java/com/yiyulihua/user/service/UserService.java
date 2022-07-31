@@ -5,6 +5,7 @@ import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.UserEntity;
 import com.yiyulihua.common.vo.UserVo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,5 +20,7 @@ public interface UserService extends IService<UserEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     UserVo getById(Integer id);
+
+    List<Integer> getAllUserId();
 }
 
