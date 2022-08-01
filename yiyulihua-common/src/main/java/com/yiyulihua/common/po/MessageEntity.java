@@ -15,12 +15,12 @@ import lombok.Data;
 @Data
 @TableName("tb_message")
 public class MessageEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 123L;
 
     /**
      * 主键
      */
-    @TableId
+    @TableId(type = IdType.ASSIGN_ID)
     private String id;
     /**
      * 发送方用户id

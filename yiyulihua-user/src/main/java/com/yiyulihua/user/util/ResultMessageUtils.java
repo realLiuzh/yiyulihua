@@ -2,12 +2,9 @@ package com.yiyulihua.user.util;
 
 
 import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.databind.util.BeanUtil;
-import com.yiyulihua.common.vo.MessageVo;
+import com.yiyulihua.common.to.MessageTo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import org.springframework.beans.BeanUtils;
-
-import java.util.Date;
 
 /**
  * @author sunbo
@@ -16,9 +13,9 @@ import java.util.Date;
 
 public class ResultMessageUtils {
 
-    public static String toMessage(String fromUserId, MessageVo messageVo) {
+    public static String toMessage(String fromUserId, MessageTo messageTo) {
         ResultMessageVo resultMessageVo = new ResultMessageVo();
-        BeanUtils.copyProperties(messageVo, resultMessageVo);
+        BeanUtils.copyProperties(messageTo, resultMessageVo);
         resultMessageVo.setFromUserId(fromUserId);
 
         return JSON.toJSONString(resultMessageVo);

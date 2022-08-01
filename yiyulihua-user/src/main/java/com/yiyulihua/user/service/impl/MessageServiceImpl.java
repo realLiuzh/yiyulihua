@@ -23,27 +23,26 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
 
     @Override
     public List<ResultMessageVo> getOfflineMessage(String receiveUserId) {
+        List<ResultMessageVo> list = new ArrayList<>();
+
         QueryWrapper<MessageEntity> wrapper = new QueryWrapper<>();
         wrapper.eq("receive_user_id", receiveUserId);
         wrapper.eq("is_offline", 1);
-        wrapper.groupBy("send_user_id");
         wrapper.orderByAsc("create_time");
 
         List<MessageEntity> messages = baseMapper.selectList(wrapper);
-
-
-        List<ResultMessageVo> list = new ArrayList<>();
-        for (MessageEntity message : messages) {
-            ResultMessageVo resultMsg = new ResultMessageVo();
-            resultMsg.setMessage(message.getContent());
-            resultMsg.setSendTime(message.getCreateTime());
-            resultMsg.setFromUserId(message.getSendUserId());
-            if (message.getIsSystem() == 1) {
-                resultMsg.setSystemMsg(true);
+        if (messages != null) {
+            for (MessageEntity message : messages) {
+                ResultMessageVo resultMsg = new ResultMessageVo();
+                resultMsg.setMessage(message.getContent());
+                resultMsg.setSendTime(message.getCreateTime());
+                resultMsg.setFromUserId(message.getSendUserId());
+                if (message.getIsSystem() == 1) {
+                    resultMsg.setSystemMsg(true);
+                }
+                list.add(resultMsg);
             }
-            list.add(resultMsg);
         }
-
         return list;
     }
 
