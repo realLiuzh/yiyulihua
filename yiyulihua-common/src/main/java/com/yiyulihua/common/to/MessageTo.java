@@ -23,7 +23,7 @@ public class MessageTo {
     private String toUserId;
 
     @ApiModelProperty(value = "消息内容", required = true)
-    private String message;
+    private String content;
 
     @ApiModelProperty(value = "消息发送时间", required = true)
     private Date sendTime;

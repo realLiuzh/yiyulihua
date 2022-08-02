@@ -15,11 +15,16 @@ public class ResultMessageUtils {
 
     public static String toMessage(String id, String fromUserId, MessageTo messageTo) {
         ResultMessageVo resultMessageVo = new ResultMessageVo();
-        BeanUtils.copyProperties(messageTo, resultMessageVo);
+
         resultMessageVo.setId(id);
+        resultMessageVo.setIsSystem(messageTo.getIsSystem());
         resultMessageVo.setFromUserId(fromUserId);
         resultMessageVo.setReceiveUserId(messageTo.getToUserId());
+        resultMessageVo.setContent(messageTo.getContent());
+        resultMessageVo.setSendTime(messageTo.getSendTime());
 
-        return JSON.toJSONString(resultMessageVo);
+        System.out.println(resultMessageVo);
+
+        return JSON.toJSONStringWithDateFormat(resultMessageVo, "yyyy-MM-dd HH:mm:ss");
     }
 }

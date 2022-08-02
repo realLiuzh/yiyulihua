@@ -1,10 +1,8 @@
 package com.yiyulihua.user.server;
 
-import cn.dev33.satoken.stp.StpUtil;
 import com.alibaba.fastjson.JSON;
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.to.MessageTo;
-import com.yiyulihua.common.to.UserLoginTo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import com.yiyulihua.user.service.MessageService;
 import com.yiyulihua.user.service.UserService;
@@ -18,7 +16,6 @@ import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -67,8 +64,9 @@ public class ChatEndpoint {
     public void onOpen(Session session, EndpointConfig config) throws IOException {
         this.session = session;
 
+        this.userId = "1";
         //存储到容器中
-        this.userId = StpUtil.getLoginId().toString();
+//        this.userId = StpUtil.getLoginId().toString();
 
         onlineUsers.put(userId, this);
 
@@ -121,7 +119,7 @@ public class ChatEndpoint {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setSendUserId(this.userId);
         messageEntity.setReceiveUserId(toUserId);
-        messageEntity.setContent(messageTo.getMessage());
+        messageEntity.setContent(messageTo.getContent());
         messageEntity.setCreateTime(messageTo.getSendTime());
 
         //查看用户是否在线
@@ -129,6 +127,7 @@ public class ChatEndpoint {
         if (endpoint != null) {
             messageService.save(messageEntity);
             String msg = ResultMessageUtils.toMessage(messageEntity.getId(), this.userId, messageTo);
+            System.out.println(msg);
             // 发送数据
             endpoint.session.getBasicRemote().sendText(msg);
         } else {
@@ -148,7 +147,7 @@ public class ChatEndpoint {
             messageEntity.setIsSystem(1);
             messageEntity.setSendUserId(this.userId);
             messageEntity.setReceiveUserId(messageTo.getToUserId());
-            messageEntity.setContent(messageTo.getMessage());
+            messageEntity.setContent(messageTo.getContent());
             messageEntity.setCreateTime(messageTo.getSendTime());
 
             ChatEndpoint chatEndpoint = onlineUsers.get(messageTo.getToUserId());
@@ -168,7 +167,7 @@ public class ChatEndpoint {
                 MessageEntity messageEntity = new MessageEntity();
                 messageEntity.setIsSystem(1);
                 messageEntity.setSendUserId(this.userId);
-                messageEntity.setContent(messageTo.getMessage());
+                messageEntity.setContent(messageTo.getContent());
                 messageEntity.setCreateTime(messageTo.getSendTime());
                 messageEntity.setReceiveUserId(id.toString());
 
