@@ -13,10 +13,12 @@ import org.springframework.beans.BeanUtils;
 
 public class ResultMessageUtils {
 
-    public static String toMessage(String fromUserId, MessageTo messageTo) {
+    public static String toMessage(String id, String fromUserId, MessageTo messageTo) {
         ResultMessageVo resultMessageVo = new ResultMessageVo();
         BeanUtils.copyProperties(messageTo, resultMessageVo);
+        resultMessageVo.setId(id);
         resultMessageVo.setFromUserId(fromUserId);
+        resultMessageVo.setReceiveUserId(messageTo.getToUserId());
 
         return JSON.toJSONString(resultMessageVo);
     }

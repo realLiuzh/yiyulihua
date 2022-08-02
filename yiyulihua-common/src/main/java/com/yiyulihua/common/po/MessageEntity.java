@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import java.io.Serializable;
 import java.util.Date;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -17,40 +18,36 @@ import lombok.Data;
 public class MessageEntity implements Serializable {
     private static final long serialVersionUID = 123L;
 
-    /**
-     * 主键
-     */
+    @ApiModelProperty("主键")
     @TableId(type = IdType.ASSIGN_ID)
     private String id;
-    /**
-     * 发送方用户id
-     */
+
+    @ApiModelProperty("发送方用户id")
     private String sendUserId;
-    /**
-     * 接收方用户id
-     */
+
+    @ApiModelProperty("接收方用户id")
     private String receiveUserId;
-    /**
-     * 消息内容
-     */
+
+    @ApiModelProperty("消息内容")
     private String content;
 
-    /**
-     * 是否为系统消息
-     */
+    @ApiModelProperty("是否为系统消息")
     private Integer isSystem;
-    /**
-     * 是否为离线消息
-     */
+
+    @ApiModelProperty("是否为离线消息")
     private Integer isOffline;
-    /**
-     * 创建时间
-     */
+
+    @ApiModelProperty("发送方是否可见")
+    private Integer sendUserVisible;
+
+    @ApiModelProperty("接收方是否可见")
+    private Integer receiveUserVisible;
+
+    @ApiModelProperty("创建时间")
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
-    /**
-     * 逻辑删除(0:有效)
-     */
+
+    @ApiModelProperty("逻辑删除(0:有效)")
     @TableLogic
     private Integer isValid;
 

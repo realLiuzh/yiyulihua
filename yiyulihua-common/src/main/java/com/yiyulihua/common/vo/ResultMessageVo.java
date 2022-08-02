@@ -1,5 +1,7 @@
 package com.yiyulihua.common.vo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -10,22 +12,25 @@ import java.util.Date;
  * @author sunbo
  * @date 2022-07-27-18:00
  */
+@ApiModel(value = "ResultMessageVo", description = "返回消息对象")
 @Data
 public class ResultMessageVo {
-    /**
-     * 是否为系统消息
-     */
-    private boolean isSystemMsg;
-    /**
-     * 发送用户 id
-     */
+
+    @ApiModelProperty("消息id")
+    private String id;
+
+    @ApiModelProperty("是否为系统消息0:false 1:true")
+    private Integer isSystem;
+
+    @ApiModelProperty("发送方用户 id")
     private String fromUserId;
-    /**
-     * 信息内容
-     */
-    private Object message;
-    /**
-     * 发送时间
-     */
+
+    @ApiModelProperty("接收方用户 id")
+    private String receiveUserId;
+
+    @ApiModelProperty("信息内容")
+    private Object content;
+
+    @ApiModelProperty("发送时间")
     private Date sendTime;
 }

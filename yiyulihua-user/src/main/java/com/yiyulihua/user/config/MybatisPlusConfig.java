@@ -1,4 +1,4 @@
-package com.yiyulihua.common.config;
+package com.yiyulihua.user.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

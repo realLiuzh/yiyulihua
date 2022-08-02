@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yiyulihua.user.dao.MessageDao">
+    <select id="getHistoryMsgPageByUserId" resultType="com.yiyulihua.common.vo.ResultMessageVo">
+        SELECT `id`,
+               `is_system`         AS isSystem,
+               a.`send_user_id`    AS fromUserId,
+               a.`receive_user_id` AS receiveUserId,
+               `content`           AS content,
+               a.create_time       AS send_time
+        FROM (SELECT `send_user_id`,
+                     `receive_user_id`,
+                     MAX(create_time) AS create_time
+              FROM `tb_message`
+              GROUP BY `send_user_id`,
+                       `receive_user_id`) a
+                 LEFT JOIN `tb_message` t
+                           ON t.`send_user_id` = a.`send_user_id`
+                               AND t.`receive_user_id` = a.`receive_user_id`
+                               AND t.create_time = a.create_time
+        WHERE (t.`send_user_id` = #{userId} AND t.`send_user_visible` = 0)
+           OR (t.`receive_user_id` = #{userId} AND t.`receive_user_visible` = 0)
+        ORDER BY t.create_time DESC
+    </select>
+</mapper>
+

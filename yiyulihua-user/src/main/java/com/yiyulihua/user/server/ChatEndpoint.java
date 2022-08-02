@@ -1,8 +1,10 @@
 package com.yiyulihua.user.server;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.alibaba.fastjson.JSON;
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.to.MessageTo;
+import com.yiyulihua.common.to.UserLoginTo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import com.yiyulihua.user.service.MessageService;
 import com.yiyulihua.user.service.UserService;
@@ -64,16 +66,11 @@ public class ChatEndpoint {
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) throws IOException {
         this.session = session;
-        //TODO 给 userId 赋值
-        Random random = new Random();
-        int i = random.nextInt(1000) + 1000;
-//        this.userId = String.valueOf(i);
-        //存储到容器中
-        this.userId = "1";
-        onlineUsers.put(userId, this);
 
-        //ceshu
-        this.session.getBasicRemote().sendText(String.valueOf(i));
+        //存储到容器中
+        this.userId = StpUtil.getLoginId().toString();
+
+        onlineUsers.put(userId, this);
 
         //查询离线消息并发送
         List<ResultMessageVo> offlineMessage = messageService.getOfflineMessage(this.userId);
@@ -91,10 +88,10 @@ public class ChatEndpoint {
      * 接收到客户端数据时被调用
      */
     @OnMessage
-    public void onMessage(String message, Session session) throws IOException {
+    public void onMessage(String message) throws IOException {
         MessageTo messageTo = JSON.parseObject(message, MessageTo.class);
         //系统消息或用户消息
-        if (messageTo.isSystemMsg()) {
+        if (messageTo.getIsSystem() == 1) {
             broadcastMessage(messageTo);
         } else {
             sendMessage(messageTo);
@@ -130,14 +127,16 @@ public class ChatEndpoint {
         //查看用户是否在线
         ChatEndpoint endpoint = onlineUsers.get(toUserId);
         if (endpoint != null) {
-            String msg = ResultMessageUtils.toMessage(this.userId, messageTo);
+            messageService.save(messageEntity);
+            String msg = ResultMessageUtils.toMessage(messageEntity.getId(), this.userId, messageTo);
             // 发送数据
             endpoint.session.getBasicRemote().sendText(msg);
         } else {
             //用户不在线,将消息设为离线消息
             messageEntity.setIsOffline(1);
+            messageService.save(messageEntity);
         }
-        messageService.save(messageEntity);
+
     }
 
     // 发送系统广播消息
@@ -154,11 +153,13 @@ public class ChatEndpoint {
 
             ChatEndpoint chatEndpoint = onlineUsers.get(messageTo.getToUserId());
             if (chatEndpoint != null) {
-                chatEndpoint.session.getBasicRemote().sendText(ResultMessageUtils.toMessage(this.userId, messageTo));
+                messageService.save(messageEntity);
+
+                chatEndpoint.session.getBasicRemote().sendText(ResultMessageUtils.toMessage(messageEntity.getId(), this.userId, messageTo));
             } else {
                 messageEntity.setIsOffline(1);
+                messageService.save(messageEntity);
             }
-            messageService.save(messageEntity);
         } else {
             //获得所有用户 id
             List<Integer> Ids = userService.getAllUserId();
@@ -169,18 +170,21 @@ public class ChatEndpoint {
                 messageEntity.setSendUserId(this.userId);
                 messageEntity.setContent(messageTo.getMessage());
                 messageEntity.setCreateTime(messageTo.getSendTime());
+                messageEntity.setReceiveUserId(id.toString());
 
                 ChatEndpoint chat;
                 //在线用户
                 if ((chat = onlineUsers.get(id.toString())) != null) {
-                    String msgResult = ResultMessageUtils.toMessage(this.userId, messageTo);
+                    messageService.save(messageEntity);
+
+                    String msgResult = ResultMessageUtils.toMessage(messageEntity.getId(), this.userId, messageTo);
                     chat.session.getBasicRemote().sendText(msgResult);
                 } else {
                     //设为离线消息
                     messageEntity.setIsOffline(1);
+                    messageService.save(messageEntity);
                 }
-                messageEntity.setReceiveUserId(id.toString());
-                messageService.save(messageEntity);
+
             }
         }
     }

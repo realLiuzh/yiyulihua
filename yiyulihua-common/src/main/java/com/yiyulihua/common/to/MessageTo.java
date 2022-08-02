@@ -16,15 +16,15 @@ import java.util.Date;
 @Data
 public class MessageTo {
 
-    @ApiModelProperty("是否为系统消息")
-    private boolean isSystemMsg;
+    @ApiModelProperty(value = "是否为系统消息0:false 1:true", required = true)
+    private Integer isSystem;
 
-    @ApiModelProperty("接收方用户 id")
+    @ApiModelProperty(value = "接收方用户 id", required = true)
     private String toUserId;
 
-    @ApiModelProperty("消息内容")
+    @ApiModelProperty(value = "消息内容", required = true)
     private String message;
 
-    @ApiModelProperty("消息发送时间")
+    @ApiModelProperty(value = "消息发送时间", required = true)
     private Date sendTime;
 }
