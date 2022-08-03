@@ -8,13 +8,19 @@
     <artifactId>yiyulihua-oss</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>oss</name>
+    <name>yiyulihua-oss</name>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+
+<!--        <jib.repository.name>yiyulihua-oss</jib.repository.name>-->
+<!--        <jib.version>2</jib.version>-->
+<!--        <jib.auth.username>mianqiuyu</jib.auth.username>-->
+<!--        <jib.auth.password>Cqupt2019210941</jib.auth.password>-->
+<!--        <jib.skip>false</jib.skip>-->
     </properties>
 
     <repositories>
@@ -88,7 +94,37 @@
 
 
     <build>
+        <finalName>yiyulihua-oss</finalName>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>com.google.cloud.tools</groupId>-->
+<!--                <artifactId>jib-maven-plugin</artifactId>-->
+<!--                <version>1.7.0</version>-->
+<!--                <configuration>-->
+<!--                    <skip>${jib.skip}</skip>-->
+<!--                    <from>-->
+<!--                        <image>openjdk:alpine</image>-->
+<!--                    </from>-->
+<!--                    <to>-->
+<!--                        <image>docker.io/mianqiuyu/${jib.repository.name}</image>-->
+<!--                        <tags>-->
+<!--                            <tag>${jib.version}</tag>-->
+<!--                        </tags>-->
+<!--                        <auth>-->
+<!--                            <username>${jib.auth.username}</username>-->
+<!--                            <password>${jib.auth.password}</password>-->
+<!--                        </auth>-->
+<!--                    </to>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

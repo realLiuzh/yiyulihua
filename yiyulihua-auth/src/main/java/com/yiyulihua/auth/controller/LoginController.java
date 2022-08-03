@@ -37,4 +37,5 @@ public class LoginController {
         AssertUtil.isTrue(saTokenInfo == null, new ApiException(ApiExceptionEnum.LOGIN_ERROR));
         return new Result<ApiToken>().setData(new ApiToken(saTokenInfo.getTokenName(), saTokenInfo.getTokenValue()));
     }
+
 }
