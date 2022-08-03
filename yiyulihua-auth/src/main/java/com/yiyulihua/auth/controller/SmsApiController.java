@@ -40,7 +40,7 @@ public class SmsApiController {
         AssertUtil.isTrue(!smsService.sendSms("86".concat(phone), code), new ApiException(ApiExceptionEnum.MESSAGE_ERROR));
         //存到redis中
         redisTemplate.opsForValue().set(phone, code, 15, TimeUnit.MINUTES);
-        return Result.success();
+        return new Result<>().setData(code);
     }
 
     /**
