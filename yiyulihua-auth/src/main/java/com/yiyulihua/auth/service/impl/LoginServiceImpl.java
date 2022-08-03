@@ -8,17 +8,24 @@ import com.yiyulihua.auth.service.LoginService;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.to.LoginPasswordTo;
+import com.yiyulihua.common.to.LoginRegisterTo;
 import com.yiyulihua.common.to.UserLoginTo;
 import com.yiyulihua.common.utils.AssertUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * 用户管理业务类
  */
 @Service
 public class LoginServiceImpl implements LoginService {
+
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
     @Resource
     private LoginDao loginDao;
@@ -36,6 +43,20 @@ public class LoginServiceImpl implements LoginService {
         // 获取当前登录用户Token信息
         saTokenInfo = StpUtil.getTokenInfo();
         return saTokenInfo;
+    }
+
+    @Override
+    public void register(LoginRegisterTo userInfo) {
+        String phone = userInfo.getPhone();
+        AssertUtil.isTrue(loginDao.phoneIsUsed(phone) != 0, new ApiException(ApiExceptionEnum.PHONE_USED));
+        String code = redisTemplate.opsForValue().get(phone);
+        AssertUtil.isTrue(code == null || !code.equals(userInfo.getCode()), new ApiException(ApiExceptionEnum.CODE_ERROR));
+        userInfo.setIsValid(0);
+        userInfo.setPassword(SaSecureUtil.md5(userInfo.getPassword()));
+        userInfo.setCreateTime(new Date());
+        userInfo.setUpdateTime(new Date());
+        userInfo.setUsername(phone);
+        AssertUtil.isTrue(loginDao.register(userInfo) != 1, new ApiException(ApiExceptionEnum.REGISTER_ERROR));
     }
 
     private UserLoginTo loadUserByUsername(String email) {

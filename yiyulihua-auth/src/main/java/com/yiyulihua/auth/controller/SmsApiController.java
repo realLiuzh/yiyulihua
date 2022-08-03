@@ -27,7 +27,7 @@ public class SmsApiController {
     private RedisTemplate<String, String> redisTemplate;
 
 
-    @ApiOperation(value = "短信发送验证码", notes = "Swagger调试不了这个接口,参数格式为form-data")
+    @ApiOperation(value = "短信发送6位验证码", notes = "Swagger调试不了这个接口,参数格式为form-data。验证码15分钟有效")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "phone",
                     value = "手机号",

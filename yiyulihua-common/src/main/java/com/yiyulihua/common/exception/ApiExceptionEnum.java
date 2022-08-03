@@ -11,7 +11,10 @@ public enum ApiExceptionEnum implements BaseErrorInfoInterface {
     SERVER_BUSY("5003", "服务器正忙，请稍后再试!"),
     // auth异常
     LOGIN_ERROR("1000", "邮箱或者密码错误"),
-    MESSAGE_ERROR("1001", "短信验证码发送失败");
+    MESSAGE_ERROR("1001", "短信验证码发送失败"),
+    PHONE_USED("1002","手机号已被占用"),
+    CODE_ERROR("1003","验证码错误"),
+    REGISTER_ERROR("1004","注册失败，请联系管理员");
 
 
     /**

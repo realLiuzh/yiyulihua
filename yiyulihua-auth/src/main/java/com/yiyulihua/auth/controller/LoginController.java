@@ -7,6 +7,7 @@ import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.ApiToken;
 import com.yiyulihua.common.to.LoginPasswordTo;
+import com.yiyulihua.common.to.LoginRegisterTo;
 import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
 import io.swagger.annotations.Api;
@@ -36,6 +37,13 @@ public class LoginController {
         SaTokenInfo saTokenInfo = loginService.login(userInfo);
         AssertUtil.isTrue(saTokenInfo == null, new ApiException(ApiExceptionEnum.LOGIN_ERROR));
         return new Result<ApiToken>().setData(new ApiToken(saTokenInfo.getTokenName(), saTokenInfo.getTokenValue()));
+    }
+
+    @ApiOperation("用户注册")
+    @PostMapping("/register")
+    public Result<Object> register(@RequestBody LoginRegisterTo userInfo) {
+        loginService.register(userInfo);
+        return Result.success();
     }
 
 }
