@@ -40,7 +40,9 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
         if (messages != null) {
             for (MessageEntity message : messages) {
                 ResultMessageVo resultMsg = new ResultMessageVo();
+                resultMsg.setId(message.getId());
                 resultMsg.setContent(message.getContent());
+                resultMsg.setReceiveUserId(message.getReceiveUserId());
                 resultMsg.setSendTime(message.getCreateTime());
                 resultMsg.setFromUserId(message.getSendUserId());
                 resultMsg.setIsSystem(message.getIsSystem());
@@ -52,9 +54,9 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
     }
 
     @Override
-    public void updateOfflineStatus(String userId) {
+    public void updateOfflineStatus(String receiveUserId) {
         UpdateWrapper<MessageEntity> wrapper = new UpdateWrapper<>();
-        wrapper.eq("receive_user_id", userId).set("is_offline", 0);
+        wrapper.eq("receive_user_id", receiveUserId).set("is_offline", 0);
         int update = baseMapper.update(null, wrapper);
         AssertUtil.isTrue(update < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
