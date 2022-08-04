@@ -1,6 +1,7 @@
 package com.yiyulihua.user.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -11,7 +12,6 @@ import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.UserVo;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -102,6 +102,15 @@ public class UserController {
         userService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+
+    /**
+     * feign 远程调用
+     */
+    @ApiIgnore
+    @GetMapping("/allId")
+    public List<Integer> getAllUserId() {
+        return userService.getAllUserId();
     }
 
 }

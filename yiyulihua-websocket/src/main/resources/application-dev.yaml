@@ -1,0 +1,26 @@
+server:
+  port: 13000
+
+spring:
+  redis:
+    database: 10
+    port: 6379
+    host: 47.96.86.132
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  application:
+    name: yiyulihua-websocket
+
+
+# Sa-Token配置
+sa-token:
+  token-name: Authorization
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+  is-read-cookie: false
+  is-read-head: true
