@@ -1,6 +1,7 @@
 package com.yiyulihua.user.controller;
 
 
+import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.MessageDeleteTo;
 import com.yiyulihua.common.to.MessageDeleteUserTo;
@@ -14,11 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.yiyulihua.user.service.MessageService;
+import springfox.documentation.annotations.ApiIgnore;
+
+import java.util.List;
 
 
 /**
  * @author snbo
- * @date 2022-07-30 10:38:30
+ * @date 2022/07/30 10:38:30
  */
 @Api(value = "消息管理", tags = "用户聊天消息管理")
 @RestController
@@ -78,5 +82,27 @@ public class MessageController {
         messageService.deleteRecordsBetweenUser(deleteUserTo);
 
         return Result.success();
+    }
+
+    @ApiIgnore
+    @GetMapping("/remote/{receiveUserId}")
+    public List<ResultMessageVo> getOfflineMessage(@PathVariable("receiveUserId") String receiveUserId) {
+        return messageService.getOfflineMessage(receiveUserId);
+    }
+
+    @ApiIgnore
+    @PutMapping("/remoteUpdate/{receiveUserId}")
+    public Result updateOfflineMessageStatus(@PathVariable("receiveUserId") String receiveUserId) {
+        messageService.updateOfflineStatus(receiveUserId);
+
+        return Result.success();
+    }
+
+    @ApiIgnore
+    @PostMapping("/remoteSave")
+    public String save(@RequestBody MessageEntity message) {
+        messageService.save(message);
+
+        return message.getId();
     }
 }

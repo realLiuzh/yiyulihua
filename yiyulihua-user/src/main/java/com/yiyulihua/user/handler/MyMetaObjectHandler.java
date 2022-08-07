@@ -1,4 +1,4 @@
-package com.yiyulihua.common.handler;
+package com.yiyulihua.user.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
