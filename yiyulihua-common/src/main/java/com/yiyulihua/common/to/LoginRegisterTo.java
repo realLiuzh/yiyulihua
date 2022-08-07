@@ -16,6 +16,8 @@ import java.util.Date;
 @ApiModel("用户注册对象")
 public class LoginRegisterTo {
     @JsonIgnore
+    private Integer id;
+    @JsonIgnore
     private String username;
     @ApiModelProperty(value = "邮箱", required = true)
     private String email;

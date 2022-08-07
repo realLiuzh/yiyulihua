@@ -11,5 +11,9 @@ public interface LoginDao {
 
     int phoneIsUsed(@Param("phone") String phone);
 
-    int register(@Param("user") LoginRegisterTo user);
+    Integer register(@Param("user") LoginRegisterTo user);
+
+    UserLoginTo loadUserById(@Param("id") Integer id);
+
+    Integer emailIsUsed(@Param("email") String email);
 }

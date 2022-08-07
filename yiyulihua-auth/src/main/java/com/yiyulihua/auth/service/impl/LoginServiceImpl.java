@@ -7,11 +7,15 @@ import com.yiyulihua.auth.dao.LoginDao;
 import com.yiyulihua.auth.service.LoginService;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
+import com.yiyulihua.common.to.ApiToken;
 import com.yiyulihua.common.to.LoginPasswordTo;
 import com.yiyulihua.common.to.LoginRegisterTo;
 import com.yiyulihua.common.to.UserLoginTo;
 import com.yiyulihua.common.utils.AssertUtil;
+import com.yiyulihua.common.vo.UserLoginVo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -31,9 +35,9 @@ public class LoginServiceImpl implements LoginService {
     private LoginDao loginDao;
 
     @Override
-    public SaTokenInfo login(LoginPasswordTo userInfo) {
+    public UserLoginVo login(LoginPasswordTo userInfo) {
         SaTokenInfo saTokenInfo = null;
-        UserLoginTo userLoginTo = loadUserByUsername(userInfo.getEmail());
+        UserLoginTo userLoginTo = loadUserByEmail(userInfo.getEmail());
         AssertUtil.isTrue((userLoginTo == null || (!SaSecureUtil.md5(userInfo.getPassword()).equals(userLoginTo.getPassword()))),
                 new ApiException(ApiExceptionEnum.LOGIN_ERROR));
         // 密码校验成功后登录，一行代码实现登录
@@ -42,12 +46,17 @@ public class LoginServiceImpl implements LoginService {
         StpUtil.getSession().set("userInfo", userLoginTo);
         // 获取当前登录用户Token信息
         saTokenInfo = StpUtil.getTokenInfo();
-        return saTokenInfo;
+
+        UserLoginVo userLoginVo = new UserLoginVo();
+        BeanUtils.copyProperties(userLoginTo, userLoginVo);
+        userLoginVo.setToken(new ApiToken(saTokenInfo.getTokenName(), saTokenInfo.getTokenValue()));
+        return userLoginVo;
     }
 
     @Override
-    public void register(LoginRegisterTo userInfo) {
+    public UserLoginVo register(LoginRegisterTo userInfo) {
         String phone = userInfo.getPhone();
+        AssertUtil.isTrue(loginDao.emailIsUsed(userInfo.getEmail()) != 0, new ApiException((ApiExceptionEnum.EMAIL_USED)));
         AssertUtil.isTrue(loginDao.phoneIsUsed(phone) != 0, new ApiException(ApiExceptionEnum.PHONE_USED));
         String code = redisTemplate.opsForValue().get(phone);
         AssertUtil.isTrue(code == null || !code.equals(userInfo.getCode()), new ApiException(ApiExceptionEnum.CODE_ERROR));
@@ -56,10 +65,28 @@ public class LoginServiceImpl implements LoginService {
         userInfo.setCreateTime(new Date());
         userInfo.setUpdateTime(new Date());
         userInfo.setUsername(phone);
-        AssertUtil.isTrue(loginDao.register(userInfo) != 1, new ApiException(ApiExceptionEnum.REGISTER_ERROR));
+        Integer update = loginDao.register(userInfo);
+        AssertUtil.isTrue(update == null, new ApiException(ApiExceptionEnum.REGISTER_ERROR));
+        // 登录
+        StpUtil.login(userInfo.getId());
+
+        UserLoginTo userLoginTo = loadUserById(userInfo.getId());
+        // 将用户信息存储到session中
+        StpUtil.getSession().set("userInfo", userLoginTo);
+
+        SaTokenInfo saTokenInfo = StpUtil.getTokenInfo();
+
+        UserLoginVo userLoginVo = new UserLoginVo();
+        BeanUtils.copyProperties(userLoginTo, userLoginVo);
+        userLoginVo.setToken(new ApiToken(saTokenInfo.getTokenName(), saTokenInfo.getTokenValue()));
+        return userLoginVo;
     }
 
-    private UserLoginTo loadUserByUsername(String email) {
+    private UserLoginTo loadUserById(Integer id) {
+        return loginDao.loadUserById(id);
+    }
+
+    private UserLoginTo loadUserByEmail(String email) {
         return loginDao.loadUserByEmail(email);
     }
 }

@@ -10,6 +10,7 @@ import com.yiyulihua.common.to.LoginPasswordTo;
 import com.yiyulihua.common.to.LoginRegisterTo;
 import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
+import com.yiyulihua.common.vo.UserLoginVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -33,17 +34,17 @@ public class LoginController {
 
     @ApiOperation("用户登录")
     @PostMapping("/login")
-    public Result<ApiToken> login(@RequestBody LoginPasswordTo userInfo) {
-        SaTokenInfo saTokenInfo = loginService.login(userInfo);
-        AssertUtil.isTrue(saTokenInfo == null, new ApiException(ApiExceptionEnum.LOGIN_ERROR));
-        return new Result<ApiToken>().setData(new ApiToken(saTokenInfo.getTokenName(), saTokenInfo.getTokenValue()));
+    public Result<UserLoginVo> login(@RequestBody LoginPasswordTo userInfo) {
+        UserLoginVo userLoginVo = loginService.login(userInfo);
+        AssertUtil.isTrue(userLoginVo == null, new ApiException(ApiExceptionEnum.LOGIN_ERROR));
+        return new Result<UserLoginVo>().setData(userLoginVo);
     }
 
     @ApiOperation("用户注册")
     @PostMapping("/register")
-    public Result<Object> register(@RequestBody LoginRegisterTo userInfo) {
-        loginService.register(userInfo);
-        return Result.success();
+    public Result<UserLoginVo> register(@RequestBody LoginRegisterTo userInfo) {
+        UserLoginVo userLoginVo = loginService.register(userInfo);
+        return new Result<UserLoginVo>().setData(userLoginVo);
     }
 
 }

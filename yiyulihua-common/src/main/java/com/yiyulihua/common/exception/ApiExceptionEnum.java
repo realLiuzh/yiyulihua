@@ -14,7 +14,8 @@ public enum ApiExceptionEnum implements BaseErrorInfoInterface {
     MESSAGE_ERROR("1001", "短信验证码发送失败"),
     PHONE_USED("1002","手机号已被占用"),
     CODE_ERROR("1003","验证码错误"),
-    REGISTER_ERROR("1004","注册失败，请联系管理员");
+    REGISTER_ERROR("1004","注册失败，请联系管理员"),
+    EMAIL_USED("1005","邮箱已被占用");
 
 
     /**
