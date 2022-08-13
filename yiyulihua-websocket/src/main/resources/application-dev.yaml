@@ -12,6 +12,9 @@ spring:
   application:
     name: yiyulihua-websocket
 
+logging:
+  level:
+    com.yiyulihua.websocket.server: debug
 
 # Sa-Token配置
 sa-token:
