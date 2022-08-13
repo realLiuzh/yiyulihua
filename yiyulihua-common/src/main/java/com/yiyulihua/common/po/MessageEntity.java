@@ -9,8 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @author Ö¾ê»µÄÁõ
- * @email 1138423425@qq.com
+ * @author snbo
  * @date 2022-07-30 10:38:30
  */
 @Data

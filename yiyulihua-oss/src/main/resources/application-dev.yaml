@@ -36,5 +36,16 @@ aliyun:
 
 logging:
   level:
-    com.yiyulihua.task.dao: debug
+    com.yiyulihua.oss.mapper: debug
 
+# Sa-Token配置
+sa-token:
+  token-name: Authorization
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+  is-read-cookie: false
+  is-read-head: true

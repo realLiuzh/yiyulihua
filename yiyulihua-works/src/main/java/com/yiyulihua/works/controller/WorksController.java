@@ -21,7 +21,7 @@ import com.yiyulihua.works.service.WorksService;
  * @date 2022-07-16 16:53:42
  */
 
-@Api(value = "作品管理")
+@Api(value = "作品管理",tags = "作品管理")
 @RestController
 public class WorksController {
     private final WorksService worksService;
@@ -31,7 +31,7 @@ public class WorksController {
         this.worksService = worksService;
     }
 
-    @ApiOperation(value = "按条件分页查询作品信息", notes = "timeSort priceSort为排序参数,大于0为降序,小于0为升序,默认为0不排序.如果要同时按时间和价格排序,比较两者绝对值,绝对值大的先排序", tags = "查询操作")
+    @ApiOperation(value = "按条件分页查询作品信息", notes = "timeSort priceSort为排序参数,大于0为降序,小于0为升序,默认为0不排序.如果要同时按时间和价格排序,比较两者绝对值,绝对值大的先排序")
     @PostMapping("/list")
     public Result<PageUtils<WorksListVo>> list(@RequestBody(required = true) WorksQuery worksQuery) {
         PageUtils<WorksListVo> page = worksService.queryPage(worksQuery);
@@ -40,7 +40,7 @@ public class WorksController {
     }
 
 
-    @ApiOperation(value = "根据作品id查询作品的详细信息", tags = "查询操作")
+    @ApiOperation(value = "根据作品id查询作品的详细信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",
                     value = "作品 id",
@@ -55,7 +55,7 @@ public class WorksController {
     }
 
 
-    @ApiOperation(value = "通过用户 id 分页查询用户发布的作品", tags = "查询操作")
+    @ApiOperation(value = "通过用户 id 分页查询用户发布的作品")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "current",
                     value = "当前页",
@@ -80,7 +80,7 @@ public class WorksController {
         return new Result<PageUtils<WorksMyPublishVo>>().setData(works);
     }
 
-    @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ", tags = "增改操作")
+    @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ")
     @PostMapping
     public Result save(@RequestBody(required = true) WorksPublishTo work) {
         worksService.publishOrSave(work);
@@ -91,7 +91,7 @@ public class WorksController {
     /**
      * 修改
      */
-    @ApiOperation(value = "根据作品id更新作品信息", notes = "id 为必填项,其余非必需", tags = "增改操作")
+    @ApiOperation(value = "根据作品id更新作品信息", notes = "id 为必填项,其余非必需")
     @PutMapping
     public Result update(@RequestBody(required = true) WorksUpdateTo work) {
         worksService.updateInfoById(work);
@@ -102,7 +102,7 @@ public class WorksController {
     /**
      * 删除
      */
-    @ApiOperation(value = "根据 id 删除作品信息", tags = "删除操作")
+    @ApiOperation(value = "根据 id 删除作品信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",
                     value = "作品 id",
@@ -120,7 +120,7 @@ public class WorksController {
     /**
      * 批量删除
      */
-    @ApiOperation(value = "根据 id 批量删除作品信息", tags = "删除操作")
+    @ApiOperation(value = "根据 id 批量删除作品信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "ids",
                     value = "作品 id 数组",
