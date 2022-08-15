@@ -38,5 +38,17 @@
                            ON `tb_works`.`publisher_id` = tb_user.`id`
             ${ew.customSqlSegment}
     </select>
+
+    <select id="getRecommend" resultType="com.yiyulihua.common.vo.WorksListVo">
+        SELECT w1.id, w1.works_name, w1.type, w1.works_deadline, w1.works_cover, w1.works_price
+        FROM tb_works AS w1
+                 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(tb_works.`id`) FROM tb_works) - (SELECT MIN(tb_works.id)
+                                                                                           FROM tb_works)) +
+                                    (SELECT MIN(tb_works.id) FROM tb_works)) AS works_id) AS t2
+        WHERE w1.id >= t2.works_id
+          AND works_status != 0
+          AND `type_id` = #{typeId}
+            LIMIT 3
+    </select>
 </mapper>
 

@@ -73,7 +73,7 @@ public class TaskController {
         return new Result<TaskVo>().setData(task);
     }
 
-    @ApiOperation(value = "通过用户 id 分页查询用户发布的任务")
+    @ApiOperation(value = "通过用户 id 分页查询用户发布的任务", notes = "根据 token 获取用户id")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "current",
                     value = "当前页",
@@ -82,18 +82,13 @@ public class TaskController {
             @ApiImplicitParam(name = "size",
                     value = "每页记录条数",
                     required = true,
-                    paramType = "path"),
-            @ApiImplicitParam(name = "publisherId",
-                    value = "发布者 id",
-                    required = true,
-                    paramType = "query")
+                    paramType = "path")
     })
     @GetMapping("/publisher/{current}/{size}")
     public Result<PageUtils<TaskMyPublishVo>> getTaskByPublisherId(
             @PathVariable("current") Integer current,
-            @PathVariable("size") Integer size,
-            @RequestParam("publisherId") String publisherId) {
-        PageUtils<TaskMyPublishVo> page = taskService.getByPublisherId(current, size, publisherId);
+            @PathVariable("size") Integer size) {
+        PageUtils<TaskMyPublishVo> page = taskService.getByPublisherId(current, size);
 
         return new Result<PageUtils<TaskMyPublishVo>>().setData(page);
     }

@@ -1,6 +1,7 @@
 package com.yiyulihua.works.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 
 import com.yiyulihua.common.query.WorksQuery;
@@ -21,7 +22,7 @@ import com.yiyulihua.works.service.WorksService;
  * @date 2022-07-16 16:53:42
  */
 
-@Api(value = "作品管理",tags = "作品管理")
+@Api(value = "作品管理", tags = "作品管理")
 @RestController
 public class WorksController {
     private final WorksService worksService;
@@ -55,7 +56,7 @@ public class WorksController {
     }
 
 
-    @ApiOperation(value = "通过用户 id 分页查询用户发布的作品")
+    @ApiOperation(value = "通过用户 id 分页查询用户发布的作品", notes = "根据 token 获取用户id")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "current",
                     value = "当前页",
@@ -64,23 +65,18 @@ public class WorksController {
             @ApiImplicitParam(name = "size",
                     value = "每页记录条数",
                     required = true,
-                    paramType = "path"),
-            @ApiImplicitParam(name = "publisherId",
-                    value = "发布者 id",
-                    required = true,
-                    paramType = "query")
+                    paramType = "path")
     })
     @GetMapping("/publisher/{current}/{size}")
     public Result<PageUtils<WorksMyPublishVo>> getWorksByPublisherId(
             @PathVariable("current") Integer current,
-            @PathVariable("size") Integer size,
-            @RequestParam("publisherId") String publisherId) {
-        PageUtils<WorksMyPublishVo> works = worksService.getWorksByPublisherId(current, size, publisherId);
+            @PathVariable("size") Integer size) {
+        PageUtils<WorksMyPublishVo> works = worksService.getWorksByPublisherId(current, size);
 
         return new Result<PageUtils<WorksMyPublishVo>>().setData(works);
     }
 
-    @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1; ")
+    @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1;")
     @PostMapping
     public Result save(@RequestBody(required = true) WorksPublishTo work) {
         worksService.publishOrSave(work);
@@ -136,4 +132,17 @@ public class WorksController {
 
     }
 
+    @ApiOperation("获取同类作品推荐")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id",
+                    value = "作品id",
+                    paramType = "path",
+                    required = true)
+    })
+    @GetMapping("/recommend/{id}")
+    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") String id) {
+        List<WorksListVo> list = worksService.getRecommend(id);
+
+        return new Result<List<WorksListVo>>().setData(list);
+    }
 }

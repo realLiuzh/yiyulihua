@@ -82,7 +82,7 @@ public class WorksUpdateTo {
     @ApiModelProperty(value = "备注(文字作品备注为字数,图片作品备注为大小,音频作品备注为时长)", required = false)
     private String remark;
 
-    @ApiModelProperty(value = "作品状态(0:未发布 1:已发布)默认为 0", required = false)
+    @ApiModelProperty(value = "作品状态(0:未发布 1:已发布(进行中) 2:待确认 3:已售出)", required = false)
     private Integer worksStatus;
 
     @ApiModelProperty("作品截止时间")

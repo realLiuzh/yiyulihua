@@ -1,5 +1,6 @@
 package com.yiyulihua.task.service.impl;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
@@ -17,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
@@ -26,7 +26,6 @@ import com.yiyulihua.task.dao.TaskDao;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.task.service.TaskService;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -88,7 +87,12 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
     }
 
     @Override
-    public PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId) {
+    public PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String publisherId = loginId.toString();
+
         //条件
         QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
         wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture", "task_works_number");

@@ -24,10 +24,8 @@ public class WorksMyPublishVo {
     @ApiModelProperty("作品封面")
     private String worksCover;
 
-
     @ApiModelProperty("作品类型(如: 图片/音频...)")
     private String type;
-
 
     @ApiModelProperty("作品子类型(如: jpg/png/mp3/flac/doc...)")
     private String subtype;
@@ -37,6 +35,9 @@ public class WorksMyPublishVo {
 
     @ApiModelProperty("出价人数")
     private Integer worksBidNumber;
+
+    @ApiModelProperty("作品状态(0:未发布 1:已发布(进行中) 2:待确认 3:已售出)")
+    private Integer worksStatus;
 
     @ApiModelProperty("作品截止时间")
     private Date worksDeadline;

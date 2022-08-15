@@ -10,6 +10,8 @@ import com.yiyulihua.common.vo.WorksListVo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 
 /**
  * @date 2022-07-16 16:53:42
@@ -19,4 +21,6 @@ public interface WorksDao extends BaseMapper<WorksEntity> {
     IPage<WorksListVo> getWorksList(IPage<WorksListVo> page, @Param(Constants.WRAPPER) Wrapper<WorksListVo> wrapper);
 
     WorksDetailsVo getWorksDetails(@Param(Constants.WRAPPER) Wrapper<WorksDetailsVo> wrapper);
+
+    List<WorksListVo> getRecommend(@Param("typeId") String typeId);
 }

@@ -8,6 +8,8 @@ import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.*;
 
+import java.util.List;
+
 /**
  * @author Ö¾ê»µÄÁõ
  * @email 1138423425@qq.com
@@ -53,7 +55,8 @@ public interface WorksService extends IService<WorksEntity> {
      */
     void updateInfoById(WorksUpdateTo work);
 
-    PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size, String publisherId);
+    PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size);
 
+    List<WorksListVo> getRecommend(String id);
 }
 

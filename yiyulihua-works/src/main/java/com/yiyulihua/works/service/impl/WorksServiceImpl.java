@@ -1,5 +1,6 @@
 package com.yiyulihua.works.service.impl;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
@@ -8,6 +9,7 @@ import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.query.WorksQuery;
 import com.yiyulihua.common.to.WorksPublishTo;
 import com.yiyulihua.common.to.WorksUpdateTo;
+import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
 import com.yiyulihua.common.vo.*;
@@ -32,7 +34,6 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     public PageUtils<WorksListVo> queryPage(WorksQuery worksQuery) {
         QueryWrapper<WorksListVo> wrapper = new QueryWrapper<>();
 
-
         // 类型查询条件
         if (!StringUtils.isEmpty(worksQuery.getTypeId())) {
             wrapper.eq("type_id", worksQuery.getTypeId());
@@ -40,8 +41,8 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
                 wrapper.eq("subtype_id", worksQuery.getSubtypeId());
             }
         }
-        // 筛选已经布的作品
-        wrapper.eq("works_status", 1);
+        // 筛选进行中或待确认的作品
+        wrapper.in("works_status", 1, 2);
         // 排序条件
         sortOperation(wrapper, worksQuery);
 
@@ -112,19 +113,17 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
 
     @Override
     public void publishOrSave(WorksPublishTo work) {
+        Object loginIdDefaultNull = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginIdDefaultNull, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginIdDefaultNull.toString();
         //检查参数
         checkEmpty(work);
 
         WorksEntity worksEntity = new WorksEntity();
+        worksEntity.setPublisherId(userId);
         BeanUtils.copyProperties(work, worksEntity);
         int insert = baseMapper.insert(worksEntity);
-        if (insert < 1) {
-            if (work.getWorksStatus() == 0) {
-                throw new ApiException("-1", "保存作品失败");
-            } else {
-                throw new ApiException("-1", "发布作品失败");
-            }
-        }
+        AssertUtil.isTrue(insert < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 
     @Override
@@ -136,18 +135,24 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
 
         WorksEntity worksEntity = new WorksEntity();
         BeanUtils.copyProperties(work, worksEntity);
-        int i = baseMapper.updateById(worksEntity);
-        if (i < 1) {
-            throw new ApiException("-1", "更新作品失败");
-        }
+        int update = baseMapper.updateById(worksEntity);
+        AssertUtil.isTrue(update < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 
     @Override
-    public PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size, String publisherId) {
+    public PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String publisherId = loginId.toString();
+
         //条件
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
         wrapper.eq("publisher_id", publisherId);
-        wrapper.orderByDesc("create_time");
+        //已发布的作品
+        wrapper.ne("works_status", 0);
+        //根据修改时间排序
+        wrapper.orderByDesc("update_time");
 
         //分页查询
         Page<WorksEntity> page = new Query<WorksEntity>().getPage(new PageQuery(current, size));
@@ -163,6 +168,12 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         });
 
         return new PageUtils<WorksMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
+    }
+
+    @Override
+    public List<WorksListVo> getRecommend(String id) {
+        WorksEntity worksEntity = baseMapper.selectById(id);
+        return baseMapper.getRecommend(worksEntity.getTypeId());
     }
 
     private void checkEmpty(WorksPublishTo work) {

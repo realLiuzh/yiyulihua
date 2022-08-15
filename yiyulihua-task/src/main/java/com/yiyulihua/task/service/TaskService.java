@@ -22,7 +22,7 @@ public interface TaskService extends IService<TaskEntity> {
 
     TaskVo selectById(Integer id);
 
-    PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size, String publisherId);
+    PageUtils<TaskMyPublishVo> getByPublisherId(Integer current, Integer size);
 
     void buildTask(TaskBuildTo taskBuildTo);
 

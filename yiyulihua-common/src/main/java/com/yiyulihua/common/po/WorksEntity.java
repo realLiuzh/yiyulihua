@@ -97,7 +97,7 @@ public class WorksEntity implements Serializable {
     @ApiModelProperty("备注(文字作品备注为字数,图片作品备注为大小,音频作品备注为时长)")
     private String remark;
 
-    @ApiModelProperty("作品状态(0:未发布 1:已发布)")
+    @ApiModelProperty("作品状态(0:未发布 1:已发布(进行中) 2:待确认 3:已售出)")
     private Integer worksStatus;
 
     @ApiModelProperty("作品截止时间")

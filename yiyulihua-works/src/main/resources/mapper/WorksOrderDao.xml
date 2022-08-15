@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yiyulihua.works.dao.WorksOrderDao">
+
+    <select id="getParticipantInfoByUserId" resultType="com.yiyulihua.common.vo.ParticipantWorksVo">
+        SELECT wo.`id`,
+               wo.`order_no`,
+               wo.`order_status`,
+               wo.`pay_status`,
+               wo.`works_id` as worksId,
+               w.`works_cover`,
+               w.`works_name`,
+               w.`works_deadline` as deadline,
+               w.`type`,
+               w.`works_price`
+        FROM tb_works_order wo
+                 LEFT JOIN tb_works w
+                           ON wo.`works_id` = w.`id`
+            ${ew.customSqlSegment}
+    </select>
+</mapper>
