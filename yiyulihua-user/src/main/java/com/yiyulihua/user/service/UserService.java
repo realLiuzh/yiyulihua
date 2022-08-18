@@ -1,6 +1,8 @@
 package com.yiyulihua.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yiyulihua.common.to.UserLoginTo;
+import com.yiyulihua.common.to.UserUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.UserEntity;
 import com.yiyulihua.common.vo.UserVo;
@@ -22,5 +24,7 @@ public interface UserService extends IService<UserEntity> {
     UserVo getById(Integer id);
 
     List<Integer> getAllUserId();
+
+    void updateUser(UserUpdateTo userLoginTo);
 }
 

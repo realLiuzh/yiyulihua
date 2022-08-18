@@ -1,9 +1,15 @@
 package com.yiyulihua.user.service.impl;
 
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
+import com.yiyulihua.common.to.UserUpdateTo;
+import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
 import com.yiyulihua.common.vo.UserVo;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,6 +27,9 @@ import com.yiyulihua.user.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements UserService {
+
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -58,6 +67,15 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         });
 
         return list;
+    }
+
+    @Override
+    public void updateUser(UserUpdateTo userUpdateTo) {
+        String code = redisTemplate.opsForValue().get(userUpdateTo.getPhone());
+        AssertUtil.isTrue(code == null || !code.equals(userUpdateTo.getCode()), new ApiException(ApiExceptionEnum.CODE_ERROR));
+        UserEntity userEntity = new UserEntity();
+        BeanUtils.copyProperties(userUpdateTo, userEntity);
+        AssertUtil.isTrue(this.baseMapper.updateById(userEntity) != 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 
 }

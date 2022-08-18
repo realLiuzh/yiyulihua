@@ -27,5 +27,9 @@ public interface TaskService extends IService<TaskEntity> {
     void buildTask(TaskBuildTo taskBuildTo);
 
     List<TaskListVo> recommendTask();
+
+    PageUtils<TaskListVo> getCollect(Integer current, Integer size);
+
+    void collectTask(Integer taskId, Integer status);
 }
 

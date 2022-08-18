@@ -8,6 +8,7 @@ import java.util.Map;
 import cn.dev33.satoken.stp.StpUtil;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.UserLoginTo;
+import com.yiyulihua.common.to.UserUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.UserVo;
@@ -65,6 +66,15 @@ public class UserController {
         UserLoginTo userInfo = (UserLoginTo) StpUtil.getSession().get("userInfo");
         UserVo user = userService.getById(userInfo.getId());
         return new Result<UserVo>().setData(user);
+    }
+
+
+    @ApiOperation(value = "用户修改个人信息", notes = "需要手机验证码")
+    @PostMapping("/update")
+    @ResponseBody
+    public Result<Object> updateUser(UserUpdateTo userUpdateTo) {
+        userService.updateUser(userUpdateTo);
+        return Result.success();
     }
 
 

@@ -13,6 +13,7 @@ import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
 import com.yiyulihua.common.vo.UserVo;
 import com.yiyulihua.task.feign.UserFeignService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -126,6 +127,52 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
     @Override
     public List<TaskListVo> recommendTask() {
         return baseMapper.recommendTask();
+    }
+
+    @Override
+    public PageUtils<TaskListVo> getCollect(Integer current, Integer size) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
+
+        //分页
+        Page<TaskListVo> page = new Query<TaskListVo>().getPage(new PageQuery(current, size));
+        List<Integer> ids = baseMapper.getCollect(page, userId);
+
+        List<TaskListVo> records = ids.stream().map(this::selectTaskListVoById).collect(Collectors.toList());
+        PageUtils<TaskListVo> pageUtils = new PageUtils<>(page);
+        pageUtils.setList(records);
+        return pageUtils;
+
+    }
+
+    @Override
+    public void collectTask(Integer taskId, Integer status) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
+
+        this.baseMapper.unCollect(userId, taskId);
+        if (status == 1)
+            this.baseMapper.collect(userId, taskId);
+    }
+
+
+    public TaskListVo selectTaskListVoById(Integer id) {
+        QueryWrapper<TaskEntity> wrapper = new QueryWrapper<>();
+        wrapper.select("id", "task_name", "type", "task_price", "task_deadline", "task_picture");
+        wrapper.orderByDesc("update_time");
+        wrapper.eq("task_status", 1);
+        wrapper.eq("is_valid", 0);
+        wrapper.eq("id", id);
+
+        TaskListVo taskListVo = new TaskListVo();
+        TaskEntity taskEntity = this.baseMapper.selectOne(wrapper);
+        BeanUtils.copyProperties(taskEntity, taskListVo);
+        return taskListVo;
+
     }
 
 }

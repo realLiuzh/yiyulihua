@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
 
-        <jib.repository.name>yiyulihua-works</jib.repository.name>
+        <jib.repository.name>yiyulihua-websocket</jib.repository.name>
         <jib.version>2</jib.version>
         <jib.auth.username>mianqiuyu</jib.auth.username>
         <jib.auth.password>Cqupt2019210941</jib.auth.password>

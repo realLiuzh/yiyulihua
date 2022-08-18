@@ -8,6 +8,7 @@ import com.yiyulihua.common.annotation.I18n;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.TaskBuildTo;
+import com.yiyulihua.common.to.UserCollectTaskTo;
 import com.yiyulihua.common.vo.TaskListVo;
 import com.yiyulihua.common.vo.TaskMyPublishVo;
 import com.yiyulihua.common.vo.TaskVo;
@@ -49,7 +50,7 @@ public class TaskController {
                     required = false,
                     paramType = "query")
     })
-    @I18n
+    //@I18n
     @GetMapping("/list")
     public Result<PageUtils<TaskListVo>> list(@RequestParam(value = "page", required = false) Integer page,
                                               @RequestParam(value = "limit", required = false) Integer limit) {
@@ -66,7 +67,7 @@ public class TaskController {
                     required = true,
                     paramType = "query"),
     })
-    @I18n
+    //@I18n
     @GetMapping("/info")
     public Result<TaskVo> selectById(@RequestParam("id") Integer id) {
         TaskVo task = taskService.selectById(id);
@@ -108,6 +109,29 @@ public class TaskController {
         return new Result<List<TaskListVo>>().setData(list);
     }
 
+    @ApiOperation(value = "用户收藏任务", tags = "收藏和参与任务", notes = "携带token")
+    @PostMapping("/collect")
+    public Result<Object> collectTask(@RequestBody UserCollectTaskTo userCollectTaskTo) {
+        taskService.collectTask(userCollectTaskTo.getTaskId(), 1);
+        return Result.success();
+    }
+
+    @ApiOperation(value = "用户取消收藏任务", tags = "收藏和参与任务", notes = "携带token")
+    @PostMapping("/uncollect")
+    public Result<Object> unCollectTask(@RequestBody UserCollectTaskTo userCollectTaskTo) {
+        taskService.collectTask(userCollectTaskTo.getTaskId(), 0);
+        return Result.success();
+    }
+
+
+    @ApiOperation(value = "查询用户收藏的任务", tags = "收藏和参与任务", notes = "携带token")
+    @GetMapping("/collected/{current}/{size}")
+    public Result<PageUtils<TaskListVo>> getCollect(@PathVariable("current") Integer current,
+                                                    @PathVariable("size") Integer size) {
+        PageUtils<TaskListVo> page = taskService.getCollect(current, size);
+
+        return new Result<PageUtils<TaskListVo>>().setData(page);
+    }
 
     /**
      * 保存

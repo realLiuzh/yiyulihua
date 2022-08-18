@@ -1,9 +1,12 @@
 package com.yiyulihua.task.dao;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yiyulihua.common.po.TaskEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yiyulihua.common.vo.TaskListVo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,4 +18,10 @@ import java.util.List;
 @Mapper
 public interface TaskDao extends BaseMapper<TaskEntity> {
     List<TaskListVo> recommendTask();
+
+    List<Integer> getCollect(IPage<?> page, @Param("userId") String userId);
+
+    void unCollect(@Param("userId") String userId, @Param("taskId") Integer taskId);
+
+    void collect(@Param("userId") String userId, @Param("taskId") Integer taskId);
 }
