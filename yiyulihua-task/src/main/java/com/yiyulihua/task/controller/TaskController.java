@@ -109,29 +109,6 @@ public class TaskController {
         return new Result<List<TaskListVo>>().setData(list);
     }
 
-    @ApiOperation(value = "用户收藏任务", tags = "收藏和参与任务", notes = "携带token")
-    @PostMapping("/collect")
-    public Result<Object> collectTask(@RequestBody UserCollectTaskTo userCollectTaskTo) {
-        taskService.collectTask(userCollectTaskTo.getTaskId(), 1);
-        return Result.success();
-    }
-
-    @ApiOperation(value = "用户取消收藏任务", tags = "收藏和参与任务", notes = "携带token")
-    @PostMapping("/uncollect")
-    public Result<Object> unCollectTask(@RequestBody UserCollectTaskTo userCollectTaskTo) {
-        taskService.collectTask(userCollectTaskTo.getTaskId(), 0);
-        return Result.success();
-    }
-
-
-    @ApiOperation(value = "查询用户收藏的任务", tags = "收藏和参与任务", notes = "携带token")
-    @GetMapping("/collected/{current}/{size}")
-    public Result<PageUtils<TaskListVo>> getCollect(@PathVariable("current") Integer current,
-                                                    @PathVariable("size") Integer size) {
-        PageUtils<TaskListVo> page = taskService.getCollect(current, size);
-
-        return new Result<PageUtils<TaskListVo>>().setData(page);
-    }
 
     /**
      * 保存

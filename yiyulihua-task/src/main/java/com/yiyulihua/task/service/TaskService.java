@@ -3,6 +3,7 @@ package com.yiyulihua.task.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.to.TaskBuildTo;
+import com.yiyulihua.common.to.TaskCommitTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.po.TaskEntity;
 import com.yiyulihua.common.vo.TaskListVo;
@@ -31,5 +32,7 @@ public interface TaskService extends IService<TaskEntity> {
     PageUtils<TaskListVo> getCollect(Integer current, Integer size);
 
     void collectTask(Integer taskId, Integer status);
+
+    PageUtils<TaskListVo> getJoin(Integer current, Integer size);
 }
 

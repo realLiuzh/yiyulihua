@@ -6,6 +6,7 @@ import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.to.TaskBuildTo;
+import com.yiyulihua.common.to.TaskCommitTo;
 import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.R;
 import com.yiyulihua.common.vo.TaskListVo;
@@ -157,6 +158,23 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
         this.baseMapper.unCollect(userId, taskId);
         if (status == 1)
             this.baseMapper.collect(userId, taskId);
+    }
+
+    @Override
+    public PageUtils<TaskListVo> getJoin(Integer current, Integer size) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
+
+        //分页
+        Page<TaskListVo> page = new Query<TaskListVo>().getPage(new PageQuery(current, size));
+        List<Integer> ids = baseMapper.getJoin(page, userId);
+
+        List<TaskListVo> records = ids.stream().map(this::selectTaskListVoById).collect(Collectors.toList());
+        PageUtils<TaskListVo> pageUtils = new PageUtils<>(page);
+        pageUtils.setList(records);
+        return pageUtils;
     }
 
 

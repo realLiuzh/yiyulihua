@@ -14,16 +14,20 @@
     </select>
 
 
-        <select id="getCollect" resultType="int">
+    <select id="getCollect" resultType="int">
             select task_id taskId from tb_task_collect where user_id=#{userId}
         </select>
 
-<!--    <select id="getCollect" resultType="com.yiyulihua.common.vo.TaskListVo">-->
-<!--            SELECT t1.id,t1.task_name,t1.type,t1.task_deadline,t1.task_picture,t1.task_price-->
-<!--            FROM tb_task AS t1-->
-<!--            WHERE t1.id in (select task_id from tb_task_collect where user_id=#{userId})-->
-<!--            AND t1.is_valid=0;-->
-<!--        </select>-->
+
+    <select id="getJoin" resultType="int">
+            select task_id taskId from tb_task_commit where is_valid=0 and user_id=#{userId}
+        </select>
+    <!--    <select id="getCollect" resultType="com.yiyulihua.common.vo.TaskListVo">-->
+    <!--            SELECT t1.id,t1.task_name,t1.type,t1.task_deadline,t1.task_picture,t1.task_price-->
+    <!--            FROM tb_task AS t1-->
+    <!--            WHERE t1.id in (select task_id from tb_task_collect where user_id=#{userId})-->
+    <!--            AND t1.is_valid=0;-->
+    <!--        </select>-->
 
     <delete id="unCollect">
         delete from tb_task_collect

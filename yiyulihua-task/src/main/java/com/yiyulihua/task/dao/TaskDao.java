@@ -24,4 +24,6 @@ public interface TaskDao extends BaseMapper<TaskEntity> {
     void unCollect(@Param("userId") String userId, @Param("taskId") Integer taskId);
 
     void collect(@Param("userId") String userId, @Param("taskId") Integer taskId);
+
+    List<Integer> getJoin(Page<TaskListVo> page, @Param("userId") String userId);
 }
