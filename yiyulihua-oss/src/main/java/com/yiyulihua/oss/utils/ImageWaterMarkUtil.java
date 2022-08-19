@@ -181,16 +181,13 @@ public class ImageWaterMarkUtil {
             // 生成图片
             ImageIO.write(buffImg, "JPG", outputStream);
             long endTime = System.currentTimeMillis();
-            System.out.println("指定水印图片位置图片添加水印...完成，耗时:" + (endTime - startTime) + "ms");
         } catch (Exception e) {
-            System.out.println("图片添加水印异常！" + e.getMessage());
         } finally {
             try {
                 if (null != outputStream) {
                     outputStream.close();
                 }
             } catch (Exception e) {
-                System.out.println("关闭流异常！" + e.getMessage());
             }
         }
         return outputStream;
@@ -240,8 +237,6 @@ public class ImageWaterMarkUtil {
         wr = w * 1.0 / bufImg.getWidth();
         hr = h * 1.0 / bufImg.getHeight();
 
-        System.out.println("缩放后的宽" + wr);
-        System.out.println("缩放后的高" + hr);
 
         AffineTransformOp ato = new AffineTransformOp(AffineTransform.getScaleInstance(wr, hr), null);
         Itemp = ato.filter(bufImg, null);

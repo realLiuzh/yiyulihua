@@ -32,10 +32,13 @@ public class OssController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "file",
                     value = "作品文件",
-                    required = true)
+                    required = true,
+                    dataType = "MultipartFile",
+                    allowMultiple = true,
+                    paramType = "query")
     })
     @PostMapping
-    public Result<Map<String, Object>> loadFile(@RequestParam("file") MultipartFile file) {
+    public Result<Map<String, Object>> loadFile(@RequestPart @RequestParam("file") MultipartFile file) {
         Map<String, Object> map = ossService.uploadFile(file);
         return new Result<Map<String, Object>>().setData(map);
     }

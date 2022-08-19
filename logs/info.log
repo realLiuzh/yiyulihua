@@ -3063,3 +3063,1116 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2022-08-18 11:18:36.099 [http-nio-9000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-18 11:18:36.099 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2022-08-18 11:18:36.110 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2022-08-19 11:41:57.893 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 11:41:58.493 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 11:41:58.494 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 11:41:58.507 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 11:41:58.668 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 11:41:58.984 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 11:41:58.991 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:41:58.991 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 11:41:58.991 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 11:41:59.148 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 11:41:59.148 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1243 ms
+2022-08-19 11:41:59.246 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 11:41:59.331 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 11:42:00.504 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:42:00.507 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:42:00.587 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:42:00.946 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 11:42:01.441 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:42:01.456 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 11:42:01.651 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 11:42:02.043 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.216 seconds (JVM running for 6.056)
+2022-08-19 11:42:27.614 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 11:42:27.615 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 11:42:27.620 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 11:49:22.884 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 11:49:22.987 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 11:49:22.988 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:49:23.012 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 11:49:28.946 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 11:49:29.551 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 11:49:29.552 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 11:49:29.567 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 11:49:29.731 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 11:49:30.036 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 11:49:30.042 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:49:30.043 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 11:49:30.043 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 11:49:30.202 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 11:49:30.203 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1245 ms
+2022-08-19 11:49:30.289 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 11:49:30.367 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 11:49:31.503 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:49:31.506 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:49:31.593 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:49:31.944 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 11:49:32.410 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:49:32.424 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 11:49:32.587 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 11:49:32.986 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.148 seconds (JVM running for 5.854)
+2022-08-19 11:49:51.980 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 11:49:51.980 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 11:49:51.985 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 11:51:51.653 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 11:51:51.752 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 11:51:51.753 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:51:51.773 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 11:51:56.509 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 11:51:57.106 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 11:51:57.108 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 11:51:57.122 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 11:51:57.282 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 11:51:57.584 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 11:51:57.590 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:51:57.591 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 11:51:57.591 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 11:51:57.742 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 11:51:57.743 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1221 ms
+2022-08-19 11:51:57.826 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 11:51:57.907 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 11:51:59.042 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:51:59.045 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:51:59.124 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:51:59.472 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 11:51:59.937 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:51:59.951 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 11:52:00.123 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 11:52:00.504 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.087 seconds (JVM running for 5.783)
+2022-08-19 11:53:46.079 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 11:53:46.079 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 11:53:46.085 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-08-19 11:54:12.621 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp38960396399525978798.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp38960396399525978798.mp3
+2022-08-19 11:54:12.743 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 11:54:12.744 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 11:54:12.744 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 11:54:12.745 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 11:54:12.746 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 11:54:12.747 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 11:54:12.747 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Reading ID3v23 tag
+2022-08-19 11:54:12.749 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 11:54:12.751 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.758 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 11:54:12.758 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.758 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 11:54:12.760 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 11:54:12.761 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.765 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Invalid identifier:    
+2022-08-19 11:54:12.766 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp38960396399525978798.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 11:54:12.766 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Loaded Frames,there are:4
+2022-08-19 11:54:12.766 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 11:54:12.766 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 11:54:12.766 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 11:54:12.768 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp38960396399525978798.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp38960396399525978798.mp3
+2022-08-19 11:54:12.768 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 11:54:12.768 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 11:54:12.768 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 11:54:12.768 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Reading ID3v23 tag
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 11:54:12.769 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Read Frame from byteBuffer
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Invalid identifier:    
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp38960396399525978798.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38960396399525978798.mp3:Loaded Frames,there are:4
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 11:54:12.770 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 11:57:53.157 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.generic - File E:\SystemCache\少女时代-Gee.flac809801126328281193.flac being read
+2022-08-19 11:57:53.159 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac.MetadataBlockDataStreamInfo - MinBlockSize:4608MaxBlockSize:4608MinFrameSize:489MaxFrameSize:17053SampleRateTotal:44100SampleRatePerChannel:22050:Channel number:2:Bits per sample: 16:TotalNumberOfSamples: 8871156:Length: 201.16
+2022-08-19 11:57:53.159 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:4
+2022-08-19 11:57:53.159 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:STREAMINFO DataLength:34 isLastBlock:false ending at 8
+2022-08-19 11:57:53.160 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:STREAMINFO
+2022-08-19 11:57:53.160 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:42
+2022-08-19 11:57:53.160 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:VORBIS_COMMENT DataLength:117 isLastBlock:false ending at 46
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Vendor is:Lavf57.71.100
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Number of user comments:6
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:19
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ARTIST
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TITLE
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 11:57:53.162 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ALBUM
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TRACKNUMBER
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:DESCRIPTION
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ENCODER
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:163
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:PADDING DataLength:8216 isLastBlock:true ending at 167
+2022-08-19 11:57:53.163 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:PADDING
+2022-08-19 11:57:56.752 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\tempMp33707558683658980018.mp3:abs:E:\SystemCache\tempMp33707558683658980018.mp3
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit133:cap133
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - tempMp33707558683658980018.mp3:Reading ID3v24 tag
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - tempMp33707558683658980018.mp3:Reading tag from file size set in header is123
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:14
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.753 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:少女时代  size:13
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:5
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:5
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.754 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 11:57:56.758 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTRCK:3
+2022-08-19 11:57:56.758 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.760 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString: size:2
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTXXX:11
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString:comment size inc terminator:8
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:   size:2
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.id3 - Reading body forTSSE:15
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 11:57:56.761 [http-nio-12000-exec-6] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Lavf58.20.100  size:14
+2022-08-19 11:59:45.079 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 11:59:45.183 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 11:59:45.184 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:59:45.197 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 11:59:50.568 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 11:59:51.167 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 11:59:51.168 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 11:59:51.181 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 11:59:51.344 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 11:59:51.691 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 11:59:51.701 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:59:51.702 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 11:59:51.702 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 11:59:51.889 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 11:59:51.889 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1309 ms
+2022-08-19 11:59:51.982 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 11:59:52.061 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 11:59:53.197 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:59:53.200 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 11:59:53.281 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 11:59:53.629 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 11:59:54.095 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 11:59:54.109 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 11:59:54.284 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 11:59:54.669 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.202 seconds (JVM running for 5.968)
+2022-08-19 12:00:00.158 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:00:00.158 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:00:00.163 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 12:00:10.409 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp36882273459154891084.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp36882273459154891084.mp3
+2022-08-19 12:00:10.527 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:00:10.527 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:00:10.527 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:00:10.528 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:00:10.528 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:00:10.528 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:00:10.528 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Reading ID3v23 tag
+2022-08-19 12:00:10.531 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:00:10.532 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.539 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:00:10.540 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.540 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:00:10.541 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.541 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:00:10.541 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.541 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:00:10.541 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.542 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:00:10.542 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.542 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:00:10.542 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:00:10.544 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Invalid identifier:    
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp36882273459154891084.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Loaded Frames,there are:4
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:00:10.545 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:00:10.548 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp36882273459154891084.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp36882273459154891084.mp3
+2022-08-19 12:00:10.548 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:00:10.548 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:00:10.548 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Reading ID3v23 tag
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:00:10.549 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Read Frame from byteBuffer
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Invalid identifier:    
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp36882273459154891084.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp36882273459154891084.mp3:Loaded Frames,there are:4
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:00:10.550 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:00:41.801 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:00:41.903 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:00:41.904 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:00:41.921 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:00:47.443 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:00:48.042 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:00:48.043 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:00:48.057 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:00:48.222 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:00:48.526 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:00:48.532 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:00:48.532 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:00:48.532 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:00:48.692 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:00:48.693 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1239 ms
+2022-08-19 12:00:48.777 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:00:48.857 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:00:49.996 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:00:49.998 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:00:50.078 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:00:50.422 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:00:50.886 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:00:50.900 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:00:51.082 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:00:51.468 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.094 seconds (JVM running for 5.88)
+2022-08-19 12:01:50.994 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:01:50.994 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:01:51.000 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-08-19 12:01:59.778 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp3466390582061153986.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp3466390582061153986.mp3
+2022-08-19 12:01:59.891 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:01:59.891 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:01:59.891 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:01:59.892 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:01:59.892 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:01:59.893 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:01:59.893 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Reading ID3v23 tag
+2022-08-19 12:01:59.894 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:01:59.896 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.904 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:01:59.904 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.904 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:01:59.905 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.905 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:01:59.905 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.905 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:01:59.905 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.906 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:01:59.906 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.906 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:01:59.906 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:01:59.908 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Invalid identifier:    
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp3466390582061153986.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Loaded Frames,there are:4
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:01:59.909 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:01:59.911 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp3466390582061153986.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp3466390582061153986.mp3
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Reading ID3v23 tag
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:01:59.912 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Read Frame from byteBuffer
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Invalid identifier:    
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp3466390582061153986.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp3466390582061153986.mp3:Loaded Frames,there are:4
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:01:59.913 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:03:19.207 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:03:19.302 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:03:19.304 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:03:19.316 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:03:24.660 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:03:25.261 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:03:25.262 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:03:25.276 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:03:25.447 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:03:25.758 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:03:25.765 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:03:25.765 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:03:25.765 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:03:25.922 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:03:25.922 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1250 ms
+2022-08-19 12:03:26.005 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:03:26.088 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:03:27.244 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:03:27.246 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:03:27.328 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:03:27.677 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:03:28.140 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:03:28.154 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:03:28.317 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:03:28.701 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.135 seconds (JVM running for 5.856)
+2022-08-19 12:03:34.468 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:03:34.469 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:03:34.473 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-08-19 12:03:42.885 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp32868834842785126435.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp32868834842785126435.mp3
+2022-08-19 12:03:42.994 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:03:42.994 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:03:42.994 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:03:42.995 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:03:42.995 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:03:42.995 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:03:42.995 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Reading ID3v23 tag
+2022-08-19 12:03:42.997 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:03:42.998 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:03:43.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.006 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:03:43.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.010 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Invalid identifier:    
+2022-08-19 12:03:43.011 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp32868834842785126435.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:03:43.011 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Loaded Frames,there are:4
+2022-08-19 12:03:43.011 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:03:43.011 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:03:43.011 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp32868834842785126435.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp32868834842785126435.mp3
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Reading ID3v23 tag
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:03:43.013 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Read Frame from byteBuffer
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Invalid identifier:    
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp32868834842785126435.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp32868834842785126435.mp3:Loaded Frames,there are:4
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:03:43.014 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:07:01.753 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:07:01.856 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:07:01.857 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:07:01.870 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:07:07.036 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:07:07.669 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:07:07.671 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:07:07.688 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-08-19 12:07:07.864 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:07:08.175 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:07:08.181 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:07:08.182 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:07:08.182 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:07:08.336 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:07:08.336 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1288 ms
+2022-08-19 12:07:08.422 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:07:08.504 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:07:09.636 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:07:09.639 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:07:09.720 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:07:10.059 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:07:10.528 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:07:10.542 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:07:10.709 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:07:11.093 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.163 seconds (JVM running for 5.947)
+2022-08-19 12:07:20.123 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:07:20.123 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:07:20.129 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-08-19 12:07:27.325 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp33490579751206820225.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp33490579751206820225.mp3
+2022-08-19 12:07:27.449 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:07:27.450 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:07:27.450 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:07:27.451 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:07:27.451 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:07:27.451 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:07:27.451 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Reading ID3v23 tag
+2022-08-19 12:07:27.453 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:07:27.454 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.462 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:07:27.462 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.462 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:07:27.464 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.464 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:07:27.464 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.464 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:07:27.465 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.465 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:07:27.465 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.465 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:07:27.465 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.467 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:07:27.467 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.467 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Invalid identifier:    
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp33490579751206820225.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Loaded Frames,there are:4
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:07:27.468 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:07:27.470 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp33490579751206820225.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp33490579751206820225.mp3
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Reading ID3v23 tag
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.471 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Read Frame from byteBuffer
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Invalid identifier:    
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp33490579751206820225.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp33490579751206820225.mp3:Loaded Frames,there are:4
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:07:27.472 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:09:56.026 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:09:56.137 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:09:56.138 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:09:56.151 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:10:01.368 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:10:02.003 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:10:02.005 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:10:02.019 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:10:02.201 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:10:02.508 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:10:02.514 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:10:02.515 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:10:02.515 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:10:02.666 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:10:02.666 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1287 ms
+2022-08-19 12:10:02.753 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:10:02.839 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:10:03.989 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:10:03.992 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:10:04.071 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:10:04.427 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:10:04.907 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:10:04.923 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:10:05.112 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:10:05.496 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.298 seconds (JVM running for 6.018)
+2022-08-19 12:10:10.336 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:10:10.337 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:10:10.342 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 12:10:16.873 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp38838628426767105929.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp38838628426767105929.mp3
+2022-08-19 12:10:16.986 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:10:16.987 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:10:16.987 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:10:16.988 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:10:16.988 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:10:16.988 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:10:16.988 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Reading ID3v23 tag
+2022-08-19 12:10:16.990 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:10:16.991 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:16.998 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:10:16.998 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:16.998 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:10:16.999 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:10:17.000 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.003 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.004 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Invalid identifier:    
+2022-08-19 12:10:17.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp38838628426767105929.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:10:17.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Loaded Frames,there are:4
+2022-08-19 12:10:17.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:10:17.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:10:17.005 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp38838628426767105929.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp38838628426767105929.mp3
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Reading ID3v23 tag
+2022-08-19 12:10:17.007 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Read Frame from byteBuffer
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Invalid identifier:    
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp38838628426767105929.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp38838628426767105929.mp3:Loaded Frames,there are:4
+2022-08-19 12:10:17.008 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:10:17.009 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:10:17.009 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:15:31.212 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:15:34.222 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:15:34.222 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:15:34.236 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:15:39.411 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:15:40.008 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:15:40.010 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:15:40.023 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:15:40.185 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:15:40.486 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:15:40.492 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:15:40.492 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:15:40.492 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:15:40.648 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:15:40.648 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1225 ms
+2022-08-19 12:15:40.731 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:15:40.810 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:15:41.942 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:15:41.945 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:15:42.024 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:15:42.370 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:15:42.837 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:15:42.850 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:15:43.032 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:15:43.411 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.101 seconds (JVM running for 5.801)
+2022-08-19 12:15:52.743 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:15:52.743 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:15:52.747 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-08-19 12:16:00.509 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp35482063808401333076.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp35482063808401333076.mp3
+2022-08-19 12:16:00.619 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:16:00.619 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:16:00.619 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:16:00.620 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:16:00.620 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:16:00.621 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:16:00.621 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Reading ID3v23 tag
+2022-08-19 12:16:00.622 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:16:00.624 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.631 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:16:00.631 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.631 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:16:00.632 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:16:00.633 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Invalid identifier:    
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp35482063808401333076.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:16:00.636 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Loaded Frames,there are:4
+2022-08-19 12:16:00.637 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:16:00.637 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:16:00.637 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:16:00.638 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\周杰伦-最伟大的作品.mp35482063808401333076.mp3:abs:E:\SystemCache\周杰伦-最伟大的作品.mp35482063808401333076.mp3
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.audio - No id3v24 tag found
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit1131:cap1131
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Reading ID3v23 tag
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3 Tag size is 1,121 according to header (does not include header size, add 10)
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:15
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:9
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:周杰伦 size:8
+2022-08-19 12:16:00.639 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:15
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:最伟大的作品 size:14
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Reading body forCOMM:18
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:1
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Reading from array from offset:1
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read StringFixedLength:XXX
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString: size inc terminator:4
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:酷我音乐 size:10
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Read Frame from byteBuffer
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Invalid identifier:    
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Invalid Frame Identifier:周杰伦-最伟大的作品.mp35482063808401333076.mp3:    is not a valid ID3v2.30 frame
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - 周杰伦-最伟大的作品.mp35482063808401333076.mp3:Loaded Frames,there are:4
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Creating tag from a tag of a different version
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying primitives
+2022-08-19 12:16:00.640 [http-nio-12000-exec-4] INFO  org.jaudiotagger.tag.id3 - Copying Primitives
+2022-08-19 12:17:31.694 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.generic - File E:\SystemCache\少女时代-Gee.flac5104958534158621286.flac being read
+2022-08-19 12:17:31.697 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac.MetadataBlockDataStreamInfo - MinBlockSize:4608MaxBlockSize:4608MinFrameSize:489MaxFrameSize:17053SampleRateTotal:44100SampleRatePerChannel:22050:Channel number:2:Bits per sample: 16:TotalNumberOfSamples: 8871156:Length: 201.16
+2022-08-19 12:17:31.697 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:4
+2022-08-19 12:17:31.697 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:STREAMINFO DataLength:34 isLastBlock:false ending at 8
+2022-08-19 12:17:31.697 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:STREAMINFO
+2022-08-19 12:17:31.698 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:42
+2022-08-19 12:17:31.698 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:VORBIS_COMMENT DataLength:117 isLastBlock:false ending at 46
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Vendor is:Lavf57.71.100
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Number of user comments:6
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:19
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ARTIST
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TITLE
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ALBUM
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TRACKNUMBER
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:DESCRIPTION
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 12:17:31.700 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ENCODER
+2022-08-19 12:17:31.701 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:163
+2022-08-19 12:17:31.701 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:PADDING DataLength:8216 isLastBlock:true ending at 167
+2022-08-19 12:17:31.701 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:PADDING
+2022-08-19 12:17:34.541 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\tempMp37490905564433388505.mp3:abs:E:\SystemCache\tempMp37490905564433388505.mp3
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit133:cap133
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - tempMp37490905564433388505.mp3:Reading ID3v24 tag
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - tempMp37490905564433388505.mp3:Reading tag from file size set in header is123
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:14
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.542 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:少女时代  size:13
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:5
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:5
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 12:17:34.543 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTRCK:3
+2022-08-19 12:17:34.544 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.546 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString: size:2
+2022-08-19 12:17:34.546 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTXXX:11
+2022-08-19 12:17:34.546 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.546 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString:comment size inc terminator:8
+2022-08-19 12:17:34.547 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:   size:2
+2022-08-19 12:17:34.547 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.id3 - Reading body forTSSE:15
+2022-08-19 12:17:34.547 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 12:17:34.547 [http-nio-12000-exec-10] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Lavf58.20.100  size:14
+2022-08-19 12:28:34.523 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:28:34.623 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:28:34.624 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:28:34.641 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:28:40.119 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:28:40.716 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:28:40.717 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:28:40.731 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:28:40.892 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:28:41.195 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:28:41.201 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:28:41.201 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:28:41.202 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:28:41.360 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:28:41.361 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1230 ms
+2022-08-19 12:28:41.445 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:28:41.525 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:28:42.659 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:28:42.662 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:28:42.741 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:28:43.088 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:28:43.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:28:43.574 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:28:43.953 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:28:44.339 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.312 seconds (JVM running for 6.038)
+2022-08-19 12:28:59.810 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:28:59.810 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:28:59.815 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 12:30:55.447 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:30:55.547 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:30:55.548 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:30:55.561 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:31:01.114 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:31:01.712 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:31:01.714 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:31:01.728 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:31:01.889 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:31:02.204 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:31:02.212 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:31:02.212 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:31:02.212 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:31:02.308 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:31:02.308 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1183 ms
+2022-08-19 12:31:02.455 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:31:02.533 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:31:03.684 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:31:03.687 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:31:03.768 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:31:04.125 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:31:04.605 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:31:04.619 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:31:04.789 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:31:05.182 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.16 seconds (JVM running for 5.871)
+2022-08-19 12:31:16.509 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:31:16.509 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:31:16.514 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 12:42:04.829 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:42:06.367 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:42:06.368 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:42:06.381 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:42:10.412 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:42:11.013 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:42:11.014 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:42:11.028 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:42:11.189 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:42:11.495 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:42:11.501 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:42:11.501 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:42:11.501 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:42:11.664 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:42:11.664 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1240 ms
+2022-08-19 12:42:11.750 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:42:11.830 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:42:12.968 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:42:12.971 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:42:13.051 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:42:13.401 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:42:13.867 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:42:13.882 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:42:14.047 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:42:14.445 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.134 seconds (JVM running for 5.915)
+2022-08-19 12:43:32.497 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:43:32.608 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:43:32.609 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:43:32.630 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:43:37.856 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:43:38.457 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:43:38.458 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:43:38.472 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:43:38.635 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:43:38.940 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:43:38.946 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:43:38.946 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:43:38.946 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:43:39.041 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:43:39.041 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1173 ms
+2022-08-19 12:43:39.192 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:43:39.275 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:43:40.407 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:43:40.410 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:43:40.491 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:43:40.838 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:43:41.309 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:43:41.323 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:43:41.503 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:43:41.889 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.135 seconds (JVM running for 5.848)
+2022-08-19 12:43:58.835 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:43:58.835 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:43:58.841 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-08-19 12:51:31.720 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:51:31.819 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:51:31.820 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:51:31.833 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:51:37.509 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:51:38.119 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:51:38.120 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:51:38.134 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:51:38.296 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:51:38.607 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:51:38.613 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:51:38.614 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:51:38.614 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:51:38.770 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:51:38.773 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1252 ms
+2022-08-19 12:51:38.859 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:51:38.940 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:51:40.075 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:51:40.078 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:51:40.157 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:51:40.509 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:51:40.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:51:40.991 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:51:41.158 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:51:41.542 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.231 seconds (JVM running for 6.173)
+2022-08-19 12:51:49.005 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:51:49.005 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:51:49.010 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 12:58:57.980 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 12:58:58.105 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 12:58:58.106 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:58:58.120 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 12:59:03.394 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 12:59:03.993 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 12:59:03.994 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 12:59:04.008 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 12:59:04.170 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 12:59:04.472 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 12:59:04.478 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:59:04.478 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 12:59:04.478 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 12:59:04.638 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 12:59:04.639 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1234 ms
+2022-08-19 12:59:04.720 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 12:59:04.798 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 12:59:05.934 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:59:05.936 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 12:59:06.015 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 12:59:06.362 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 12:59:06.830 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 12:59:06.844 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 12:59:07.018 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 12:59:07.402 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.101 seconds (JVM running for 5.879)
+2022-08-19 12:59:20.842 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 12:59:20.843 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 12:59:20.847 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-08-19 13:00:47.134 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 13:00:47.245 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 13:00:47.246 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 13:00:47.266 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 13:00:52.861 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 13:00:53.456 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 13:00:53.457 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 13:00:53.472 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 13:00:53.634 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 13:00:53.943 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 13:00:53.949 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 13:00:53.950 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 13:00:53.950 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 13:00:54.113 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 13:00:54.113 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1240 ms
+2022-08-19 13:00:54.201 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 13:00:54.282 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 13:00:55.418 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 13:00:55.421 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 13:00:55.501 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 13:00:55.849 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 13:00:56.320 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 13:00:56.333 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 13:00:56.516 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 13:00:56.900 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.139 seconds (JVM running for 5.913)
+2022-08-19 13:01:25.364 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 13:01:25.364 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 13:01:25.369 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 13:14:28.104 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 13:14:28.201 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 13:14:28.202 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 13:14:28.216 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-08-19 13:14:33.302 [main] INFO  com.yiyulihua.oss.OssApplication - The following profiles are active: dev
+2022-08-19 13:14:33.909 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-19 13:14:33.910 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 13:14:33.924 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-08-19 13:14:34.089 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=68f09d03-e470-357b-8079-dda05e17de2e
+2022-08-19 13:14:34.394 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12000 (http)
+2022-08-19 13:14:34.400 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12000"]
+2022-08-19 13:14:34.401 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-19 13:14:34.401 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-19 13:14:34.561 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-19 13:14:34.561 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1247 ms
+2022-08-19 13:14:34.646 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-08-19 13:14:34.724 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-08-19 13:14:35.860 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 13:14:35.863 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-19 13:14:35.943 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-19 13:14:36.288 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-08-19 13:14:36.753 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12000"]
+2022-08-19 13:14:36.767 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 12000 (http) with context path ''
+2022-08-19 13:14:36.951 [main] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP yiyulihua-oss 192.168.0.12:12000 register finished
+2022-08-19 13:14:37.332 [main] INFO  com.yiyulihua.oss.OssApplication - Started OssApplication in 5.092 seconds (JVM running for 5.856)
+2022-08-19 13:15:47.451 [http-nio-12000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 13:15:47.451 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-19 13:15:47.456 [http-nio-12000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-08-19 13:28:45.740 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.generic - File E:\SystemCache\少女时代-Gee.flac4187622790854272499.flac being read
+2022-08-19 13:28:45.743 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac.MetadataBlockDataStreamInfo - MinBlockSize:4608MaxBlockSize:4608MinFrameSize:489MaxFrameSize:17053SampleRateTotal:44100SampleRatePerChannel:22050:Channel number:2:Bits per sample: 16:TotalNumberOfSamples: 8871156:Length: 201.16
+2022-08-19 13:28:45.743 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:4
+2022-08-19 13:28:45.744 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:STREAMINFO DataLength:34 isLastBlock:false ending at 8
+2022-08-19 13:28:45.744 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:STREAMINFO
+2022-08-19 13:28:45.744 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:42
+2022-08-19 13:28:45.744 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:VORBIS_COMMENT DataLength:117 isLastBlock:false ending at 46
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Vendor is:Lavf57.71.100
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Number of user comments:6
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:19
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ARTIST
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TITLE
+2022-08-19 13:28:45.747 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ALBUM
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:TRACKNUMBER
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:13
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:DESCRIPTION
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Next Comment Length:9
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.vorbiscomment.VorbisCommentReader - Adding:ENCODER
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Looking for MetaBlockHeader at:163
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Reading MetadataBlockHeader:BlockType:PADDING DataLength:8216 isLastBlock:true ending at 167
+2022-08-19 13:28:45.748 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio.flac - Ignoring MetadataBlock:PADDING
+2022-08-19 13:28:48.761 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Reading file:pathE:\SystemCache\tempMp35104607974865902847.mp3:abs:E:\SystemCache\tempMp35104607974865902847.mp3
+2022-08-19 13:28:48.768 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No ids3v11 tag found
+2022-08-19 13:28:48.768 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - No id3v1 tag found
+2022-08-19 13:28:48.769 [http-nio-12000-exec-2] INFO  org.jaudiotagger.audio - Attempting to read id3v2tags
+2022-08-19 13:28:48.770 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - ByteBuffer pos:0:limit133:cap133
+2022-08-19 13:28:48.770 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - tempMp35104607974865902847.mp3:Reading ID3v24 tag
+2022-08-19 13:28:48.770 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - tempMp35104607974865902847.mp3:Reading tag from file size set in header is123
+2022-08-19 13:28:48.780 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTPE1:14
+2022-08-19 13:28:48.780 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.780 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:少女时代  size:13
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTIT2:5
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTALB:5
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.783 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Gee  size:4
+2022-08-19 13:28:48.785 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTRCK:3
+2022-08-19 13:28:48.785 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.787 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString: size:2
+2022-08-19 13:28:48.788 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTXXX:11
+2022-08-19 13:28:48.788 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.788 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NullTerminatedString:comment size inc terminator:8
+2022-08-19 13:28:48.788 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:   size:2
+2022-08-19 13:28:48.789 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.id3 - Reading body forTSSE:15
+2022-08-19 13:28:48.789 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read NumberFixedlength:3
+2022-08-19 13:28:48.789 [http-nio-12000-exec-2] INFO  org.jaudiotagger.tag.datatype - Read SizeTerminatedString:Lavf58.20.100  size:14
+2022-08-19 13:32:19.511 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-08-19 13:32:19.624 [SpringContextShutdownHook] INFO  com.alibaba.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-08-19 13:32:19.625 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-19 13:32:19.683 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

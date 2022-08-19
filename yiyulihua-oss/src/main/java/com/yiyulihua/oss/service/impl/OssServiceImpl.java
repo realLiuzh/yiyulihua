@@ -6,6 +6,8 @@ import com.aliyun.oss.model.DeleteObjectsResult;
 import com.aliyun.oss.model.VoidResult;
 import com.spire.doc.Document;
 import com.spire.doc.FileFormat;
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.utils.DateUtils;
 import com.yiyulihua.common.utils.RRException;
 import com.yiyulihua.oss.service.OssService;
@@ -57,11 +59,13 @@ public class OssServiceImpl implements OssService {
             case ".flac":
                 return uploadAudio(file);
             default:
-                throw new RRException("文件格式错误");
+                throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
         }
     }
 
     private Map<String, Object> uploadAudio(MultipartFile file) {
+        InputStream sourceInputStream;
+
         String filename = file.getOriginalFilename();
         if (StringUtils.isEmpty(filename)) {
             return null;
@@ -74,11 +78,11 @@ public class OssServiceImpl implements OssService {
         Integer duration;
         File source = null;
         try {
+            sourceInputStream = file.getInputStream();
             // 生成临时文件
             tempFile = File.createTempFile(prefix, ".mp3");
             // MultipartFile转File
             source = FileUtils.multipartFileToFile(file);
-
             //时长
             duration = AudioUtils.getTime(source);
             if (".flac".equals(suffix)) {
@@ -100,8 +104,7 @@ public class OssServiceImpl implements OssService {
                 throw new RRException("格式错误");
             }
 
-            realUrl = upload(createFileName("audio", filename), Files.newInputStream(source.toPath()));
-
+            realUrl = upload(createFileName("audio", filename), sourceInputStream);
             Map<String, Object> map = new HashMap<>();
             map.put("realUrl", realUrl);
             map.put("previewUrl", previewUrl);
@@ -142,8 +145,7 @@ public class OssServiceImpl implements OssService {
             tempFile = File.createTempFile(prefix, suffix);
 
             //加水印
-            BufferedImage bufferedImage = ImageWaterMarkUtil.addFullTextWaterMark(file.getInputStream(), "一隅立画", suffix.substring(1));
-
+            BufferedImage bufferedImage = ImageWaterMarkUtil.addFullTextWaterMark(file.getInputStream(), "一隅立画");
             ImageIO.write(bufferedImage, suffix.substring(1), tempFile);
 
             //上传oss
