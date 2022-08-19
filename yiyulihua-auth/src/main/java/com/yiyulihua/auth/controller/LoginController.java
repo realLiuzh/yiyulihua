@@ -4,6 +4,7 @@ import com.yiyulihua.auth.service.LoginService;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.result.Result;
+import com.yiyulihua.common.to.ForgetPasswordTo;
 import com.yiyulihua.common.to.LoginCodeTo;
 import com.yiyulihua.common.to.LoginPasswordTo;
 import com.yiyulihua.common.to.LoginRegisterTo;
@@ -42,13 +43,18 @@ public class LoginController {
     }
 
 
-
-
     @ApiOperation("用户注册")
     @PostMapping("/register")
     public Result<UserLoginVo> register(@RequestBody LoginRegisterTo userInfo) {
         UserLoginVo userLoginVo = loginService.register(userInfo);
         return new Result<UserLoginVo>().setData(userLoginVo);
+    }
+
+    @ApiOperation("忘记密码")
+    @PostMapping("/forget")
+    public Result<Object> forgetPassword(@RequestBody ForgetPasswordTo forgetPasswordTo) {
+        loginService.forgetPassword(forgetPasswordTo);
+        return Result.success();
     }
 
 }

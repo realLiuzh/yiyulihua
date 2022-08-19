@@ -17,5 +17,7 @@ public interface LoginDao {
 
     Integer emailIsUsed(@Param("email") String email);
 
-    UserLoginTo loadUserByPhone(String phone);
+    UserLoginTo loadUserByPhone(@Param("phone") String phone);
+
+    int changePassword(@Param("id") Integer id, @Param("password") String password);
 }

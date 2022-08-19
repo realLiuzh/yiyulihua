@@ -16,6 +16,7 @@ public enum ApiExceptionEnum implements BaseErrorInfoInterface {
     CODE_ERROR("1003","验证码错误"),
     REGISTER_ERROR("1004","注册失败，请联系管理员"),
     EMAIL_USED("1005","邮箱已被占用"),
+    NO_USER("1006","该用户不存在"),
     //任务提交
     IS_COMMITTED("2000","您已经提交任务");
 

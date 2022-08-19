@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 
-@ApiModel("用户登录对象")
+@ApiModel("邮箱密码登录对象")
 public class LoginPasswordTo {
     @ApiModelProperty(value = "邮箱",required = true)
     private String email;

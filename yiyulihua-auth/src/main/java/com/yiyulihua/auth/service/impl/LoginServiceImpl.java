@@ -69,6 +69,17 @@ public class LoginServiceImpl implements LoginService {
         return userLoginVo;
     }
 
+    @Override
+    public void forgetPassword(ForgetPasswordTo forgetPasswordTo) {
+        String code = redisTemplate.opsForValue().get(forgetPasswordTo.getPhone());
+        AssertUtil.isTrue(code == null || !code.equals(forgetPasswordTo.getCode()), new ApiException(ApiExceptionEnum.CODE_ERROR));
+        UserLoginTo userInfo = loginDao.loadUserByPhone(forgetPasswordTo.getPhone());
+        AssertUtil.isTrue(userInfo==null,new ApiException(ApiExceptionEnum.NO_USER));
+        String newPassword = SaSecureUtil.md5(forgetPasswordTo.getPassword());
+        int i=loginDao.changePassword(userInfo.getId(),newPassword);
+        System.out.println(i);
+    }
+
 
     @Override
     public UserLoginVo register(LoginRegisterTo userInfo) {
