@@ -3,7 +3,14 @@
 
 <mapper namespace="com.yiyulihua.auth.dao.LoginDao">
     <select id="loadUserByEmail" resultType="com.yiyulihua.common.to.UserLoginTo">
-        select id, email, password, avatar, email, phone, organization
+        select id,
+               username,
+               email,
+               password,
+               avatar,
+               email,
+               phone,
+               organization
         from tb_user
         where email = #{email}
           and is_valid = 0;
@@ -16,7 +23,8 @@
           and is_valid = 0
     </select>
 
-    <insert id="register" useGeneratedKeys="true"  keyProperty="id" parameterType="com.yiyulihua.common.to.LoginRegisterTo">
+    <insert id="register" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.yiyulihua.common.to.LoginRegisterTo">
         insert into tb_user(username, phone, email, password, create_time, update_time, is_valid)
         values (#{user.username}, #{user.phone}, #{user.email}, #{user.password}, #{user.createTime},
                 #{user.updateTime}, #{user.isValid});
@@ -24,9 +32,30 @@
 
 
     <select id="loadUserById" resultType="com.yiyulihua.common.to.UserLoginTo">
-        select id, email, password, avatar, email, phone, organization
+        select id,
+               username,
+               email,
+               password,
+               avatar,
+               email,
+               phone,
+               organization
         from tb_user
         where id = #{id}
+          and is_valid = 0;
+    </select>
+
+    <select id="loadUserByPhone" resultType="com.yiyulihua.common.to.UserLoginTo">
+        select id,
+               username,
+               email,
+               password,
+               avatar,
+               email,
+               phone,
+               organization
+        from tb_user
+        where phone = #{phone}
           and is_valid = 0;
     </select>
 

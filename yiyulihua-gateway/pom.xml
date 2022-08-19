@@ -15,7 +15,7 @@
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
 
         <jib.repository.name>yiyulihua-gateway</jib.repository.name>
-        <jib.version>1</jib.version>
+        <jib.version>2</jib.version>
         <jib.auth.username>mianqiuyu</jib.auth.username>
         <jib.auth.password>Cqupt2019210941</jib.auth.password>
         <jib.skip>false</jib.skip>
