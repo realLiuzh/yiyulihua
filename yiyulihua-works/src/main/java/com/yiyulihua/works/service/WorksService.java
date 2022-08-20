@@ -58,5 +58,8 @@ public interface WorksService extends IService<WorksEntity> {
     PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size);
 
     List<WorksListVo> getRecommend(String id);
+
+    WorksPublishTo getOnlySaveInfo();
+
 }
 

@@ -142,9 +142,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     @Override
     public PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size) {
         // 根据 token 获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        String publisherId = loginId.toString();
+        String publisherId = getUserId();
 
         //条件
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
@@ -167,13 +165,37 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
             list.add(worksMyPublishVo);
         });
 
-        return new PageUtils<WorksMyPublishVo>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
+        return new PageUtils<>(list, (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
 
     @Override
     public List<WorksListVo> getRecommend(String id) {
         WorksEntity worksEntity = baseMapper.selectById(id);
         return baseMapper.getRecommend(worksEntity.getTypeId());
+    }
+
+    @Override
+    public WorksPublishTo getOnlySaveInfo() {
+        // 根据 token 获取用户id
+        String publisherId = getUserId();
+
+        QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
+        wrapper.eq("publisher_id", publisherId);
+        wrapper.eq("works_status", 0);
+        wrapper.orderByDesc("update_time");
+
+        WorksEntity worksEntity = baseMapper.selectOne(wrapper);
+        WorksPublishTo worksPublishTo = new WorksPublishTo();
+        BeanUtils.copyProperties(worksEntity, worksPublishTo);
+
+        return worksPublishTo;
+    }
+
+    private String getUserId() {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        return loginId.toString();
     }
 
     private void checkEmpty(WorksPublishTo work) {

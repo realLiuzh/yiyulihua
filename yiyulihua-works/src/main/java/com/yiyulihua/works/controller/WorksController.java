@@ -84,6 +84,14 @@ public class WorksController {
         return Result.success();
     }
 
+    @ApiOperation(value = "获取用户已保存的作品信息", notes = "根据 token 获取用户信息")
+    @GetMapping("onlySave")
+    public Result<WorksPublishTo> getOnlySaveWorks() {
+        WorksPublishTo works = worksService.getOnlySaveInfo();
+
+        return new Result<WorksPublishTo>().setData(works);
+    }
+
     /**
      * 修改
      */
