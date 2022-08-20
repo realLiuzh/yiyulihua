@@ -45,17 +45,12 @@ public class MessageController {
             @ApiImplicitParam(name = "size",
                     value = "每页记录条数",
                     required = true,
-                    paramType = "path"),
-            @ApiImplicitParam(name = "Id",
-                    value = "用户 id",
-                    required = true,
-                    paramType = "query")
+                    paramType = "path")
     })
     @GetMapping("/{current}/{size}")
     public Result<PageUtils<ResultMessageVo>> info(@PathVariable("current") Integer current,
-                                                   @PathVariable("size") Integer size,
-                                                   @RequestParam("Id") String id) {
-        PageUtils<ResultMessageVo> page = messageService.getHistoryMessagePage(current, size, id);
+                                                   @PathVariable("size") Integer size) {
+        PageUtils<ResultMessageVo> page = messageService.getHistoryMessagePage(current, size);
 
         return new Result<PageUtils<ResultMessageVo>>().setData(page);
     }
@@ -76,10 +71,17 @@ public class MessageController {
         return Result.success();
     }
 
-    @ApiOperation(value = "根据用户 id 单方面删除两个用户间的所有聊天记录")
+    @ApiOperation(value = "根据用户 id 单方面删除两个用户间的所有聊天记录", notes = "本用户 id 从 token 获取")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "toUserId",
+                    value = "对方id",
+                    dataType = "String",
+                    required = true,
+                    paramType = "body")
+    })
     @PutMapping("matchUser")
-    public Result removeAllMsgByUserId(@RequestBody MessageDeleteUserTo deleteUserTo) {
-        messageService.deleteRecordsBetweenUser(deleteUserTo);
+    public Result removeAllMsgByUserId(@RequestBody String toUserId) {
+        messageService.deleteRecordsBetweenUser(toUserId);
 
         return Result.success();
     }

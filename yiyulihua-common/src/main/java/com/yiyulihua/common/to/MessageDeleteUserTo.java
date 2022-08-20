@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @author sunbo
- * @date 2022-08-02-15:43
+ * @since 2022-08-02-15:43
  */
 @ApiModel(value = "MessageDeleteUserTo", description = "删除聊天记录对象")
 @Data

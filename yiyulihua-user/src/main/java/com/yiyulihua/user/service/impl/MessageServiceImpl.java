@@ -1,5 +1,6 @@
 package com.yiyulihua.user.service.impl;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -9,7 +10,6 @@ import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.to.MessageDeleteTo;
-import com.yiyulihua.common.to.MessageDeleteUserTo;
 import com.yiyulihua.common.utils.AssertUtil;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
@@ -62,11 +62,15 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
     }
 
     @Override
-    public PageUtils<ResultMessageVo> getHistoryMessagePage(Integer current, Integer size, String id) {
+    public PageUtils<ResultMessageVo> getHistoryMessagePage(Integer current, Integer size) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
 
         Page<ResultMessageVo> page = new Query<ResultMessageVo>().getPage(new PageQuery(current, size));
         //自定义分页查询
-        baseMapper.getHistoryMsgPageByUserId(page, id);
+        baseMapper.getHistoryMsgPageByUserId(page, userId);
 
         return new PageUtils<>(page.getRecords(), (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
@@ -106,19 +110,24 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
     }
 
     @Override
-    public void deleteRecordsBetweenUser(MessageDeleteUserTo deleteUserTo) {
+    public void deleteRecordsBetweenUser(String toUserId) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
+
         // 为发送方的情况
         UpdateWrapper<MessageEntity> wrapper1 = new UpdateWrapper<>();
-        wrapper1.eq("send_user_id", deleteUserTo.getUserId())
-                .eq("receive_user_id", deleteUserTo.getToUserId())
+        wrapper1.eq("send_user_id", userId)
+                .eq("receive_user_id", toUserId)
                 .set("send_user_visible", 1);
 
         AssertUtil.isTrue(baseMapper.update(null, wrapper1) < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
 
         // 为接收方的情况
         UpdateWrapper<MessageEntity> wrapper2 = new UpdateWrapper<>();
-        wrapper2.eq("receive_user_id", deleteUserTo.getUserId())
-                .eq("send_user_id", deleteUserTo.getToUserId())
+        wrapper2.eq("receive_user_id", userId)
+                .eq("send_user_id", toUserId)
                 .set("receive_user_visible", 1);
         AssertUtil.isTrue(baseMapper.update(null, wrapper2) < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
