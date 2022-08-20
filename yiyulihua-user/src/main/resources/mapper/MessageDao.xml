@@ -22,5 +22,19 @@
            OR (t.`receive_user_id` = #{userId} AND t.`receive_user_visible` = 0)
         ORDER BY t.create_time DESC
     </select>
+
+    <select id="getHistoryMessageBetweenPage" resultType="com.yiyulihua.common.vo.HistoryMessageVo">
+        SELECT `id`,
+               `content`,
+               `create_time`     as sendTime,
+               `send_user_id`    as fromUserId,
+               `receive_user_id` as receiveUserId
+        FROM tb_message
+        WHERE ((send_user_id = #{userId} AND receive_user_id = #{toUserId} AND send_user_visible = 0)
+            OR (receive_user_id = #{userId} AND send_user_id = #{toUserId} AND receive_user_visible = 0))
+          AND is_offline = 0
+          AND create_time between #{begin} and #{end}
+        order by `create_time` ASC
+    </select>
 </mapper>
 

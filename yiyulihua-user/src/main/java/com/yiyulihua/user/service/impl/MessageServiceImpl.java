@@ -9,17 +9,22 @@ import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.query.PageQuery;
+import com.yiyulihua.common.to.HistoryMessageTo;
 import com.yiyulihua.common.to.MessageDeleteTo;
 import com.yiyulihua.common.utils.AssertUtil;
+import com.yiyulihua.common.utils.DateUtils;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
+import com.yiyulihua.common.vo.HistoryMessageVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import org.springframework.stereotype.Service;
 
 import com.yiyulihua.user.dao.MessageDao;
 import com.yiyulihua.user.service.MessageService;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -130,5 +135,23 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
                 .eq("send_user_id", toUserId)
                 .set("receive_user_visible", 1);
         AssertUtil.isTrue(baseMapper.update(null, wrapper2) < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+    }
+
+    @Override
+    public PageUtils<HistoryMessageVo> getHistoryMessageBetweenUserPage(HistoryMessageTo historyMessageTo) {
+        // 根据 token 获取用户id
+        Object loginId = StpUtil.getLoginIdDefaultNull();
+        System.out.println(loginId);
+        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
+        String userId = loginId.toString();
+
+        Page<HistoryMessageVo> page = new Query<HistoryMessageVo>().getPage(new PageQuery(historyMessageTo.getCurrent(), historyMessageTo.getSize()));
+        // 设置时间区间
+        String begin = null != historyMessageTo.getBegin() ? DateUtils.format(historyMessageTo.getBegin(), DateUtils.DATE_TIME_PATTERN) : "2022-01-01 00:00:00";
+        String end = null != historyMessageTo.getEnd() ? DateUtils.format(historyMessageTo.getEnd(), DateUtils.DATE_TIME_PATTERN) : DateUtils.format(new Date(), DateUtils.DATE_TIME_PATTERN);
+
+        baseMapper.getHistoryMessageBetweenPage(page, userId, historyMessageTo.getToUserId(), begin, end);
+
+        return new PageUtils<>(page.getRecords(), (int) page.getTotal(), (int) page.getSize(), (int) page.getCurrent());
     }
 }

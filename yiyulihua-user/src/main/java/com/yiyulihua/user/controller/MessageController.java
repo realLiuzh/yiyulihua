@@ -3,9 +3,11 @@ package com.yiyulihua.user.controller;
 
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.result.Result;
+import com.yiyulihua.common.to.HistoryMessageTo;
 import com.yiyulihua.common.to.MessageDeleteTo;
 import com.yiyulihua.common.to.MessageDeleteUserTo;
 import com.yiyulihua.common.utils.PageUtils;
+import com.yiyulihua.common.vo.HistoryMessageVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -84,6 +86,14 @@ public class MessageController {
         messageService.deleteRecordsBetweenUser(toUserId);
 
         return Result.success();
+    }
+
+    @ApiOperation(value = "分页获取用户间历史消息", notes = "本用户 id 从 token 获取")
+    @PostMapping("/history")
+    public Result<PageUtils<HistoryMessageVo>> getHistoryMessage(@RequestBody HistoryMessageTo historyMessageTo) {
+        PageUtils<HistoryMessageVo> page = messageService.getHistoryMessageBetweenUserPage(historyMessageTo);
+
+        return new Result<PageUtils<HistoryMessageVo>>().setData(page);
     }
 
     @ApiIgnore
