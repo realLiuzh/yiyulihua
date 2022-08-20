@@ -146,6 +146,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
 
         //条件
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
+        wrapper.select("id", "works_name", "type", "subtype", "works_cover", "works_price", "works_bid_number", "works_status", "works_deadline");
         wrapper.eq("publisher_id", publisherId);
         //已发布的作品
         wrapper.ne("works_status", 0);
@@ -180,6 +181,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         String publisherId = getUserId();
 
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
+        wrapper.select("works_name", "type_id", "type", "subtype_id", "subtype", "preview_url", "real_url", "works_cover", "works_demand", "works_price", "works_process", "remark", "works_status", "works_deadline");
         wrapper.eq("publisher_id", publisherId);
         wrapper.eq("works_status", 0);
         wrapper.orderByDesc("update_time");
