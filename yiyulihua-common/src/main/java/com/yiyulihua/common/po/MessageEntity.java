@@ -31,16 +31,16 @@ public class MessageEntity implements Serializable {
     private String content;
 
     @ApiModelProperty("是否为系统消息")
-    private Integer isSystem;
+    private Integer isSystem = 0;
 
     @ApiModelProperty("是否为离线消息")
-    private Integer isOffline;
+    private Integer isOffline = 0;
 
     @ApiModelProperty("发送方是否可见")
-    private Integer sendUserVisible;
+    private Integer sendUserVisible = 0;
 
     @ApiModelProperty("接收方是否可见")
-    private Integer receiveUserVisible;
+    private Integer receiveUserVisible = 0;
 
     @ApiModelProperty("创建时间")
     @TableField(fill = FieldFill.INSERT)
