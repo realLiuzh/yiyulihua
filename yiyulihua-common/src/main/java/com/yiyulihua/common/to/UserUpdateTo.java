@@ -18,16 +18,16 @@ import java.util.Date;
 public class UserUpdateTo {
     @ApiModelProperty(value = "id", required = true)
     private Integer id;
-    @ApiModelProperty(value = "用户头像url", required = true)
+    @ApiModelProperty(value = "用户头像url", required = false)
     private String avatar;
-    @ApiModelProperty(value = "用户昵称", required = true)
+    @ApiModelProperty(value = "用户昵称", required = false)
     private String username;
-    @ApiModelProperty(value = "企业/学校", required = true)
+    @ApiModelProperty(value = "企业/学校", required = false)
     private String organization;
-    @ApiModelProperty(value = "密码", required = true)
+    @ApiModelProperty(value = "密码", required = false)
     private String password;
-    @ApiModelProperty(value = "手机号", required = true)
+    @ApiModelProperty(value = "手机号", required = false)
     private String phone;
-    @ApiModelProperty(value = "手机验证码", required = true)
+    @ApiModelProperty(value = "手机验证码", required = false)
     private String code;
 }

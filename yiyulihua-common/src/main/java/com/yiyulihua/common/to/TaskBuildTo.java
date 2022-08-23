@@ -61,15 +61,15 @@ public class TaskBuildTo {
     @ApiModelProperty(value = "任务截止日期", required = true)
     private Date taskDeadline;
 
-    /**
-     * 首页广告
-     */
-    @ApiModelProperty(value = "首页广告天数(0、15...)", required = true)
-    private Integer frontPageAds;
-
-    /**
-     * 底部广告
-     */
-    @ApiModelProperty(value = "底部广告天数(0、15...)", required = true)
-    private Integer bottomAds;
+//    /**
+//     * 首页广告
+//     */
+//    @ApiModelProperty(value = "首页广告天数(0、15...)", required = true)
+//    private Integer frontPageAds;
+//
+//    /**
+//     * 底部广告
+//     */
+//    @ApiModelProperty(value = "底部广告天数(0、15...)", required = true)
+//    private Integer bottomAds;
 }

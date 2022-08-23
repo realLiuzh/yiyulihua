@@ -82,8 +82,10 @@ public class TaskServiceImpl extends ServiceImpl<TaskDao, TaskEntity> implements
 //            taskVo.setPublisherAvatar(userVo.getAvatar());
 //            taskVo.setPublisherName(userVo.getUsername());
 //        }
-        taskVo.setPublisherAvatar((String) data.get("avatar"));
-        taskVo.setPublisherName((String) data.get("username"));
+        if (data.get("avatar") != null)
+            taskVo.setPublisherAvatar((String) data.get("avatar"));
+        if (data.get("username") != null)
+            taskVo.setPublisherName((String) data.get("username"));
         return taskVo;
 
     }
