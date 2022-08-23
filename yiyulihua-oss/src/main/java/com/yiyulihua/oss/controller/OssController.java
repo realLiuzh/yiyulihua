@@ -40,6 +40,7 @@ public class OssController {
     @PostMapping
     public Result<Map<String, Object>> loadFile(@RequestPart @RequestParam("file") MultipartFile file) {
         Map<String, Object> map = ossService.uploadFile(file);
+
         return new Result<Map<String, Object>>().setData(map);
     }
 

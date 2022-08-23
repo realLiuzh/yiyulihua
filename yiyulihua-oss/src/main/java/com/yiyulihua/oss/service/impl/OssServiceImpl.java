@@ -14,7 +14,6 @@ import com.yiyulihua.oss.service.OssService;
 import com.yiyulihua.oss.utils.AudioUtils;
 import com.yiyulihua.oss.utils.ConstantPropertiesUtils;
 import com.yiyulihua.oss.utils.FileUtils;
-import com.yiyulihua.oss.utils.ImageWaterMarkUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.jaudiotagger.audio.exceptions.CannotReadException;
 import org.jaudiotagger.audio.exceptions.InvalidAudioFrameException;
@@ -24,8 +23,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -131,44 +128,17 @@ public class OssServiceImpl implements OssService {
         if (StringUtils.isEmpty(filename)) {
             return null;
         }
-        //文件格式
-        String suffix = filename.substring(filename.lastIndexOf("."));
-        File tempFile = null;
-        String imageUrl;
-        String previewImageUrl;
-        String resolution;
-
 
         try {
-            //生成临时文件
-            String prefix = "tempImage";
-            tempFile = File.createTempFile(prefix, suffix);
-
-            //加水印
-            BufferedImage bufferedImage = ImageWaterMarkUtil.addFullTextWaterMark(file.getInputStream(), "一隅立画");
-            ImageIO.write(bufferedImage, suffix.substring(1), tempFile);
-
             //上传oss
-            imageUrl = upload(createFileName("image", filename), file.getInputStream());
-            previewImageUrl = upload(createFileName("previewImage", filename), Files.newInputStream(tempFile.toPath()));
-
-            //获取像素
-            resolution = ImageWaterMarkUtil.getResolution(file.getInputStream());
+            String imageUrl = upload(createFileName("image", filename), file.getInputStream());
 
             Map<String, Object> map = new HashMap<>();
-            map.put("realUrl", imageUrl);
-            map.put("previewUrl", previewImageUrl);
-            map.put("resolution", resolution);
+            map.put("imageUrl", imageUrl);
 
             return map;
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            //删除临时文件
-            assert tempFile != null;
-            if (!tempFile.delete()) {
-                tempFile.deleteOnExit();
-            }
         }
     }
 

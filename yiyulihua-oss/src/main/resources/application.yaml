@@ -5,4 +5,4 @@ spring:
     nacos:
       discovery:
         server-addr: 175.178.189.89:12208
-        ip: 175.178.189.89
+        ip: 121.40.19.111
