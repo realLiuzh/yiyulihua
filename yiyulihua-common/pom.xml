@@ -72,6 +72,12 @@
             <version>2.7.0</version>
         </dependency>
 
+        <!--hibernate-validator-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>7.0.5.Final</version>
+        </dependency>
 
         <!-- commons-lang3 -->
         <dependency>

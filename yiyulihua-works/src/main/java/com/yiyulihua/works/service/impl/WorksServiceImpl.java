@@ -116,8 +116,6 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         Object loginIdDefaultNull = StpUtil.getLoginIdDefaultNull();
         AssertUtil.isTrue(null == loginIdDefaultNull, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
         String userId = loginIdDefaultNull.toString();
-        //检查参数
-        checkEmpty(work);
 
         WorksEntity worksEntity = new WorksEntity();
         worksEntity.setPublisherId(userId);
@@ -200,36 +198,4 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         return loginId.toString();
     }
 
-    private void checkEmpty(WorksPublishTo work) {
-        if (StringUtils.isEmpty(work.getWorksName())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getTypeId())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getType())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getSubtypeId())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getSubtype())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getPreviewUrl())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getRealUrl())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getWorksPrice())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getRemark())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-        if (StringUtils.isEmpty(work.getWorksStatus())) {
-            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
-        }
-    }
 }

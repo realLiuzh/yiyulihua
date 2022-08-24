@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -22,9 +23,10 @@ import java.util.Arrays;
  * @author snbo
  * @since 2022-08-13
  */
-@Api(value = "广告管理",tags = "广告轮播图管理")
+@Api(value = "广告管理",tags = "后台管理")
 @RestController
-@RequestMapping("/ad")
+@RequestMapping("/admin")
+@Validated
 public class AdvertiseController {
 
     private final AdvertiseService advertiseService;
@@ -51,10 +53,9 @@ public class AdvertiseController {
     })
     @GetMapping("/{current}/{size}")
     public Result<PageUtils<AdvertiseVo>> list(
-            @PathVariable("current") Integer current,
+            @PathVariable("current")  Integer current,
             @PathVariable("size") Integer size,
             @RequestParam("position") Integer position) {
-
         PageUtils<AdvertiseVo> page = advertiseService.getListPage(current, size, position);
 
         return new Result<PageUtils<AdvertiseVo>>().setData(page);

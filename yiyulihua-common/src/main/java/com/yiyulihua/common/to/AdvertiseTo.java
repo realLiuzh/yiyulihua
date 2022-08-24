@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @author sunbo
- * @date 2022/08/13 14:30
+ * @since  2022/08/13 14:30
  */
 @Data
 @ApiModel(value = "AdvertiseTo", description = "添加/修改广告对象")

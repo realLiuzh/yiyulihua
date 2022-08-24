@@ -26,7 +26,7 @@ import java.util.Map;
  */
 @Api(value = "作品订单管理", tags = "作品订单管理")
 @RestController
-@RequestMapping("/worksOrder")
+@RequestMapping("/w_order")
 public class WorksOrderController {
 
     private final WorksOrderService worksOrderService;
@@ -65,7 +65,7 @@ public class WorksOrderController {
     public Result<Map<String, String>> createOrder(@RequestBody OrderTo order) {
         String orderNo = worksOrderService.createOrder(order);
 
-        Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>(1);
         map.put("orderNo", orderNo);
         return new Result<Map<String, String>>().setData(map);
     }
@@ -79,15 +79,13 @@ public class WorksOrderController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result delete(@PathVariable("id") String id) {
+    public Result<?> delete(@PathVariable("id") String id) {
         worksOrderService.removeById(id);
 
         return Result.success();
     }
 
-    /**
-     * 批量删除
-     */
+
     @ApiOperation(value = "根据 id 批量删除订单信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "ids",
@@ -97,7 +95,7 @@ public class WorksOrderController {
                     dataType = "String[]")
     })
     @PostMapping("/delete")
-    public Result delete(@RequestBody String[] ids) {
+    public Result<?> delete(@RequestBody String[] ids) {
         worksOrderService.removeByIds(Arrays.asList(ids));
 
         return Result.success();

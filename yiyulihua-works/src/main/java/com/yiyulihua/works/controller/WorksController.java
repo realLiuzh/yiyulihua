@@ -11,10 +11,15 @@ import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.*;
 import io.swagger.annotations.*;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.yiyulihua.works.service.WorksService;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 
 /**
@@ -24,6 +29,7 @@ import com.yiyulihua.works.service.WorksService;
 
 @Api(value = "作品管理", tags = "作品管理")
 @RestController
+@Validated
 public class WorksController {
     private final WorksService worksService;
 
@@ -49,7 +55,7 @@ public class WorksController {
                     paramType = "path")
     })
     @GetMapping("/{id}")
-    public Result<WorksDetailsVo> info(@PathVariable("id") String id) {
+    public Result<WorksDetailsVo> info(@PathVariable("id") @NotBlank(message = "id 不能为空") @Length(min = 19, max = 19, message = "id 格式错误") String id) {
         WorksDetailsVo works = worksService.getDetailsInfoById(id);
 
         return new Result<WorksDetailsVo>().setData(works);
@@ -78,7 +84,7 @@ public class WorksController {
 
     @ApiOperation(value = "发布或保存作品", notes = "worksStatus 为作品状态,保存设为0,发布设为1;")
     @PostMapping
-    public Result save(@RequestBody(required = true) WorksPublishTo work) {
+    public Result<?> save(@RequestBody @Validated WorksPublishTo work) {
         worksService.publishOrSave(work);
 
         return Result.success();
@@ -97,7 +103,7 @@ public class WorksController {
      */
     @ApiOperation(value = "根据作品id更新作品信息", notes = "id 为必填项,其余非必需")
     @PutMapping
-    public Result update(@RequestBody(required = true) WorksUpdateTo work) {
+    public Result<?> update(@RequestBody @Validated WorksUpdateTo work) {
         worksService.updateInfoById(work);
 
         return Result.success();
@@ -115,7 +121,7 @@ public class WorksController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result delete(@PathVariable("id") String id) {
+    public Result<?> delete(@PathVariable("id") @NotBlank @Length(min = 19, max = 19,message = "id 格式错误") String id) {
         worksService.removeById(id);
 
         return Result.success();
@@ -133,7 +139,7 @@ public class WorksController {
                     dataType = "String[]")
     })
     @PostMapping("/delete")
-    public Result delete(@RequestBody String[] ids) {
+    public Result<?> delete(@RequestBody @NotEmpty String[] ids) {
         worksService.removeByIds(Arrays.asList(ids));
 
         return Result.success();
@@ -148,7 +154,7 @@ public class WorksController {
                     required = true)
     })
     @GetMapping("/recommend/{id}")
-    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") String id) {
+    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") @NotBlank @Length(min = 19, max = 19,message = "id 格式错误") String id) {
         List<WorksListVo> list = worksService.getRecommend(id);
 
         return new Result<List<WorksListVo>>().setData(list);
