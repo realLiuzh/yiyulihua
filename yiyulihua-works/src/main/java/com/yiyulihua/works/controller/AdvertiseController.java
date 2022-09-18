@@ -64,7 +64,7 @@ public class AdvertiseController {
 
     @ApiOperation(value = "添加广告信息",notes = "添加操作无需填写 id 值")
     @PostMapping
-    public Result save(@RequestBody AdvertiseTo advertise) {
+    public Result<?> save(@RequestBody AdvertiseTo advertise) {
         advertiseService.saveAdvertise(advertise);
 
         return Result.success();
@@ -72,7 +72,7 @@ public class AdvertiseController {
 
     @ApiOperation(value = "根据 id 修改广告信息")
     @PutMapping
-    public Result update(@RequestBody AdvertiseTo advertise) {
+    public Result<?> update(@RequestBody AdvertiseTo advertise) {
         advertiseService.updateAdvertise(advertise);
 
         return Result.success();
@@ -88,7 +88,7 @@ public class AdvertiseController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result delete(@PathVariable("id") String id) {
+    public Result<?> delete(@PathVariable("id") String id) {
         advertiseService.removeById(id);
 
         return Result.success();
@@ -103,7 +103,7 @@ public class AdvertiseController {
                     dataType = "String[]")
     })
     @PostMapping("/delete")
-    public Result deleteBatch(@RequestBody String[] ids) {
+    public Result<?> deleteBatch(@RequestBody String[] ids) {
         advertiseService.removeByIds(Arrays.asList(ids));
 
         return Result.success();

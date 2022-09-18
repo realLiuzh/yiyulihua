@@ -7,6 +7,7 @@ import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.query.WorksQuery;
+import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.WorksPublishTo;
 import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.AssertUtil;
@@ -189,6 +190,16 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         BeanUtils.copyProperties(worksEntity, worksPublishTo);
 
         return worksPublishTo;
+    }
+
+    @Override
+    public Result<?> updateBinNumber(String workId) {
+        boolean update = update()
+                .setSql("works_bid_number = works_bid_number + 1")
+                .eq("id", workId)
+                .update();
+        AssertUtil.isTrue(!update, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+        return Result.success();
     }
 
     private String getUserId() {

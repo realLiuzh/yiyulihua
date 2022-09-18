@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 @Component
-@FeignClient(value = "yiyulihua-user", url = "http://47.96.86.132:11000")
+@FeignClient(value = "yiyulihua-user")
 public interface MessageAndUserFeignClient {
     @GetMapping("/remote/{receiveUserId}")
     List<ResultMessageVo> getOfflineMessage(@PathVariable("receiveUserId") String receiveUserId);

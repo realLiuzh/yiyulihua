@@ -3,6 +3,7 @@ package com.yiyulihua.works.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.query.WorksQuery;
+import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.WorksPublishTo;
 import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
@@ -61,5 +62,6 @@ public interface WorksService extends IService<WorksEntity> {
 
     WorksPublishTo getOnlySaveInfo();
 
+    Result<?> updateBinNumber(String workId);
 }
 

@@ -17,6 +17,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.yiyulihua.works.service.WorksService;
+import springfox.documentation.annotations.ApiIgnore;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
@@ -121,7 +122,7 @@ public class WorksController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result<?> delete(@PathVariable("id") @NotBlank @Length(min = 19, max = 19,message = "id 格式错误") String id) {
+    public Result<?> delete(@PathVariable("id") @NotBlank @Length(min = 19, max = 19, message = "id 格式错误") String id) {
         worksService.removeById(id);
 
         return Result.success();
@@ -154,9 +155,15 @@ public class WorksController {
                     required = true)
     })
     @GetMapping("/recommend/{id}")
-    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") @NotBlank @Length(min = 19, max = 19,message = "id 格式错误") String id) {
+    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") @NotBlank @Length(min = 19, max = 19, message = "id 格式错误") String id) {
         List<WorksListVo> list = worksService.getRecommend(id);
 
         return new Result<List<WorksListVo>>().setData(list);
+    }
+
+    @ApiIgnore
+    @PutMapping("/update_bid_num/{id}")
+    public Result<?> updateNumber(@PathVariable("id") String workId) {
+        return worksService.updateBinNumber(workId);
     }
 }

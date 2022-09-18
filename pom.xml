@@ -19,6 +19,7 @@
         <module>yiyulihua-auth</module>
         <module>yiyulihua-oss</module>
         <module>yiyulihua-websocket</module>
+        <module>yiyulihua-order</module>
     </modules>
 
 

@@ -5,8 +5,3 @@ spring:
     nacos:
       discovery:
         server-addr: 175.178.189.89:12208
-#
-#logging:
-#  file:
-#    path: logs/
-#  config: classpath:logback-spring.xml
