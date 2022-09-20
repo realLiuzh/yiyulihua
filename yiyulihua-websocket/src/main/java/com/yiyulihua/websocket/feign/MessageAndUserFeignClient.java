@@ -11,20 +11,22 @@ import java.util.List;
 
 /**
  * @author sunbo
- * @date 2022/08/03 12:02
+ * @since  2022/08/03 12:02
  */
 
 @Component
 @FeignClient(value = "yiyulihua-user")
 public interface MessageAndUserFeignClient {
     @GetMapping("/remote/{receiveUserId}")
-    List<ResultMessageVo> getOfflineMessage(@PathVariable("receiveUserId") String receiveUserId);
+    List<ResultMessageVo> getOfflineMessage(
+            @PathVariable("receiveUserId") Integer receiveUserId);
 
     @PutMapping("/remoteUpdate/{receiveUserId}")
-    Result updateOfflineMessageStatus(@PathVariable("receiveUserId") String receiveUserId);
+    Result<?> updateOfflineMessageStatus(
+            @PathVariable("receiveUserId") Integer receiveUserId);
 
     @PostMapping("/remoteSave")
-    String save(@RequestBody MessageEntity message);
+    Integer save(@RequestBody MessageEntity message);
 
     @GetMapping("/allId")
     List<Integer> getAllUserId();

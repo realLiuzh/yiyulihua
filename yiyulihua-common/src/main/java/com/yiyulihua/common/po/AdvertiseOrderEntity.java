@@ -26,17 +26,17 @@ public class AdvertiseOrderEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("主键")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("订单号")
-    private String orderNo;
+    private Long orderNo;
 
     @ApiModelProperty("作品id")
-    private String worksId;
+    private Integer worksId;
 
     @ApiModelProperty("用户id")
-    private String userId;
+    private Integer userId;
 
     @ApiModelProperty("广告位置(0: 上方,1:下方)")
     private Integer position;

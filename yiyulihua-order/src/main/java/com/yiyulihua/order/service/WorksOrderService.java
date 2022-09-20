@@ -5,6 +5,7 @@ import com.yiyulihua.common.po.WorksOrderEntity;
 import com.yiyulihua.common.to.OrderTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.ParticipantWorksVo;
+import com.yiyulihua.order.util.OrderConstants;
 
 /**
  * <p>
@@ -18,5 +19,7 @@ public interface WorksOrderService extends IService<WorksOrderEntity> {
 
     PageUtils<ParticipantWorksVo> getWorksOrderByUserId(Integer current, Integer size);
 
-    String createOrder(OrderTo order);
+    Long createOrder(OrderTo order);
+
+    void updateOrderStatusByOrderNo(String orderNo, OrderConstants... codeMsg);
 }

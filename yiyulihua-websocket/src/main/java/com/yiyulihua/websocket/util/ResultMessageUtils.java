@@ -12,7 +12,7 @@ import com.yiyulihua.common.vo.ResultMessageVo;
 
 public class ResultMessageUtils {
 
-    public static String toMessage(String id, String fromUserId, MessageTo messageTo) {
+    public static String toMessage(Integer id, Integer fromUserId, MessageTo messageTo) {
         ResultMessageVo resultMessageVo = new ResultMessageVo();
 
 

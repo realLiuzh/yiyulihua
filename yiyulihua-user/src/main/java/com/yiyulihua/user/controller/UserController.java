@@ -114,13 +114,5 @@ public class UserController {
         return R.ok();
     }
 
-    /**
-     * feign 远程调用
-     */
-    @ApiIgnore
-    @GetMapping("/allId")
-    public List<Integer> getAllUserId() {
-        return userService.getAllUserId();
-    }
 
 }

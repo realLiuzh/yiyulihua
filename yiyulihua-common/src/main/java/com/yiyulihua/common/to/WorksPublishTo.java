@@ -13,7 +13,7 @@ import java.util.Date;
  * @author sunbo
  * @date 2022-07-23-19:53
  */
-@ApiModel(value = "WorksPublishVo", description = "作品发布或保存对象")
+@ApiModel(value = "WorksPublishTo", description = "作品发布或保存对象")
 @Data
 public class WorksPublishTo {
 
@@ -29,8 +29,8 @@ public class WorksPublishTo {
      * 作品类型id
      */
     @ApiModelProperty(value = "作品类型 id", required = true)
-    @NotBlank
-    private String typeId;
+    @NotNull
+    private Integer typeId;
     /**
      * 作品类型
      */
@@ -42,7 +42,7 @@ public class WorksPublishTo {
      */
     @ApiModelProperty(value = "作品子类型(格式) id", required = true)
     @NotBlank
-    private String subtypeId;
+    private Integer subtypeId;
     /**
      * 作品子类型
      */

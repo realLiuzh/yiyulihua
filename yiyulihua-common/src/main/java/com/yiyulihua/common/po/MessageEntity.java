@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * @author snbo
- * @date 2022-07-30 10:38:30
+ * @since  2022-07-30 10:38:30
  */
 @Data
 @TableName("tb_message")
@@ -18,14 +18,14 @@ public class MessageEntity implements Serializable {
     private static final long serialVersionUID = 123L;
 
     @ApiModelProperty("主键")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("发送方用户id")
-    private String sendUserId;
+    private Integer sendUserId;
 
     @ApiModelProperty("接收方用户id")
-    private String receiveUserId;
+    private Integer receiveUserId;
 
     @ApiModelProperty("消息内容")
     private String content;

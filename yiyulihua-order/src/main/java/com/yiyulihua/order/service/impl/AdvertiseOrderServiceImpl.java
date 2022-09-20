@@ -16,7 +16,8 @@ import com.yiyulihua.common.utils.Query;
 import com.yiyulihua.common.vo.AdvertiseOrderVo;
 import com.yiyulihua.order.dao.AdvertiseOrderDao;
 import com.yiyulihua.order.service.AdvertiseOrderService;
-import com.yiyulihua.order.util.OrderNoGenerator;
+import com.yiyulihua.order.util.RedisIdWorker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,15 +34,20 @@ import java.util.stream.Collectors;
 @Service
 public class AdvertiseOrderServiceImpl extends ServiceImpl<AdvertiseOrderDao, AdvertiseOrderEntity> implements AdvertiseOrderService {
 
+    private final RedisIdWorker redisIdWorker;
+
+    public AdvertiseOrderServiceImpl(RedisIdWorker redisIdWorker) {
+        this.redisIdWorker = redisIdWorker;
+    }
+
+
     @Override
     public String createOrder(AdvertiseOrderTo advertiseOrderTo) {
         // 获取用户 id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        String userId = loginId.toString();
+        int userId = StpUtil.getLoginIdAsInt();
 
         AdvertiseOrderEntity orderEntity = new AdvertiseOrderEntity();
-        orderEntity.setOrderNo(OrderNoGenerator.uuid16());
+        orderEntity.setOrderNo(redisIdWorker.nextId("order:adv"));
         orderEntity.setWorksId(advertiseOrderTo.getWorksId());
         orderEntity.setUserId(userId);
         orderEntity.setPosition(advertiseOrderTo.getPosition());
@@ -52,7 +58,7 @@ public class AdvertiseOrderServiceImpl extends ServiceImpl<AdvertiseOrderDao, Ad
         int insert = baseMapper.insert(orderEntity);
         AssertUtil.isTrue(insert < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
 
-        return orderEntity.getOrderNo();
+        return orderEntity.getOrderNo().toString();
     }
 
     @Override

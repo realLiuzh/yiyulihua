@@ -20,7 +20,7 @@ public class MessageTo {
     private Integer isSystem;
 
     @ApiModelProperty(value = "接收方用户 id", required = true)
-    private String toUserId;
+    private Integer toUserId;
 
     @ApiModelProperty(value = "消息内容", required = true)
     private String content;

@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class MessageDeleteTo {
     @ApiModelProperty(value = "消息id",required = true)
-    private String msgId;
+    private Integer msgId;
     @ApiModelProperty(value = "用户身份(0: 发送方 1:接收方)",required = true)
     private Integer role;
 }

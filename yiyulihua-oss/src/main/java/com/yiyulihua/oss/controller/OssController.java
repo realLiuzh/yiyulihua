@@ -38,7 +38,9 @@ public class OssController {
                     paramType = "query")
     })
     @PostMapping
-    public Result<Map<String, Object>> loadFile(@RequestPart @RequestParam("file") MultipartFile file) {
+    public Result<Map<String, Object>> loadFile(
+            @RequestPart
+            @RequestParam("file") MultipartFile file) {
         Map<String, Object> map = ossService.uploadFile(file);
 
         return new Result<Map<String, Object>>().setData(map);
@@ -53,7 +55,7 @@ public class OssController {
                     paramType = "query")
     })
     @DeleteMapping
-    public Result deleteFile(@RequestParam("url") String url) {
+    public Result<?> deleteFile(@RequestParam("url") String url) {
         if (ossService.removeFile(url)) {
             return Result.success();
         }

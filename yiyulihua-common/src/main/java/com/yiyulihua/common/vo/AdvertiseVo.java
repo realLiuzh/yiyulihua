@@ -14,7 +14,7 @@ import lombok.Data;
 public class AdvertiseVo {
 
     @ApiModelProperty("主键")
-    private String id;
+    private Integer id;
 
     @ApiModelProperty("广告标题")
     private String title;

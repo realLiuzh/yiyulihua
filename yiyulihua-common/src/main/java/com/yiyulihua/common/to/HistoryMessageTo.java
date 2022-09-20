@@ -21,7 +21,7 @@ public class HistoryMessageTo {
     private Integer size;
 
     @ApiModelProperty(value = "对方用户id",required = true)
-    private String toUserId;
+    private Integer toUserId;
 
     @ApiModelProperty("开始时间,默认 2022-01-01 00:00:00")
     private Date begin;

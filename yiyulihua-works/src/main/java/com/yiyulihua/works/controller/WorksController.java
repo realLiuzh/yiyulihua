@@ -11,7 +11,7 @@ import com.yiyulihua.common.to.WorksUpdateTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.*;
 import io.swagger.annotations.*;
-import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.*;
 import com.yiyulihua.works.service.WorksService;
 import springfox.documentation.annotations.ApiIgnore;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 
 /**
@@ -41,7 +41,8 @@ public class WorksController {
 
     @ApiOperation(value = "按条件分页查询作品信息", notes = "timeSort priceSort为排序参数,大于0为降序,小于0为升序,默认为0不排序.如果要同时按时间和价格排序,比较两者绝对值,绝对值大的先排序")
     @PostMapping("/list")
-    public Result<PageUtils<WorksListVo>> list(@RequestBody(required = true) WorksQuery worksQuery) {
+    public Result<PageUtils<WorksListVo>> list(
+            @RequestBody WorksQuery worksQuery) {
         PageUtils<WorksListVo> page = worksService.queryPage(worksQuery);
 
         return new Result<PageUtils<WorksListVo>>().setData(page);
@@ -56,7 +57,10 @@ public class WorksController {
                     paramType = "path")
     })
     @GetMapping("/{id}")
-    public Result<WorksDetailsVo> info(@PathVariable("id") @NotBlank(message = "id 不能为空") @Length(min = 19, max = 19, message = "id 格式错误") String id) {
+    public Result<WorksDetailsVo> info(@PathVariable("id")
+                                       @NotNull(message = "id 不能为空")
+                                       @Range(min = 1, max = Integer.MAX_VALUE, message = "id 格式错误")
+                                       Integer id) {
         WorksDetailsVo works = worksService.getDetailsInfoById(id);
 
         return new Result<WorksDetailsVo>().setData(works);
@@ -122,7 +126,10 @@ public class WorksController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result<?> delete(@PathVariable("id") @NotBlank @Length(min = 19, max = 19, message = "id 格式错误") String id) {
+    public Result<?> delete(@PathVariable("id")
+                                @NotNull
+                                @Range(min = 0, max = Integer.MAX_VALUE, message = "id 格式错误")
+                                Integer id) {
         worksService.removeById(id);
 
         return Result.success();
@@ -140,7 +147,7 @@ public class WorksController {
                     dataType = "String[]")
     })
     @PostMapping("/delete")
-    public Result<?> delete(@RequestBody @NotEmpty String[] ids) {
+    public Result<?> delete(@RequestBody @NotEmpty Integer[] ids) {
         worksService.removeByIds(Arrays.asList(ids));
 
         return Result.success();
@@ -155,7 +162,11 @@ public class WorksController {
                     required = true)
     })
     @GetMapping("/recommend/{id}")
-    public Result<List<WorksListVo>> getRecommend(@PathVariable("id") @NotBlank @Length(min = 19, max = 19, message = "id 格式错误") String id) {
+    public Result<List<WorksListVo>> getRecommend(
+            @PathVariable("id")
+            @NotNull
+            @Range(min = 0, max = Integer.MAX_VALUE, message = "id 格式错误")
+            Integer id) {
         List<WorksListVo> list = worksService.getRecommend(id);
 
         return new Result<List<WorksListVo>>().setData(list);
@@ -163,7 +174,8 @@ public class WorksController {
 
     @ApiIgnore
     @PutMapping("/update_bid_num/{id}")
-    public Result<?> updateNumber(@PathVariable("id") String workId) {
+    public Result<?> updateNumber(@PathVariable("id") Integer workId) {
         return worksService.updateBinNumber(workId);
     }
+
 }

@@ -21,8 +21,8 @@ public class AdvertiseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("主键")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("广告标题")
     private String title;

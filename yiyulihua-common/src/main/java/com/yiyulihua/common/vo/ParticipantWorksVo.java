@@ -16,13 +16,13 @@ import java.util.Date;
 public class ParticipantWorksVo {
 
     @ApiModelProperty("主键")
-    private String id;
+    private Integer id;
 
     @ApiModelProperty("订单号")
-    private String orderNo;
+    private Long orderNo;
 
     @ApiModelProperty("作品id")
-    private String worksId;
+    private Integer worksId;
 
     @ApiModelProperty("作品名称")
     private String worksName;

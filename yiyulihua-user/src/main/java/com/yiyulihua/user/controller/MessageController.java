@@ -5,7 +5,6 @@ import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.HistoryMessageTo;
 import com.yiyulihua.common.to.MessageDeleteTo;
-import com.yiyulihua.common.to.MessageDeleteUserTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.HistoryMessageVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
@@ -24,7 +23,7 @@ import java.util.List;
 
 /**
  * @author snbo
- * @date 2022/07/30 10:38:30
+ * @since 2022/07/30 10:38:30
  */
 @Api(value = "消息管理", tags = "用户聊天消息管理")
 @RestController
@@ -59,16 +58,16 @@ public class MessageController {
 
     @ApiOperation(value = "根据 id 单方面删除聊天记录")
     @PutMapping("one")
-    public Result removeMsgRecord(@RequestBody MessageDeleteTo deleteVo) {
-        messageService.deleteRecords(deleteVo);
+    public Result<?> removeMsgRecord(@RequestBody MessageDeleteTo delete) {
+        messageService.deleteRecords(delete);
 
         return Result.success();
     }
 
     @ApiOperation(value = "根据 id 单方面批量删除聊天记录")
     @PutMapping("batch")
-    public Result removeMsgRecords(@RequestBody MessageDeleteTo[] deleteVos) {
-        messageService.deleteRecordsBatch(deleteVos);
+    public Result<?> removeMsgRecords(@RequestBody MessageDeleteTo[] deletes) {
+        messageService.deleteRecordsBatch(deletes);
 
         return Result.success();
     }
@@ -82,7 +81,7 @@ public class MessageController {
                     paramType = "body")
     })
     @PutMapping("matchUser")
-    public Result removeAllMsgByUserId(@RequestBody String toUserId) {
+    public Result<?> removeAllMsgByUserId(@RequestBody Integer toUserId) {
         messageService.deleteRecordsBetweenUser(toUserId);
 
         return Result.success();
@@ -90,7 +89,8 @@ public class MessageController {
 
     @ApiOperation(value = "分页获取用户间历史消息", notes = "本用户 id 从 token 获取")
     @PostMapping("/history")
-    public Result<PageUtils<HistoryMessageVo>> getHistoryMessage(@RequestBody HistoryMessageTo historyMessageTo) {
+    public Result<PageUtils<HistoryMessageVo>> getHistoryMessage(
+            @RequestBody HistoryMessageTo historyMessageTo) {
         PageUtils<HistoryMessageVo> page = messageService.getHistoryMessageBetweenUserPage(historyMessageTo);
 
         return new Result<PageUtils<HistoryMessageVo>>().setData(page);
@@ -98,13 +98,15 @@ public class MessageController {
 
     @ApiIgnore
     @GetMapping("/remote/{receiveUserId}")
-    public List<ResultMessageVo> getOfflineMessage(@PathVariable("receiveUserId") String receiveUserId) {
+    public List<ResultMessageVo> getOfflineMessage(
+            @PathVariable("receiveUserId") Integer receiveUserId) {
         return messageService.getOfflineMessage(receiveUserId);
     }
 
     @ApiIgnore
     @PutMapping("/remoteUpdate/{receiveUserId}")
-    public Result updateOfflineMessageStatus(@PathVariable("receiveUserId") String receiveUserId) {
+    public Result<?> updateOfflineMessageStatus(
+            @PathVariable("receiveUserId") Integer receiveUserId) {
         messageService.updateOfflineStatus(receiveUserId);
 
         return Result.success();
@@ -112,7 +114,7 @@ public class MessageController {
 
     @ApiIgnore
     @PostMapping("/remoteSave")
-    public String save(@RequestBody MessageEntity message) {
+    public Integer save(@RequestBody MessageEntity message) {
         messageService.save(message);
 
         return message.getId();

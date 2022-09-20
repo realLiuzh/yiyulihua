@@ -6,6 +6,12 @@ spring:
     database: 10
     port: 6379
     host: 47.96.86.132
+  datasource:
+    username: snbo
+    password: 1234
+    url: jdbc:mysql://175.178.189.89:12209/yiyulihua?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
 
@@ -37,8 +43,3 @@ feign:
         connect-timeout: 60000
         read-timeout: 60000
         loggerLevel: full
-
-#Feign负载均衡配置 配置全局超时时间 毫秒单位
-ribbon:
-  ConnectTimeout: 5000 #请求连接的超时时间，默认时间为1秒
-  ReadTimeout: 5000 #请求处理的超时时间

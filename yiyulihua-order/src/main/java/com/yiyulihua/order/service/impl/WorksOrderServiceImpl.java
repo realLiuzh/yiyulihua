@@ -2,11 +2,11 @@ package com.yiyulihua.order.service.impl;
 
 import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.conditions.update.UpdateChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yiyulihua.common.exception.ApiException;
 import com.yiyulihua.common.exception.ApiExceptionEnum;
-import com.yiyulihua.common.po.WorksEntity;
 import com.yiyulihua.common.po.WorksOrderEntity;
 import com.yiyulihua.common.query.PageQuery;
 import com.yiyulihua.common.result.Result;
@@ -18,10 +18,10 @@ import com.yiyulihua.common.vo.ParticipantWorksVo;
 import com.yiyulihua.order.dao.WorksOrderDao;
 import com.yiyulihua.order.feign.WorksClient;
 import com.yiyulihua.order.service.WorksOrderService;
-import com.yiyulihua.order.util.OrderNoGenerator;
+import com.yiyulihua.order.util.OrderConstants;
+import com.yiyulihua.order.util.RedisIdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 
 /**
@@ -37,9 +37,12 @@ public class WorksOrderServiceImpl extends ServiceImpl<WorksOrderDao, WorksOrder
 
     private final WorksClient worksClient;
 
+    private final RedisIdWorker redisIdWorker;
+
     @Autowired
-    public WorksOrderServiceImpl(WorksClient worksClient) {
+    public WorksOrderServiceImpl(WorksClient worksClient, RedisIdWorker redisIdWorker) {
         this.worksClient = worksClient;
+        this.redisIdWorker = redisIdWorker;
     }
 
 
@@ -62,31 +65,43 @@ public class WorksOrderServiceImpl extends ServiceImpl<WorksOrderDao, WorksOrder
     }
 
     @Override
-    public String createOrder(OrderTo order) {
-        AssertUtil.isTrue(StringUtils.isEmpty(order) || null == order.getQuotePrice(), new ApiException(ApiExceptionEnum.BODY_NOT_MATCH));
+    public Long createOrder(OrderTo order) {
         //获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.BODY_NOT_MATCH));
-        String userId = loginId.toString();
+        int userId = StpUtil.getLoginIdAsInt();
 
         WorksOrderEntity worksOrderEntity = new WorksOrderEntity();
         worksOrderEntity.setWorksId(order.getWorksId());
         worksOrderEntity.setQuotePrice(order.getQuotePrice());
-        worksOrderEntity.setOrderNo(OrderNoGenerator.uuid16());
+        worksOrderEntity.setOrderNo(redisIdWorker.nextId("order:works:no"));
         worksOrderEntity.setParticipantId(userId);
+        worksOrderEntity.setOrderTitle(order.getTitle());
 
         //默认已报价
-        worksOrderEntity.setOrderStatus(0);
+        worksOrderEntity.setOrderStatus(OrderConstants.QUOTED.getCode());
         //默认未支付
-        worksOrderEntity.setPayStatus(0);
+        worksOrderEntity.setPayStatus(OrderConstants.UNPAID.getCode());
 
         int insert = baseMapper.insert(worksOrderEntity);
         AssertUtil.isTrue(insert < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
 
         //更新作品的报价人数
         Result<?> result = worksClient.updateNumber(order.getWorksId());
-        AssertUtil.isTrue(!result.getCode().equals("0"), new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+        AssertUtil.isTrue(!result.getCode().equals(ApiExceptionEnum.SUCCESS.getResultCode()), new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
 
         return worksOrderEntity.getOrderNo();
+    }
+
+
+    @Override
+    public void updateOrderStatusByOrderNo(String orderNo, OrderConstants... codeMsg) {
+        UpdateChainWrapper<WorksOrderEntity> wrapper = update();
+        for (OrderConstants constants : codeMsg) {
+            wrapper.set(constants.getMsg(), constants.getCode());
+        }
+        boolean update = wrapper
+                .eq("order_no", orderNo)
+                .update();
+
+        AssertUtil.isTrue(!update, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 }

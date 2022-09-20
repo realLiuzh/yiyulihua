@@ -16,8 +16,11 @@ import java.math.BigDecimal;
 public class OrderTo {
 
     @ApiModelProperty(value = "作品id",required = true)
-    private String worksId;
+    private Integer worksId;
 
     @ApiModelProperty(value = "买方报价",required = true)
     private BigDecimal quotePrice;
+
+    @ApiModelProperty("订单名称")
+    private String title;
 }

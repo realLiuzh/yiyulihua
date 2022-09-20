@@ -25,14 +25,17 @@ public class WorksOrderEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("主键")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("订单号")
-    private String orderNo;
+    private Long orderNo;
+
+    @ApiModelProperty("订单标题")
+    private String orderTitle;
 
     @ApiModelProperty("作品id")
-    private String worksId;
+    private Integer worksId;
 
     @ApiModelProperty("买方报价")
     private BigDecimal quotePrice;
@@ -44,7 +47,7 @@ public class WorksOrderEntity implements Serializable {
     private Integer payStatus;
 
     @ApiModelProperty("买方id")
-    private String participantId;
+    private Integer participantId;
 
     @ApiModelProperty("创建时间")
     @TableField(fill = FieldFill.INSERT)

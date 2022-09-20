@@ -102,7 +102,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     }
 
     @Override
-    public WorksDetailsVo getDetailsInfoById(String id) {
+    public WorksDetailsVo getDetailsInfoById(Integer id) {
         QueryWrapper<WorksDetailsVo> wrapper = new QueryWrapper<>();
         wrapper.eq("tb_works.id", id);
         WorksDetailsVo works = baseMapper.getWorksDetails(wrapper);
@@ -141,7 +141,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     @Override
     public PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size) {
         // 根据 token 获取用户id
-        String publisherId = getUserId();
+        int publisherId = StpUtil.getLoginIdAsInt();
 
         //条件
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
@@ -169,7 +169,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     }
 
     @Override
-    public List<WorksListVo> getRecommend(String id) {
+    public List<WorksListVo> getRecommend(Integer id) {
         WorksEntity worksEntity = baseMapper.selectById(id);
         return baseMapper.getRecommend(worksEntity.getTypeId());
     }
@@ -177,7 +177,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     @Override
     public WorksPublishTo getOnlySaveInfo() {
         // 根据 token 获取用户id
-        String publisherId = getUserId();
+        int publisherId = StpUtil.getLoginIdAsInt();
 
         QueryWrapper<WorksEntity> wrapper = new QueryWrapper<>();
         wrapper.select("works_name", "type_id", "type", "subtype_id", "subtype", "preview_url", "real_url", "works_cover", "works_demand", "works_price", "works_process", "remark", "works_status", "works_deadline");
@@ -193,7 +193,7 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
     }
 
     @Override
-    public Result<?> updateBinNumber(String workId) {
+    public Result<?> updateBinNumber(Integer workId) {
         boolean update = update()
                 .setSql("works_bid_number = works_bid_number + 1")
                 .eq("id", workId)
@@ -201,12 +201,4 @@ public class WorksServiceImpl extends ServiceImpl<WorksDao, WorksEntity> impleme
         AssertUtil.isTrue(!update, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
         return Result.success();
     }
-
-    private String getUserId() {
-        // 根据 token 获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        return loginId.toString();
-    }
-
 }

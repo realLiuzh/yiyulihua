@@ -18,9 +18,9 @@ import java.util.List;
  */
 public interface MessageService extends IService<MessageEntity> {
 
-    List<ResultMessageVo> getOfflineMessage(String receiveUserId);
+    List<ResultMessageVo> getOfflineMessage(Integer receiveUserId);
 
-    void updateOfflineStatus(String userId);
+    void updateOfflineStatus(Integer userId);
 
     PageUtils<ResultMessageVo> getHistoryMessagePage(Integer current, Integer size);
 
@@ -28,7 +28,7 @@ public interface MessageService extends IService<MessageEntity> {
 
     void deleteRecordsBatch(MessageDeleteTo[] deleteVos);
 
-    void deleteRecordsBetweenUser(String deleteUserTo);
+    void deleteRecordsBetweenUser(Integer deleteUserTo);
 
     PageUtils<HistoryMessageVo> getHistoryMessageBetweenUserPage(HistoryMessageTo historyMessageTo);
 }

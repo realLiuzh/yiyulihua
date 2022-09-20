@@ -1,0 +1,202 @@
+2022-09-19 15:22:17.595 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - The following profiles are active: dev
+2022-09-19 15:22:18.360 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-19 15:22:18.363 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-19 15:22:18.381 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-09-19 15:22:18.663 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ec42e48f-4bb5-3c10-bed2-b96e745ec06c
+2022-09-19 15:22:18.743 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-19 15:22:19.566 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-19 15:22:19.730 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-19 15:22:21.731 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:22:21.741 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:22:21.967 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:22:22.476 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-19 15:22:23.485 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - Started AliPayConfTest in 7.191 seconds (JVM running for 8.709)
+2022-09-19 15:22:23.741 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - null
+2022-09-19 15:22:23.762 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:22:23.770 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-19 15:22:59.193 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - The following profiles are active: dev
+2022-09-19 15:22:59.940 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-19 15:22:59.942 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-19 15:22:59.963 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-09-19 15:23:00.222 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ec42e48f-4bb5-3c10-bed2-b96e745ec06c
+2022-09-19 15:23:00.296 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-19 15:23:01.056 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-19 15:23:01.209 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-19 15:23:03.288 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:23:03.296 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:23:03.511 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:23:03.992 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-19 15:23:05.017 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - Started AliPayConfTest in 7.116 seconds (JVM running for 8.468)
+2022-09-19 15:23:05.188 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest -                 ****************************              
+2022-09-19 15:23:05.188 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - null
+2022-09-19 15:23:05.203 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:23:05.211 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-19 15:23:35.300 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - The following profiles are active: dev
+2022-09-19 15:23:36.030 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-19 15:23:36.031 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-19 15:23:36.050 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-09-19 15:23:36.307 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ec42e48f-4bb5-3c10-bed2-b96e745ec06c
+2022-09-19 15:23:36.379 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-19 15:23:37.125 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-19 15:23:37.265 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-19 15:23:39.259 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:23:39.265 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:23:39.536 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:23:40.039 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-19 15:23:41.006 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - Started AliPayConfTest in 6.95 seconds (JVM running for 8.052)
+2022-09-19 15:23:41.207 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest -                 ****************************              
+2022-09-19 15:23:41.207 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - null
+2022-09-19 15:23:41.225 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:23:41.231 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-19 15:24:07.184 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - The following profiles are active: dev
+2022-09-19 15:24:07.978 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-19 15:24:07.980 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-19 15:24:08.004 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2022-09-19 15:24:08.288 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ec42e48f-4bb5-3c10-bed2-b96e745ec06c
+2022-09-19 15:24:08.374 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-19 15:24:09.192 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-19 15:24:09.356 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-19 15:24:11.747 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:24:11.752 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-19 15:24:12.019 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:24:12.569 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-19 15:24:13.555 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - Started AliPayConfTest in 7.704 seconds (JVM running for 9.4)
+2022-09-19 15:24:13.757 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest -                 ****************************              
+2022-09-19 15:24:13.758 [main] INFO  com.yiyulihua.order.conf.AliPayConfTest - 2021000121666477
+2022-09-19 15:24:13.774 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-19 15:24:13.782 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:16:45.200 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:16:46.072 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:16:46.076 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:16:46.127 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37ms. Found 0 Redis repository interfaces.
+2022-09-20 16:16:46.369 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:16:46.444 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:16:47.343 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:16:47.559 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:16:49.594 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:16:49.600 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:16:49.813 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:16:50.421 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:16:51.533 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 7.717 seconds (JVM running for 8.941)
+2022-09-20 16:16:52.099 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:16:52.107 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:17:47.576 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:17:48.285 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:17:48.287 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:17:48.304 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-09-20 16:17:48.547 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:17:48.619 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:17:49.339 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:17:49.476 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:17:51.389 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:17:51.395 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:17:51.601 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:17:52.101 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:17:53.032 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.679 seconds (JVM running for 7.825)
+2022-09-20 16:17:54.407 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:17:54.422 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:18:56.264 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:18:57.040 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:18:57.042 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:18:57.060 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-09-20 16:18:57.308 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:18:57.381 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:18:58.120 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:18:58.259 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:19:00.328 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:19:00.333 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:19:00.594 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:19:01.122 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:19:02.093 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 7.077 seconds (JVM running for 8.205)
+2022-09-20 16:19:03.480 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:19:03.495 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:20:21.204 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:20:21.939 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:20:21.941 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:20:21.962 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2022-09-20 16:20:22.217 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:20:22.291 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:20:22.997 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:20:23.130 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:20:25.015 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:20:25.020 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:20:25.219 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:20:25.717 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:20:26.694 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.758 seconds (JVM running for 8.086)
+2022-09-20 16:20:28.066 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:20:28.077 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:22:09.904 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:22:10.624 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:22:10.626 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:22:10.643 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-09-20 16:22:10.890 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:22:10.964 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:22:11.699 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:22:11.837 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:22:13.860 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:22:13.865 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:22:14.074 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:22:14.597 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:22:15.517 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.845 seconds (JVM running for 7.877)
+2022-09-20 16:22:16.948 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:22:16.959 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:24:39.032 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:24:39.782 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:24:39.784 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:24:39.845 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
+2022-09-20 16:24:40.067 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:24:40.139 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:24:40.896 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:24:41.032 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:24:43.153 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:24:43.158 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:24:43.369 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:24:43.867 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:24:44.819 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.993 seconds (JVM running for 8.087)
+2022-09-20 16:24:46.215 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:24:46.228 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:25:51.415 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:25:52.130 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:25:52.132 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:25:52.176 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34ms. Found 0 Redis repository interfaces.
+2022-09-20 16:25:52.390 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:25:52.461 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:25:53.187 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:25:53.319 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:25:55.241 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:25:55.246 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:25:55.439 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:25:55.931 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:25:56.920 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.698 seconds (JVM running for 7.846)
+2022-09-20 16:25:58.309 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:25:58.321 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:27:56.206 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:27:56.930 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:27:56.932 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:27:56.952 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-09-20 16:27:57.196 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:27:57.272 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:27:57.964 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:27:58.111 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:28:00.014 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:28:00.019 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:28:00.226 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:28:00.703 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:28:01.647 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.655 seconds (JVM running for 7.759)
+2022-09-20 16:28:03.001 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:28:03.013 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-09-20 16:29:46.510 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - The following profiles are active: dev
+2022-09-20 16:29:47.227 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-20 16:29:47.229 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-20 16:29:47.247 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-09-20 16:29:47.500 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=4a23f454-1cf7-3f77-ac6f-778ff26a734c
+2022-09-20 16:29:47.575 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.yiyulihua.order.feign.WorksClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-20 16:29:48.347 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-20 16:29:48.487 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-20 16:29:50.382 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:29:50.386 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-20 16:29:50.580 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:29:51.046 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-09-20 16:29:52.011 [main] INFO  com.yiyulihua.order.service.impl.WorksOrderServiceImplTest - Started WorksOrderServiceImplTest in 6.753 seconds (JVM running for 8.229)
+2022-09-20 16:29:52.470 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-20 16:29:52.478 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,7 +1,6 @@
 package com.yiyulihua.user.service.impl;
 
 import cn.dev33.satoken.stp.StpUtil;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -17,15 +16,15 @@ import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.utils.Query;
 import com.yiyulihua.common.vo.HistoryMessageVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import com.yiyulihua.user.dao.MessageDao;
 import com.yiyulihua.user.service.MessageService;
-import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -33,45 +32,38 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
 
 
     @Override
-    public List<ResultMessageVo> getOfflineMessage(String receiveUserId) {
-        List<ResultMessageVo> list = new ArrayList<>();
+    public List<ResultMessageVo> getOfflineMessage(Integer receiveUserId) {
+        List<ResultMessageVo> list = query()
+                .eq("receive_user_id", receiveUserId)
+                .eq("is_offline", 1)
+                .orderByAsc("create_time")
+                .list()
+                .stream()
+                .map(message -> {
+                    ResultMessageVo resultMsg = new ResultMessageVo();
+                    BeanUtils.copyProperties(message,resultMsg);
+                    resultMsg.setSendTime(message.getCreateTime());
+                    resultMsg.setFromUserId(message.getSendUserId());
+                    return resultMsg;
+                })
+                .collect(Collectors.toList());
 
-        QueryWrapper<MessageEntity> wrapper = new QueryWrapper<>();
-        wrapper.eq("receive_user_id", receiveUserId);
-        wrapper.eq("is_offline", 1);
-        wrapper.orderByAsc("create_time");
-
-        List<MessageEntity> messages = baseMapper.selectList(wrapper);
-        if (messages != null) {
-            for (MessageEntity message : messages) {
-                ResultMessageVo resultMsg = new ResultMessageVo();
-                resultMsg.setId(message.getId());
-                resultMsg.setContent(message.getContent());
-                resultMsg.setReceiveUserId(message.getReceiveUserId());
-                resultMsg.setSendTime(message.getCreateTime());
-                resultMsg.setFromUserId(message.getSendUserId());
-                resultMsg.setIsSystem(message.getIsSystem());
-
-                list.add(resultMsg);
-            }
-        }
         return list;
     }
 
     @Override
-    public void updateOfflineStatus(String receiveUserId) {
-        UpdateWrapper<MessageEntity> wrapper = new UpdateWrapper<>();
-        wrapper.eq("receive_user_id", receiveUserId).set("is_offline", 0);
-        int update = baseMapper.update(null, wrapper);
-        AssertUtil.isTrue(update < 1, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
+    public void updateOfflineStatus(Integer receiveUserId) {
+        boolean update = update()
+                .set("is_offline", 0)
+                .eq("receive_user_id", receiveUserId)
+                .update();
+        AssertUtil.isTrue(!update, new ApiException(ApiExceptionEnum.INTERNAL_SERVER_ERROR));
     }
 
     @Override
     public PageUtils<ResultMessageVo> getHistoryMessagePage(Integer current, Integer size) {
         // 根据 token 获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        String userId = loginId.toString();
+        int userId = StpUtil.getLoginIdAsInt();
 
         Page<ResultMessageVo> page = new Query<ResultMessageVo>().getPage(new PageQuery(current, size));
         //自定义分页查询
@@ -115,11 +107,9 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
     }
 
     @Override
-    public void deleteRecordsBetweenUser(String toUserId) {
+    public void deleteRecordsBetweenUser(Integer toUserId) {
         // 根据 token 获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        String userId = loginId.toString();
+        int userId = StpUtil.getLoginIdAsInt();
 
         // 为发送方的情况
         UpdateWrapper<MessageEntity> wrapper1 = new UpdateWrapper<>();
@@ -140,10 +130,7 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
     @Override
     public PageUtils<HistoryMessageVo> getHistoryMessageBetweenUserPage(HistoryMessageTo historyMessageTo) {
         // 根据 token 获取用户id
-        Object loginId = StpUtil.getLoginIdDefaultNull();
-        System.out.println(loginId);
-        AssertUtil.isTrue(null == loginId, new ApiException(ApiExceptionEnum.SIGNATURE_NOT_MATCH));
-        String userId = loginId.toString();
+        int userId = StpUtil.getLoginIdAsInt();
 
         Page<HistoryMessageVo> page = new Query<HistoryMessageVo>().getPage(new PageQuery(historyMessageTo.getCurrent(), historyMessageTo.getSize()));
         // 设置时间区间

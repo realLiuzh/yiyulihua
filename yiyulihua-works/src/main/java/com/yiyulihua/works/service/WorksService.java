@@ -36,7 +36,7 @@ public interface WorksService extends IService<WorksEntity> {
      * @author sunbo
      * @date 2022/7/23 19:21
      */
-    WorksDetailsVo getDetailsInfoById(String id);
+    WorksDetailsVo getDetailsInfoById(Integer id);
 
     /**
      * description: 保存或发布作品
@@ -52,16 +52,17 @@ public interface WorksService extends IService<WorksEntity> {
      *
      * @param work 作品信息
      * @author sunbo
-     * @date 2022/7/24 17:19
+     * @since  2022/7/24 17:19
      */
     void updateInfoById(WorksUpdateTo work);
 
     PageUtils<WorksMyPublishVo> getWorksByPublisherId(Integer current, Integer size);
 
-    List<WorksListVo> getRecommend(String id);
+    List<WorksListVo> getRecommend(Integer id);
 
     WorksPublishTo getOnlySaveInfo();
 
-    Result<?> updateBinNumber(String workId);
+    Result<?> updateBinNumber(Integer workId);
+
 }
 

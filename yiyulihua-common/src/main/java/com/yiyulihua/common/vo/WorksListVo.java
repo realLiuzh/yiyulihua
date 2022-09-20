@@ -18,7 +18,7 @@ public class WorksListVo {
      * 主键
      */
     @ApiModelProperty("主键")
-    private String id;
+    private Integer id;
     /**
      * 作品名称
      */
@@ -43,7 +43,7 @@ public class WorksListVo {
      * 发布者id
      */
     @ApiModelProperty("发布者id")
-    private String publisherId;
+    private Integer publisherId;
     /**
      * 发布者昵称
      */

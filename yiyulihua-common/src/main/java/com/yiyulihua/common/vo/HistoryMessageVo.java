@@ -14,13 +14,13 @@ import java.util.Date;
 @Data
 public class HistoryMessageVo {
     @ApiModelProperty("主键")
-    private String id;
+    private Integer id;
 
     @ApiModelProperty("发送方用户 id")
-    private String fromUserId;
+    private Integer fromUserId;
 
     @ApiModelProperty("接收方用户 id")
-    private String receiveUserId;
+    private Integer receiveUserId;
 
     @ApiModelProperty("信息内容")
     private Object content;

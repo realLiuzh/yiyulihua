@@ -16,7 +16,7 @@ import java.util.Date;
 public class WorksMyPublishVo {
 
     @ApiModelProperty("主键")
-    private String id;
+    private Integer id;
 
     @ApiModelProperty("作品名称")
     private String worksName;

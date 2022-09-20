@@ -3,6 +3,7 @@ package com.yiyulihua.works.controller;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.AdvertiseTo;
 import com.yiyulihua.common.utils.PageUtils;
+import com.yiyulihua.common.utils.ValidatedGroup;
 import com.yiyulihua.common.vo.AdvertiseVo;
 import com.yiyulihua.works.service.AdvertiseService;
 import io.swagger.annotations.Api;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.groups.Default;
 import java.util.Arrays;
 
 /**
@@ -23,7 +25,7 @@ import java.util.Arrays;
  * @author snbo
  * @since 2022-08-13
  */
-@Api(value = "广告管理",tags = "后台管理")
+@Api(value = "广告管理", tags = "后台管理")
 @RestController
 @RequestMapping("/admin")
 @Validated
@@ -53,7 +55,7 @@ public class AdvertiseController {
     })
     @GetMapping("/{current}/{size}")
     public Result<PageUtils<AdvertiseVo>> list(
-            @PathVariable("current")  Integer current,
+            @PathVariable("current") Integer current,
             @PathVariable("size") Integer size,
             @RequestParam("position") Integer position) {
         PageUtils<AdvertiseVo> page = advertiseService.getListPage(current, size, position);
@@ -62,9 +64,9 @@ public class AdvertiseController {
     }
 
 
-    @ApiOperation(value = "添加广告信息",notes = "添加操作无需填写 id 值")
+    @ApiOperation(value = "添加广告信息", notes = "添加操作无需填写 id 值")
     @PostMapping
-    public Result<?> save(@RequestBody AdvertiseTo advertise) {
+    public Result<?> save(@RequestBody @Validated AdvertiseTo advertise) {
         advertiseService.saveAdvertise(advertise);
 
         return Result.success();
@@ -72,7 +74,9 @@ public class AdvertiseController {
 
     @ApiOperation(value = "根据 id 修改广告信息")
     @PutMapping
-    public Result<?> update(@RequestBody AdvertiseTo advertise) {
+    public Result<?> update(@RequestBody
+                            @Validated({ValidatedGroup.Update.class, Default.class})
+                            AdvertiseTo advertise) {
         advertiseService.updateAdvertise(advertise);
 
         return Result.success();
@@ -88,7 +92,7 @@ public class AdvertiseController {
             )
     })
     @DeleteMapping("/{id}")
-    public Result<?> delete(@PathVariable("id") String id) {
+    public Result<?> delete(@PathVariable("id") Integer id) {
         advertiseService.removeById(id);
 
         return Result.success();
@@ -103,7 +107,7 @@ public class AdvertiseController {
                     dataType = "String[]")
     })
     @PostMapping("/delete")
-    public Result<?> deleteBatch(@RequestBody String[] ids) {
+    public Result<?> deleteBatch(@RequestBody Integer[] ids) {
         advertiseService.removeByIds(Arrays.asList(ids));
 
         return Result.success();

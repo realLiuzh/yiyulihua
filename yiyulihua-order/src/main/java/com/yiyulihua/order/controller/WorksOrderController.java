@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -62,12 +62,11 @@ public class WorksOrderController {
      */
     @ApiOperation(value = "创建订单,返回订单号", notes = "生成订单,待支付成功后自动更新支付状态为已支付,支付后向卖家发送消息,待卖家确认后自动更改订单状态")
     @PostMapping
-    public Result<Map<String, String>> createOrder(@RequestBody OrderTo order) {
-        String orderNo = worksOrderService.createOrder(order);
+    public Result<Map<String, Long>> createOrder(@RequestBody OrderTo order) {
+        Long orderNo = worksOrderService.createOrder(order);
 
-        Map<String, String> map = new HashMap<>(1);
-        map.put("orderNo", orderNo);
-        return new Result<Map<String, String>>().setData(map);
+        return new Result<Map<String, Long>>()
+                .setData(Collections.singletonMap("orderNo", orderNo));
     }
 
     @ApiOperation(value = "根据 id 删除作品订单信息")

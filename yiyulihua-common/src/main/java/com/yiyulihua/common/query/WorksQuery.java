@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @author sunbo
- * @date 2022-07-22-17:47
+ * @since  2022-07-22-17:47
  */
 @ApiModel(value = "WorksQuery", description = "作品查询条件对象")
 @Data
@@ -35,10 +35,10 @@ public class WorksQuery {
      * 根据类型查询
      */
     @ApiModelProperty("根据作品类型查询")
-    private String typeId;
+    private Integer typeId;
     /**
      * 根据子类型查询
      */
     @ApiModelProperty("根据作品类型格式查询")
-    private String subtypeId;
+    private Integer subtypeId;
 }

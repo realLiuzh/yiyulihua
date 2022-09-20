@@ -18,7 +18,7 @@ import java.util.List;
 public class TypeListVo {
 
     @ApiModelProperty("类型主键id")
-    private String id;
+    private Integer id;
 
     @ApiModelProperty("类型/格式")
     private String format;

@@ -4,9 +4,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -19,9 +21,9 @@ import java.util.Date;
 public class WorksUpdateTo {
 
     @ApiModelProperty(value = "作品主键 id(更新作品信息时必填)", required = true)
-    @NotBlank(message = "id 不能为空")
-    @Length(min = 19, max = 19, message = "id 格式错误")
-    private String id;
+    @NotNull(message = "id 不能为空")
+    @Range(min = 0, max = Integer.MAX_VALUE, message = "id 格式错误")
+    private Integer id;
 
     @ApiModelProperty(value = "作品名称")
     @Length(max = 40)
@@ -29,13 +31,13 @@ public class WorksUpdateTo {
 
 
     @ApiModelProperty(value = "作品类型 id")
-    private String typeId;
+    private Integer typeId;
 
     @ApiModelProperty(value = "作品类型(如: text/image/audio...)")
     private String type;
 
     @ApiModelProperty(value = "作品子类型(格式) id")
-    private String subtypeId;
+    private Integer subtypeId;
 
     @ApiModelProperty(value = "作品子类型(如: jpg/png/mp3/flac/doc...)")
     private String subtype;

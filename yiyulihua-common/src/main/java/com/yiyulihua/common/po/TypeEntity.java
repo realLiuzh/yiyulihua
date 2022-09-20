@@ -26,11 +26,11 @@ public class TypeEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("主键id")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("父格式 id( 父格式id为 0 为顶层格式(image/text))")
-    private String parentId;
+    private Integer parentId;
 
     @ApiModelProperty("格式")
     private String format;

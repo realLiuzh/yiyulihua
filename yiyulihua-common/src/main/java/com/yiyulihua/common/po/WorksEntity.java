@@ -24,8 +24,8 @@ public class WorksEntity implements Serializable {
      * 主键
      */
     @ApiModelProperty("主键")
-    @TableId(type = IdType.ASSIGN_ID)
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
     /**
      * 作品名称
      */
