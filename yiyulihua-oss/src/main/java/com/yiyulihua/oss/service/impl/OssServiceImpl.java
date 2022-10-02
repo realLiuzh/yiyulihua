@@ -4,6 +4,7 @@ import com.aliyun.oss.*;
 import com.aliyun.oss.model.DeleteObjectsRequest;
 import com.aliyun.oss.model.DeleteObjectsResult;
 import com.aliyun.oss.model.VoidResult;
+import com.google.common.collect.ImmutableMap;
 import com.spire.doc.Document;
 import com.spire.doc.FileFormat;
 import com.yiyulihua.common.exception.ApiException;
@@ -31,7 +32,7 @@ import java.util.*;
 
 /**
  * @author sunbo
- * @date 2022-07-18-18:25
+ * @since 2022-07-18-18:25
  */
 @Slf4j
 @Service
@@ -102,12 +103,13 @@ public class OssServiceImpl implements OssService {
             }
 
             realUrl = upload(createFileName("audio", filename), sourceInputStream);
-            Map<String, Object> map = new HashMap<>();
-            map.put("realUrl", realUrl);
-            map.put("previewUrl", previewUrl);
-            map.put("duration", duration);
 
-            return map;
+            assert realUrl != null;
+            assert previewUrl != null;
+            return ImmutableMap.of("realUrl", realUrl,
+                    "previewUrl", previewUrl,
+                    "duration", duration);
+
         } catch (IOException | CannotReadException | TagException | InvalidAudioFrameException |
                  ReadOnlyFileException e) {
             throw new RuntimeException(e);
@@ -133,10 +135,7 @@ public class OssServiceImpl implements OssService {
             //上传oss
             String imageUrl = upload(createFileName("image", filename), file.getInputStream());
 
-            Map<String, Object> map = new HashMap<>();
-            map.put("imageUrl", imageUrl);
-
-            return map;
+            return Collections.singletonMap("realUrl", imageUrl);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -199,12 +198,13 @@ public class OssServiceImpl implements OssService {
             fileUrl = upload(createFileName("word", filename), file.getInputStream());
             previewUrl = upload(createFileName("previewWord", filename), Files.newInputStream(tempFile.toPath()));
 
-            Map<String, Object> map = new HashMap<>();
-            map.put("realUrl", fileUrl);
-            map.put("previewUrl", previewUrl);
-            map.put("wordCount", wordCount);
 
-            return map;
+            assert fileUrl != null;
+            assert previewUrl != null;
+            return ImmutableMap.of("realUrl", fileUrl,
+                    "previewUrl", previewUrl,
+                    "wordCount", wordCount);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
