@@ -2,25 +2,44 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yiyulihua.user.dao.MessageDao">
     <select id="getHistoryMsgPageByUserId" resultType="com.yiyulihua.common.vo.ResultMessageVo">
-        SELECT `id`,
-               `is_system`         AS isSystem,
-               a.`send_user_id`    AS fromUserId,
-               a.`receive_user_id` AS receiveUserId,
-               `content`           AS content,
-               a.create_time       AS send_time
-        FROM (SELECT `send_user_id`,
-                     `receive_user_id`,
-                     MAX(create_time) AS create_time
-              FROM `tb_message`
-              GROUP BY `send_user_id`,
-                       `receive_user_id`) a
-                 LEFT JOIN `tb_message` t
-                           ON t.`send_user_id` = a.`send_user_id`
-                               AND t.`receive_user_id` = a.`receive_user_id`
-                               AND t.create_time = a.create_time
-        WHERE (t.`send_user_id` = #{userId} AND t.`send_user_visible` = 0)
-           OR (t.`receive_user_id` = #{userId} AND t.`receive_user_visible` = 0)
-        ORDER BY t.create_time DESC
+        SELECT msg.`id` AS id,
+               msg.`is_system`       AS isSystem,
+               msg.`send_user_id`    AS fromUserId,
+               msg.`receive_user_id` AS receiveUserId,
+               msg.`content`         AS content,
+               msg.`create_time`     AS send_time
+        FROM (SELECT m.`id`,
+                     m.`is_system`,
+                     m.`send_user_id`,
+                     m.`receive_user_id`,
+                     m.`content`,
+                     m.`create_time`
+              FROM tb_message m
+              WHERE ((
+                                 m.`send_user_id` IN (SELECT send_user_id AS chat_id
+                                                      FROM tb_message
+                                                      WHERE receive_user_id = #{userId}
+                                                        AND `receive_user_visible` = 0
+                                                      UNION
+                                                      SELECT receive_user_id AS chat_id
+                                                      FROM tb_message
+                                                      WHERE send_user_id = #{userId}
+                                                        AND `send_user_visible` = 0) AND
+                                 m.`receive_user_id` = #{userId} AND
+                                 m.`receive_user_visible` = 0)
+                  OR (
+                                 m.`send_user_id` = #{userId} AND m.`send_user_visible` = 0 AND
+                                 m.`receive_user_id` IN (SELECT send_user_id AS chat_id
+                                                         FROM tb_message
+                                                         WHERE receive_user_id = #{userId}
+                                                           AND `receive_user_visible` = 0
+                                                         UNION
+                                                         SELECT receive_user_id AS chat_id
+                                                         FROM tb_message
+                                                         WHERE send_user_id = #{userId}
+                                                           AND `send_user_visible` = 0)))
+              ORDER BY m.`create_time` DESC LIMIT 9999999) msg
+        GROUP BY msg.`send_user_id` + msg.`receive_user_id`
     </select>
 
     <select id="getHistoryMessageBetweenPage" resultType="com.yiyulihua.common.vo.HistoryMessageVo">
