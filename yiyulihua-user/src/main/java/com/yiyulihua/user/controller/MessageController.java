@@ -7,6 +7,7 @@ import com.yiyulihua.common.to.HistoryMessageTo;
 import com.yiyulihua.common.to.MessageDeleteTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.HistoryMessageVo;
+import com.yiyulihua.common.vo.IndexMsgVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -49,11 +50,11 @@ public class MessageController {
                     paramType = "path")
     })
     @GetMapping("/{current}/{size}")
-    public Result<PageUtils<ResultMessageVo>> info(@PathVariable("current") Integer current,
+    public Result<PageUtils<IndexMsgVo>> info(@PathVariable("current") Integer current,
                                                    @PathVariable("size") Integer size) {
-        PageUtils<ResultMessageVo> page = messageService.getHistoryMessagePage(current, size);
+        PageUtils<IndexMsgVo> page = messageService.getHistoryMessagePage(current, size);
 
-        return new Result<PageUtils<ResultMessageVo>>().setData(page);
+        return new Result<PageUtils<IndexMsgVo>>().setData(page);
     }
 
     @ApiOperation(value = "根据 id 单方面删除聊天记录")

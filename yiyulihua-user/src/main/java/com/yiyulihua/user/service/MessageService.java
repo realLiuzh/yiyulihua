@@ -7,6 +7,7 @@ import com.yiyulihua.common.to.HistoryMessageTo;
 import com.yiyulihua.common.to.MessageDeleteTo;
 import com.yiyulihua.common.utils.PageUtils;
 import com.yiyulihua.common.vo.HistoryMessageVo;
+import com.yiyulihua.common.vo.IndexMsgVo;
 import com.yiyulihua.common.vo.ResultMessageVo;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public interface MessageService extends IService<MessageEntity> {
 
     void updateOfflineStatus(Integer userId);
 
-    PageUtils<ResultMessageVo> getHistoryMessagePage(Integer current, Integer size);
+    PageUtils<IndexMsgVo> getHistoryMessagePage(Integer current, Integer size);
 
     void deleteRecords(MessageDeleteTo deleteVo);
 
