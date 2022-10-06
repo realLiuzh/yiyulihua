@@ -1,6 +1,8 @@
 package com.yiyulihua.user.controller;
 
 
+import com.yiyulihua.common.exception.ApiException;
+import com.yiyulihua.common.exception.ApiExceptionEnum;
 import com.yiyulihua.common.po.MessageEntity;
 import com.yiyulihua.common.result.Result;
 import com.yiyulihua.common.to.HistoryMessageTo;
@@ -51,7 +53,7 @@ public class MessageController {
     })
     @GetMapping("/{current}/{size}")
     public Result<PageUtils<IndexMsgVo>> info(@PathVariable("current") Integer current,
-                                                   @PathVariable("size") Integer size) {
+                                              @PathVariable("size") Integer size) {
         PageUtils<IndexMsgVo> page = messageService.getHistoryMessagePage(current, size);
 
         return new Result<PageUtils<IndexMsgVo>>().setData(page);
@@ -92,6 +94,10 @@ public class MessageController {
     @PostMapping("/history")
     public Result<PageUtils<HistoryMessageVo>> getHistoryMessage(
             @RequestBody HistoryMessageTo historyMessageTo) {
+        if (historyMessageTo.getEnd().isBefore(historyMessageTo.getBegin())) {
+            throw new ApiException(ApiExceptionEnum.BODY_NOT_MATCH);
+        }
+
         PageUtils<HistoryMessageVo> page = messageService.getHistoryMessageBetweenUserPage(historyMessageTo);
 
         return new Result<PageUtils<HistoryMessageVo>>().setData(page);

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yiyulihua.user.dao.MessageDao">
     <select id="getHistoryMsgPageByUserId" resultType="com.yiyulihua.common.vo.ResultMessageVo">
-        SELECT msg.`id` AS id,
+        SELECT msg.`id`              AS id,
                msg.`is_system`       AS isSystem,
                msg.`send_user_id`    AS fromUserId,
                msg.`receive_user_id` AS receiveUserId,
@@ -50,8 +50,8 @@
                `receive_user_id` as receiveUserId
         FROM tb_message
         WHERE ((send_user_id = #{userId} AND receive_user_id = #{toUserId} AND send_user_visible = 0)
-            OR (receive_user_id = #{userId} AND send_user_id = #{toUserId} AND receive_user_visible = 0))
-          AND is_offline = 0
+            OR (receive_user_id = #{userId} AND send_user_id = #{toUserId} AND receive_user_visible = 0 AND
+                is_offline = 0))
           AND create_time between #{begin} and #{end}
         order by `create_time` ASC
     </select>

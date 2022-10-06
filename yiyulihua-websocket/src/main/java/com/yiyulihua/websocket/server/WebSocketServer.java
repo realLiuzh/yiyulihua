@@ -39,7 +39,7 @@ public class WebSocketServer extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         //获得 userId
-        Integer userId = (Integer) session.getAttributes().get("loginId");
+        Integer userId = Integer.valueOf(session.getAttributes().get("loginId").toString());
 
         //存储到容器中
         onlineUsers.put(userId, session);
@@ -61,7 +61,7 @@ public class WebSocketServer extends TextWebSocketHandler {
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 
-        Integer userId = (Integer) session.getAttributes().get("loginId");
+        Integer userId = Integer.valueOf(session.getAttributes().get("loginId").toString());
 
         MessageTo messageTo = JSON.parseObject(message.getPayload(), MessageTo.class);
         //发送用户消息
@@ -73,13 +73,13 @@ public class WebSocketServer extends TextWebSocketHandler {
      */
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-        Integer userId = (Integer) session.getAttributes().get("loginId");
+        Integer userId = Integer.valueOf(session.getAttributes().get("loginId").toString());
         onlineUsers.remove(userId);
     }
 
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
-        Integer userId = (Integer) session.getAttributes().get("loginId");
+        Integer userId = Integer.valueOf(session.getAttributes().get("loginId").toString());
         onlineUsers.remove(userId);
     }
 

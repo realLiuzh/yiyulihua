@@ -27,7 +27,7 @@ import org.springframework.stereotype.Service;
 import com.yiyulihua.user.dao.MessageDao;
 import com.yiyulihua.user.service.MessageService;
 
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -162,8 +162,8 @@ public class MessageServiceImpl extends ServiceImpl<MessageDao, MessageEntity> i
 
         Page<HistoryMessageVo> page = new Query<HistoryMessageVo>().getPage(new PageQuery(historyMessageTo.getCurrent(), historyMessageTo.getSize()));
         // 设置时间区间
-        String begin = null != historyMessageTo.getBegin() ? DateUtils.format(historyMessageTo.getBegin(), DateUtils.DATE_TIME_PATTERN) : "2022-01-01 00:00:00";
-        String end = null != historyMessageTo.getEnd() ? DateUtils.format(historyMessageTo.getEnd(), DateUtils.DATE_TIME_PATTERN) : DateUtils.format(new Date(), DateUtils.DATE_TIME_PATTERN);
+        String begin = historyMessageTo.getBegin().format(DateTimeFormatter.ofPattern(DateUtils.DATE_TIME_PATTERN));
+        String end = historyMessageTo.getEnd().format(DateTimeFormatter.ofPattern(DateUtils.DATE_TIME_PATTERN));
 
         baseMapper.getHistoryMessageBetweenPage(page, userId, historyMessageTo.getToUserId(), begin, end);
 
