@@ -5,6 +5,7 @@ spring:
     nacos:
       discovery:
         server-addr: 175.178.189.89:12208
+        ip: 47.96.86.132
 
 #logging:
 #  file:
